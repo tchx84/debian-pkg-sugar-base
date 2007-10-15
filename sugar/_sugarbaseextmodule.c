@@ -24,16 +24,16 @@
 /* include this first, before NO_IMPORT_PYGOBJECT is defined */
 #include <pygobject.h>
 
-extern PyMethodDef py_sugarext_functions[];
+extern PyMethodDef py_sugarbaseext_functions[];
 
 DL_EXPORT(void)
-init_sugarext(void)
+init_sugarbaseext(void)
 {
     PyObject *m, *d;
 
     init_pygobject ();
 
-    m = Py_InitModule ("_sugarext", py_sugarext_functions);
+    m = Py_InitModule ("_sugarbaseext", py_sugarbaseext_functions);
     d = PyModule_GetDict (m);
 
     if (PyErr_Occurred ()) {
