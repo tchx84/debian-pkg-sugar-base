@@ -11,6 +11,8 @@ libtool
 ltmain.sh
 missing
 py-compile
+*~
+*.pyc
 *.lo
 *.la
 Makefile
