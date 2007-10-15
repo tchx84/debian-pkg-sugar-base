@@ -2,6 +2,7 @@ INCLUDES = -DXDG_PREFIX=sugar_mime
 
 sugardir = $(pythondir)/sugar
 sugar_PYTHON =		\
+	__init__.py	\
 	logger.py	\
 	mime.py
 
