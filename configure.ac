@@ -19,5 +19,6 @@ PKG_CHECK_MODULES(EXTENSION, pygobject-2.0)
 
 AC_OUTPUT([
 Makefile
-sugar/Makefile
+src/Makefile
+src/sugar/Makefile
 ])

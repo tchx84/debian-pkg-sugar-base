@@ -16,6 +16,7 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
+import os
 import logging
 
 from sugar import _sugarbaseext
@@ -32,26 +33,52 @@ def get_for_file(file_name):
 def get_from_file_name(file_name):
     return _sugarbaseext.get_mime_type_from_file_name(file_name)
 
-_extensions_cache = {}
+_extensions = None
+_globs_timestamps = None
+
 def get_primary_extension(mime_type):
-    if _extensions_cache.has_key(mime_type):
-        return _extensions_cache[mime_type]
+    global extensions
+    global _globs_timestamps
 
-    f = open('/etc/mime.types')
-    while True:
-        line = f.readline()
-        if not line:
-            break
-        cols = line.replace('\t', ' ').split(' ')
-        if mime_type == cols[0]:
-            for col in cols[1:]:
-                if col:
-                    col = col.replace('\n', '')
-                    _extensions_cache[mime_type] = col
-                    return col
+    dirs = []
 
-    _extensions_cache[mime_type] = None
-    return None
+    if 'XDG_DATA_HOME' in os.environ:
+        dirs.append(os.environ['XDG_DATA_HOME'])
+    else:
+        dirs.append(os.path.expanduser('~/.local/share/'))
+
+    if 'XDG_DATA_DIRS' in os.environ:
+        dirs.extend(os.environ['XDG_DATA_DIRS'].split(':'))
+    else:
+        dirs.extend(['/usr/local/share/', '/usr/share/'])
+
+    timestamps = []
+    globs_path_list = []
+    for f in dirs:
+        globs_path = os.path.join(f, 'mime', 'globs')
+        if os.path.exists(globs_path):
+            mtime = os.stat(globs_path).st_mtime
+            timestamps.append([globs_path, mtime])
+            globs_path_list.append(globs_path)
+
+    if timestamps != _globs_timestamps:
+        _extensions = {}
+
+        for globs_path in globs_path_list:
+            globs_file = open(globs_path)
+            for line in globs_file.readlines():
+                line = line.strip()
+                if not line.startswith('#'):
+                    line_type, glob = line.split(':')
+                    if glob.startswith('*.'):
+                        _extensions[line_type] = glob[2:]
+
+        _globs_timestamps = timestamps
+
+    if mime_type in _extensions:
+        return _extensions[mime_type]
+    else:
+        return None
 
 def choose_most_significant(mime_types):
     logging.debug('Choosing between %r.' % mime_types)
