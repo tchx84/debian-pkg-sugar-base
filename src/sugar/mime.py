@@ -18,8 +18,62 @@
 
 import os
 import logging
+from gettext import gettext as _
 
 from sugar import _sugarbaseext
+
+_extensions = None
+_globs_timestamps = None
+_generic_types = [
+{ 'id'    : 'Text',
+  'name'  : _('Text'),
+  'icon'  : 'text-x-generic',
+  'types' : ['text/plain', 'text/rtf', 'application/pdf',
+             'application/x-pdf', 'text/html',
+             'application/vnd.oasis.opendocument.text',
+             'application/rtf', 'text/rtf']
+},
+{ 'id'    : 'Image',
+  'name'  : _('Image'),
+  'icon'  : 'image-x-generic',
+  'types' : ['image/png', 'image/gif', 'image/jpeg']
+},
+{ 'id'    : 'Audio',
+  'name'  : _('Audio'),
+  'icon'  : 'audio-x-generic',
+  'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav']
+},
+{ 'id'    : 'Video',
+  'name'  : _('Video'),
+  'icon'  : 'video-x-generic',
+  'types' : ['video/ogg', 'application/ogg']
+},
+{ 'id'    : 'Link',
+  'name'  : _('Link'),
+  'icon'  : 'text-uri-list',
+  'types' : ['text/x-moz-url', 'text/uri-list']
+}]
+
+class ObjectType(object):
+    def __init__(self, type_id, name, icon, mime_types):
+        self.type_id = type_id
+        self.name = name
+        self.icon = icon
+        self.mime_types = mime_types
+
+def get_generic_type(type_id):
+    types = get_all_generic_types()
+    for generic_type in types:
+        if type_id == generic_type.type_id:
+            return generic_type
+
+def get_all_generic_types():
+    types = []
+    for generic_type in _generic_types:
+        object_type = ObjectType(generic_type['id'], generic_type['name'],
+                                 generic_type['icon'], generic_type['types'])
+        types.append(object_type)
+    return types
 
 def get_for_file(file_name):
     mime_type = _sugarbaseext.get_mime_type_for_file(file_name)
@@ -33,11 +87,23 @@ def get_for_file(file_name):
 def get_from_file_name(file_name):
     return _sugarbaseext.get_mime_type_from_file_name(file_name)
 
+def get_mime_icon(mime_type):
+    generic_type = _get_generic_type_for_mime(mime_type)
+    if generic_type:
+        return generic_type['icon']
+
+    return mime_type.replace('/', '-')
+
+def get_mime_description(mime_type):
+    generic_type = _get_generic_type_for_mime(mime_type)
+    if generic_type:
+        return generic_type['name']
+
+    import gnomevfs
+    return gnomevfs.mime_get_description(mime_type)
+
 def get_mime_parents(mime_type):
     return _sugarbaseext.list_mime_parents(mime_type)
-
-_extensions = None
-_globs_timestamps = None
 
 def get_primary_extension(mime_type):
     global extensions
@@ -148,3 +214,9 @@ def _file_looks_like_text(file_name):
             pass
 
     return False
+
+def _get_generic_type_for_mime(mime_type):
+    for generic_type in _generic_types:
+        if mime_type in generic_type['types']:
+            return generic_type
+    return None
