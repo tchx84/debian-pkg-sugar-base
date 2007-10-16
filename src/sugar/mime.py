@@ -33,6 +33,9 @@ def get_for_file(file_name):
 def get_from_file_name(file_name):
     return _sugarbaseext.get_mime_type_from_file_name(file_name)
 
+def get_mime_parents(mime_type):
+    return _sugarbaseext.list_mime_parents(mime_type)
+
 _extensions = None
 _globs_timestamps = None
 

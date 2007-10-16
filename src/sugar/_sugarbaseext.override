@@ -2,8 +2,8 @@
 %%
 headers
 #include <Python.h>
-#include "xdgmime.h"
 #include <glib.h>
+#include "xdgmime.h"
 %%
 modulename _sugarext
 %%
@@ -17,7 +17,7 @@ _wrap_sugar_mime_get_mime_type_for_file(PyObject *self, PyObject *args, PyObject
 {
     static char *kwlist[] = { "filename", NULL };
     char *filename;
-    const gchar *ret;
+    const char *ret;
 
     if (!PyArg_ParseTupleAndKeywords(args, kwargs,"s:get_mime_type_for_file", kwlist, &filename))
         return NULL;
@@ -28,5 +28,33 @@ _wrap_sugar_mime_get_mime_type_for_file(PyObject *self, PyObject *args, PyObject
         return PyString_FromString(ret);
     Py_INCREF(Py_None);
     return Py_None;
+}
+%%
+override sugar_mime_list_mime_parents kwargs
+static PyObject *
+_wrap_sugar_mime_list_mime_parents(PyObject *self, PyObject *args, PyObject *kwargs)
+{
+    static char *kwlist[] = { "mime_type", NULL };
+    char *mime_type;
+    char **parents, **tmp;
+    int i = 0, j;
+    PyObject *ret;
+
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs,"s:list_mime_parents", kwlist, &mime_type))
+        return NULL;
+
+    parents = (char **)sugar_mime_list_mime_parents(mime_type);
+    if (!parents)
+        return PyTuple_New(0);
+
+    tmp = parents;
+    while (*tmp)
+        tmp++, i++;
+
+    ret = PyTuple_New(i);
+    for (j = 0; j < i; j++)
+        PyTuple_SetItem(ret, j, PyString_FromString(parents[j]));
+
+    return ret;
 }
 %%
