@@ -22,8 +22,8 @@ from gettext import gettext as _
 
 from sugar import _sugarbaseext
 
-_extensions = None
-_globs_timestamps = None
+_extensions = {}
+_globs_timestamps = []
 _generic_types = [
 { 'id'    : 'Text',
   'name'  : _('Text'),
@@ -106,7 +106,7 @@ def get_mime_parents(mime_type):
     return _sugarbaseext.list_mime_parents(mime_type)
 
 def get_primary_extension(mime_type):
-    global extensions
+    global _extensions
     global _globs_timestamps
 
     dirs = []
@@ -131,6 +131,7 @@ def get_primary_extension(mime_type):
             globs_path_list.append(globs_path)
 
     if timestamps != _globs_timestamps:
+        # Clear the old extensions list
         _extensions = {}
 
         for globs_path in globs_path_list:
