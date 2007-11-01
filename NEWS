@@ -1,3 +1,5 @@
+* #4566: bring back categories in logs (smcv)
+
 Snapshot ed1f1b416d
 
 * Improved mime handling. (marco)
