@@ -50,3 +50,10 @@ def start(log_filename=None):
 
         os.dup2(log_file.fileno(), sys.stdout.fileno())
         os.dup2(log_file.fileno(), sys.stderr.fileno())
+
+    # Attempt to provide verbose IPython tracebacks.
+    try:
+        from IPython.ultraTB import AutoFormattedTB
+        sys.excepthook = AutoFormattedTB(mode='Verbose', color_scheme='NoColor')
+    except ImportError:
+        pass
