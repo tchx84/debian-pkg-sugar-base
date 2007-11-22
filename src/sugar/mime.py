@@ -134,6 +134,10 @@ def get_primary_extension(mime_type):
         # Clear the old extensions list
         _extensions = {}
 
+        # FIXME Properly support these types in the system. (#4855)
+        _extensions['audio/ogg'] = 'ogg'
+        _extensions['video/ogg'] = 'ogg'
+
         for globs_path in globs_path_list:
             globs_file = open(globs_path)
             for line in globs_file.readlines():
