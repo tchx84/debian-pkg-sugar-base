@@ -23,3 +23,11 @@
     '("const-char*" "mime")
   )
 )
+
+(define-function uri_list_extract_uris
+  (c-name "g_uri_list_extract_uris")
+  (return-type "gchar**")
+  (parameters
+    '("const-char*" "uri_list")
+  )
+)
