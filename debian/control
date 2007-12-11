@@ -1,0 +1,20 @@
+Source: sugar-base
+Section: x11
+Priority: optional
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Build-Depends: cdbs (>= 0.4.23-1.1), libtool, automake1.10, autoconf, debhelper (>= 5), dh-buildinfo, python-gtk2-dev, python-central
+Standards-Version: 3.7.3
+XS-Python-Version: all
+
+Package: sugar-base
+Architecture: any
+Depends: ${shlibs:Depends}, ${python:Depends}
+Provides: ${python:Provides}
+XB-Python-Version: ${python:Versions}
+Description: Sugar graphical shell - core functionality
+ Sugar is a graphical user interface aimed at children.
+ .
+ Sugar is mainly used as the interfaced for One Laptop Per Child (OLPC)
+ machines.
+ .
+ This package contains the base modules for Sugar.

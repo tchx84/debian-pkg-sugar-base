@@ -1,0 +1,88 @@
+This is sugar-base packaged for Debian GNU systems.
+
+Upstream source: git://dev.laptop.org
+
+Upstream author: Red Hat, Inc.
+
+Files: debian/*
+Copyright: © 2007 Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+ The Debian packaging information is under the GPL, version 2 or later.
+
+Files: *
+Copyright: © 2006-2007, Red Hat, Inc.
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+
+Files: maint-helper.py
+Copyright: © 2007, Red Hat, Inc.
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+Files: src/sugar/mime.py
+Copyright: © 2006-2007, Red Hat, Inc.
+           © 2007, One Laptop Per Child
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+
+Files: src/sugar/xdgmime.h, src/sugar/xdgmimeglob.[ch],
+       src/sugar/xdgmimeint.[ch], src/sugar/xdgmimemagic.[ch]
+Copyright: © 2003  Red Hat, Inc.
+           © 2003  Jonathan Blandford <jrb@alum.mit.edu>
+License: LGPL-2+ | other
+  Licensed under the Academic Free License version 2.0
+  Or under the following terms:
+ .
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+Files: src/sugar/xdgmime.c
+Copyright: © 2003,2004  Red Hat, Inc.
+           © 2003,2004  Jonathan Blandford <jrb@alum.mit.edu>
+License: LGPL-2+ | other
+  Licensed under the Academic Free License version 2.0
+  Or under the following terms:
+ .
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+Files: src/sugar/xdgmimecache.[ch]
+Copyright: © 2005  Matthias Clasen <mclasen@redhat.com>
+License: LGPL-2+ | other
+  Licensed under the Academic Free License version 2.0
+  Or under the following terms:
+ .
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+Files: src/sugar/xdgmimealias.[ch], src/sugar/xdgmimeparent.[ch]
+Copyright: © 2004  Red Hat, Inc.
+           © 2004  Matthias Clasen <mclasen@redhat.com>
+License: LGPL-2+ | other
+  Licensed under the Academic Free License version 2.0
+  Or under the following terms:
+ .
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+On Debian systems, the complete text of the GNU General Public License
+can be found in file "/usr/share/common-licenses/GPL", and the complete
+text of the GNU Lesser General Public License can be found in file
+"/usr/share/common-licenses/LGPL"..
