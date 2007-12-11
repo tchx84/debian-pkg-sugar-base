@@ -1,3 +1,9 @@
+sugar-base (0.2~git20071211-0~0jones~snapshot0) UNRELEASED; urgency=low
+
+  * Add Homepage, Vcs-Git and Vcs-Browser fields to debian/control.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 11 Dec 2007 16:27:17 +0100
+
 sugar-base (0.2~git20071211-0~0jones1) jones; urgency=low
 
   * Initial unofficial release.

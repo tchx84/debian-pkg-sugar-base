@@ -4,6 +4,9 @@ Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
 Build-Depends: cdbs (>= 0.4.23-1.1), libtool, automake1.10, autoconf, debhelper (>= 5), dh-buildinfo, python-gtk2-dev, python-central
 Standards-Version: 3.7.3
+Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
+Homepage: http://wiki.laptop.org/go/Sugar
 XS-Python-Version: all
 
 Package: sugar-base
