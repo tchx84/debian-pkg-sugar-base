@@ -5,7 +5,6 @@
 # NB! Local CDBS tweaks in use. More info in README.cdbs-tweaks
 DEB_AUTO_UPDATE_ACLOCAL = 1.10
 DEB_AUTO_UPDATE_AUTOMAKE = 1.10
-#DEB_AUTO_UPDATE_AUTOHEADER = 2.59
 DEB_AUTO_UPDATE_AUTOCONF = 2.59
 DEB_AUTO_UPDATE_LIBTOOL = pre
 include /usr/share/cdbs/1/class/autotools.mk
@@ -13,9 +12,11 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include debian/cdbs/1/rules/copyright-check.mk
 include debian/cdbs/1/rules/buildinfo.mk
 
+# Workaround: can't pass --install to autotools through CDBS
 pre-build::
 	[ -e py-compile ] || autoreconf -i
 
+# Cleanup automade files
 clean::
 	rm -f aclocal.m4 compile config.guess config.sub configure depcomp install-sh ltmain.sh missing py-compile
 	find -name Makefile.in -exec rm '{}' ';'
