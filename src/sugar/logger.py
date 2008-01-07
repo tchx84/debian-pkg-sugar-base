@@ -37,6 +37,17 @@ def set_level(level):
     if levels.has_key(level):
         logging.getLogger('').setLevel(levels[level])
 
+def _except_hook(type, value, traceback):
+    # Attempt to provide verbose IPython tracebacks.
+    # Importing IPython is slow, so we import it lazily.
+    try:
+        from IPython.ultraTB import AutoFormattedTB
+        sys.excepthook = AutoFormattedTB(mode='Verbose', color_scheme='NoColor')
+    except ImportError:
+        sys.excepthook = sys.__excepthook__
+
+    sys.excepthook(type, value, traceback)
+        
 def start(log_filename=None):
     logging.basicConfig(level=logging.WARNING,
             format="%(created)f %(levelname)s %(name)s: %(message)s")
@@ -51,9 +62,5 @@ def start(log_filename=None):
         os.dup2(log_file.fileno(), sys.stdout.fileno())
         os.dup2(log_file.fileno(), sys.stderr.fileno())
 
-    # Attempt to provide verbose IPython tracebacks.
-    try:
-        from IPython.ultraTB import AutoFormattedTB
-        sys.excepthook = AutoFormattedTB(mode='Verbose', color_scheme='NoColor')
-    except ImportError:
-        pass
+    sys.excepthook = _except_hook
+
