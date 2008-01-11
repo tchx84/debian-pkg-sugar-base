@@ -1,3 +1,9 @@
+sugar-base (0.2~git20080111-0~0jones1) UNRELEASED; urgency=low
+
+  * New upstream snapshot.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 11 Jan 2008 16:47:34 +0100
+
 sugar-base (0.2~git20071211-0~0jones~snapshot0) UNRELEASED; urgency=low
 
   * Add Homepage, Vcs-Git and Vcs-Browser fields to debian/control.
