@@ -1,3 +1,6 @@
+* #5389: Correctly handle pastes from gtk text entries. (tomeu)
+* #5525: Import ipython lazily. (tomeu)
+* #5080: Use uri_list_extract_uris implementation from glib. (tomeu)
 * #4783 Make browse play Record audio/video again (marco)
 
 Snapshot 1a04bb7c71

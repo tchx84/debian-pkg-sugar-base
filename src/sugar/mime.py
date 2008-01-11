@@ -154,6 +154,11 @@ def get_primary_extension(mime_type):
     else:
         return None
 
+_black_list = [
+               # Target used only between gtk.TextBuffer instances
+               'application/x-gtk-text-buffer-rich-text',
+              ]
+
 def choose_most_significant(mime_types):
     logging.debug('Choosing between %r.' % mime_types)
     if not mime_types:
@@ -165,7 +170,7 @@ def choose_most_significant(mime_types):
     for mime_category in ['image/', 'application/']:
         for mime_type in mime_types:
 
-            if mime_type.startswith(mime_category):
+            if mime_type.startswith(mime_category) and mime_type not in _black_list:
                 # skip mozilla private types (second component starts with '_'
                 # or ends with '-priv') 
                 if mime_type.split('/')[1].startswith('_') or \
