@@ -25,6 +25,14 @@ License: GPL-2+
  the Free Software Foundation; either version 2 of the License, or
  (at your option) any later version.
 
+Files: src/sugar/logger.py
+Copyright: © 2007, Red Hat, Inc.
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+
 Files: src/sugar/mime.py
 Copyright: © 2006-2007, Red Hat, Inc.
            © 2007, One Laptop Per Child
@@ -70,9 +78,21 @@ License: LGPL-2+ | other
   License as published by the Free Software Foundation; either
   version 2 of the License, or (at your option) any later version.
 
-Files: src/sugar/xdgmimealias.[ch], src/sugar/xdgmimeparent.[ch]
+Files: src/sugar/xdgmimealias.c, src/sugar/xdgmimeparent.c
 Copyright: © 2004  Red Hat, Inc.
            © 2004  Matthias Clasen <mclasen@redhat.com>
+License: LGPL-2+ | other
+  Licensed under the Academic Free License version 2.0
+  Or under the following terms:
+ .
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+Files: src/sugar/xdgmimealias.h, src/sugar/xdgmimeparent.h
+Copyright: © 2004  Red Hat, Inc.
+           © 200  Matthias Clasen <mclasen@redhat.com>
 License: LGPL-2+ | other
   Licensed under the Academic Free License version 2.0
   Or under the following terms:
