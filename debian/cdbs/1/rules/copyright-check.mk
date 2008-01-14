@@ -33,7 +33,7 @@ DEB_COPYRIGHT_CHECK_REGEX = .*
 DEB_COPYRIGHT_CHECK_IGNORE_REGEX = ^(debian/.*|(.*/)?config\.(guess|sub|rpath)(\..*)?)$
 
 # By default sort by license and then by filename
-DEB_COPYRIGHT_CHECK_SORT_OPTS = -t : -k2,1 -k1
+DEB_COPYRIGHT_CHECK_SORT_OPTS = -k2,2 -k1
 
 pre-build:: debian/stamp-copyright-check
 
