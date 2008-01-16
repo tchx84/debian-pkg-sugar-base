@@ -41,12 +41,12 @@ _generic_types = [
 { 'id'    : 'Audio',
   'name'  : _('Audio'),
   'icon'  : 'audio-x-generic',
-  'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav']
+  'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg']
 },
 { 'id'    : 'Video',
   'name'  : _('Video'),
   'icon'  : 'video-x-generic',
-  'types' : ['video/ogg', 'application/ogg']
+  'types' : ['video/ogg', 'application/ogg', 'video/x-theora+ogg']
 },
 { 'id'    : 'Link',
   'name'  : _('Link'),
