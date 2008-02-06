@@ -28,7 +28,7 @@ merges with our packaging branch:
 
 cd sugar-base
 git checkout upstream
-git pull
+git pull -t
 git checkout master
 git pull . upstream
 
