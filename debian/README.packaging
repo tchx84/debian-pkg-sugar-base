@@ -1,18 +1,17 @@
 Packaging hints
 ===============
 
-This file contains useful info for (re)building the packaging of the
-source.
-
-Packaged using GIT
-------------------
-
 This packaging is maintained with the use of GIT.
 
 Upstream source is in the "upstream" branch, and Debian-related
 packaging in "master".
 
-The following commands can be used to fetch and build the package:
+
+Getting packaging source from GIT repository
+--------------------------------------------
+
+The following commands (in an empty dir) can be used to fetch and build
+the package:
 
 aptitude install git-buildpackage
 git clone git://git.debian.org/git/collab-maint/sugar-base
@@ -20,4 +19,18 @@ cd sugar-base
 git fetch origin upstream:upstream
 git-buildpackage
 
- -- Jonas Smedegaard <dr@jones.dk>  Tue, 11 Dec 2007 15:40:36 +0100
+
+Merging with newer upstream GIT tree
+------------------------------------
+
+The following commands updates the local mirror of upstream source, and
+merges with our packaging branch:
+
+cd sugar-base
+git checkout upstream
+git pull
+git checkout master
+git pull . upstream
+
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 06 Feb 2008 12:13:44 +0100
