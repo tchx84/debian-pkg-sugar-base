@@ -1,4 +1,5 @@
 maint-helper.py: GPL-2+  [[path] - fix the copyright year \n\ / 2007, Red Hat, Inc]
+src/sugar/__init__.py: LGPL-2+ [2007, One Laptop Per Child / 2006-2007, Red Hat, Inc]
 src/sugar/_sugarbaseextmodule.c: LGPL-2+ [2006-2007, Red Hat, Inc]
 src/sugar/logger.py: LGPL-2+ [2007 Red Hat, Inc]
 src/sugar/mime.py: LGPL-2+ [2007, One Laptop Per Child / 2006-2007, Red Hat, Inc]
@@ -16,4 +17,4 @@ src/sugar/xdgmimemagic.c: LGPL-2+ [2003 Jonathan Blandford <jrb@alum.mit.edu> / 
 src/sugar/xdgmimemagic.h: LGPL-2+ [2003 Jonathan Blandford <jrb@alum.mit.edu> / 2003 Red Hat, Inc]
 src/sugar/xdgmimeparent.c: LGPL-2+ [2004 Matthias Clasen <mclasen@redhat.com> / 2004 Red Hat, Inc]
 src/sugar/xdgmimeparent.h: LGPL-2+ [200 Matthias Clasen <mclasen@redhat.com> / 2004 Red Hat, Inc]
-COPYING: UNKNOWN [1989, 1991 Free Software Foundation, Inc. / the software, and]
+COPYING: UNKNOWN [the / 1991, 1999 Free Software Foundation, Inc]
