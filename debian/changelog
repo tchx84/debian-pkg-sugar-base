@@ -1,3 +1,10 @@
+sugar-base (0.2~git20080130-0~0jones1) UNRELEASED; urgency=low
+
+  * New upstream Git snapshot.
+  * Add section to README.packaging about doing a package release.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 09 Feb 2008 01:52:01 +0100
+
 sugar-base (0.2~git20080111-0~0jones2) UNRELEASED; urgency=low
 
   * Improved copyright-check.mk cdbs snippet to use licensecheck script.
