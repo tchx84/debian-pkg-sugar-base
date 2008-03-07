@@ -1,4 +1,4 @@
-sugar-base (0.79.0-1) UNRELEASED; urgency=low
+sugar-base (0.79.0-1) unstable; urgency=low
 
   * New Upstream Version
   * Update CDBS tweaks:
@@ -16,7 +16,7 @@ sugar-base (0.79.0-1) UNRELEASED; urgency=low
   * Semi-auto-update debian/control to update build-dependencies:
     DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
- -- Jonas Smedegaard <dr@jones.dk>  Fri, 07 Mar 2008 21:28:19 +0100
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 08 Mar 2008 00:13:58 +0100
 
 sugar-base (0.2~git20080130-0~0jones1) UNRELEASED; urgency=low
 
