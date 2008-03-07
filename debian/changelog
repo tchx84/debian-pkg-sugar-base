@@ -12,6 +12,7 @@ sugar-base (0.79.0-1) UNRELEASED; urgency=low
       + No longer ignore files without copyright.
   * Fix duplicate build-dependency cleanup in debian/rules
     (upstream-tarball.mk needs tightened cdbs dependency).
+  * Relibtoolize to avoid hardcoded rpath.
   * Semi-auto-update debian/control to update build-dependencies:
     DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
