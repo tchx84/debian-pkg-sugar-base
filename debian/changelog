@@ -1,6 +1,10 @@
 sugar-base (0.79.0-1) UNRELEASED; urgency=low
 
   * New Upstream Version
+  * Update CDBS tweaks:
+    + Add upstream-tarball.mk to implement get-orig-source target.
+      Pristine-tar Git branch is maintained too, but git-buildpackage
+      does not yet support recreating the bz2 tarball.
 
  -- Jonas Smedegaard <dr@jones.dk>  Fri, 07 Mar 2008 21:28:19 +0100
 
