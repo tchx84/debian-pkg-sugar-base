@@ -4,7 +4,12 @@ sugar-base (0.79.0-1) UNRELEASED; urgency=low
   * Update CDBS tweaks:
     + Add upstream-tarball.mk to implement get-orig-source target.
       Pristine-tar Git branch is maintained too, but git-buildpackage
-      does not yet support recreating the bz2 tarball.
+      does not yet support recreating the bz2 tarball
+    + Update copyright-check.mk to parse licensecheck using perl:
+      + No longer randomly drops newlines
+      + More compact hint file (and ordered more like wiki-proposed new
+        copyright syntax).
+      + No longer ignore files without copyright.
 
  -- Jonas Smedegaard <dr@jones.dk>  Fri, 07 Mar 2008 21:28:19 +0100
 
