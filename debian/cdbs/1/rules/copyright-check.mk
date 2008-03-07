@@ -55,7 +55,7 @@ debian/stamp-copyright-check:
 	'foreach $$file (@files) {'\
 	'	$$file->{license} =~ s/\s*\(with incorrect FSF address\)//;'\
 	'	$$file->{license} =~ s/\s+\(v([^)]+) or later\)/-$$1+/;'\
-	'	$$file->{copyright} =~ s/(?<=(\b\d{4}))(?{$$y=$$^N})\s*,\s*((??{$$y+1}))\b/ - $$2/g;'\
+	'	$$file->{copyright} =~ s/(?<=(\b\d{4}))(?{$$y=$$^N})\s*[,-]\s*((??{$$y+1}))\b/-$$2/g;'\
 	'	$$file->{copyright} =~ s/(?<=\b\d{4})\s*-\s*\d{4}(?=\s*-\s*(\d{4})\b)//g;'\
 	'	$$pattern = "$$file->{license} [$$file->{copyright}]";'\
 	'	push @{ $$patternfiles{"$$pattern"} }, $$file->{name};'\
