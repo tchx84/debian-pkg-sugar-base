@@ -1,5 +1,6 @@
 sugar-base (0.79.0-1) unstable; urgency=low
 
+  * First official release. Closes: bug#444021.
   * New Upstream Version
   * Update CDBS tweaks:
     + Add upstream-tarball.mk to implement get-orig-source target.
