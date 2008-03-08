@@ -7,6 +7,7 @@ sugar-base (0.79.0-2) unstable; urgency=low
   * Add upstream source (in addition to Git source) to debian/copyright.
   * Fix typo and mention XO in long description.
   * Fix Git commands in README.packaging: Cannot push all+tags in 1 go.
+  * Bump copyright years for debian/* files.
 
  -- Jonas Smedegaard <dr@jones.dk>  Sat, 08 Mar 2008 01:09:31 +0100
 
