@@ -5,6 +5,7 @@ sugar-base (0.79.0-2) unstable; urgency=low
       README.cdbs-tweaks
   * Add section on packaging from upstream tarball to README.packaging.
   * Add upstream source (in addition to Git source) to debian/copyright.
+  * Fix typo and mention XO in long description.
 
  -- Jonas Smedegaard <dr@jones.dk>  Sat, 08 Mar 2008 01:09:31 +0100
 
