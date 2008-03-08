@@ -14,6 +14,14 @@ tarballs and syncing directly with upstream development, both using
 git-buildpackage (with its default branch names).
 
 
+Package sugar-base as example
+-----------------------------
+
+The rest of this document uses sugar-base as sample package, and some
+old actual version numbers from that package - replace with your actual
+package as needed...
+
+
 Getting packaging source from Git repository
 --------------------------------------------
 
