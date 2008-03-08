@@ -1,5 +1,7 @@
 sugar-base (0.79.0-2) UNRELEASED; urgency=low
 
+  * Sync with upstream Git. Highlights:
+    + 56da6b0 Use the right gettext domain.
   * Update CDBS tweaks:
     + Strip no longer relevant notes on cdbs-autoupdate.mk from
       README.cdbs-tweaks
