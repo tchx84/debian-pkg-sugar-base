@@ -1,3 +1,12 @@
+sugar-base (0.79.0-2) unstable; urgency=low
+
+  * Update CDBS tweaks:
+    + Strip no longer relevant notes on cdbs-autoupdate.mk from
+      README.cdbs-tweaks
+  * Add section on packaging from upstream tarball to README.packaging.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 08 Mar 2008 01:09:31 +0100
+
 sugar-base (0.79.0-1) unstable; urgency=low
 
   * First official release. Closes: bug#444021.
