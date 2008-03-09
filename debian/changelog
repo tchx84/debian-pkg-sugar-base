@@ -12,6 +12,7 @@ sugar-base (0.79.0-2) UNRELEASED; urgency=low
   * Bump copyright years for debian/* files.
   * Add watch file.
   * Recommend sugar.
+  * Suggest ipython (for better debugging in logger).
 
  -- Jonas Smedegaard <dr@jones.dk>  Sat, 08 Mar 2008 01:09:31 +0100
 

@@ -13,6 +13,7 @@ Package: sugar-base
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}
 Recommends: sugar
+Suggests: ipython
 Provides: ${python:Provides}
 XB-Python-Version: ${python:Versions}
 Description: Sugar graphical shell - core functionality
