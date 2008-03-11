@@ -1,8 +1,9 @@
-sugar-base (0.79.0-2) UNRELEASED; urgency=low
+sugar-base (0.79.0-2) unstable; urgency=low
 
   * Sync with upstream Git. Highlights:
     + 56da6b0 Use the right gettext domain.
   * Update CDBS tweaks:
+    + Replace virtual automake1.10 build-dependency with automake
     + Strip no longer relevant notes on cdbs-autoupdate.mk from
       README.cdbs-tweaks
   * Add section on packaging from upstream tarball to README.packaging.
@@ -13,8 +14,10 @@ sugar-base (0.79.0-2) UNRELEASED; urgency=low
   * Add watch file.
   * Recommend sugar.
   * Suggest ipython (for better debugging in logger).
+  * Semi-auto-update debian/control to update build-dependencies:
+    DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
- -- Jonas Smedegaard <dr@jones.dk>  Sat, 08 Mar 2008 01:09:31 +0100
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 11 Mar 2008 01:20:56 +0100
 
 sugar-base (0.79.0-1) unstable; urgency=low
 
