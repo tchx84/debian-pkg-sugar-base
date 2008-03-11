@@ -4,15 +4,16 @@ GENERATED FILE [1994-2002]: Makefile.in, src/Makefile.in, src/sugar/Makefile.in
 LGPL-2+ [200 Matthias Clasen <mclasen@redhat.com> / 2004 Red Hat, Inc]: src/sugar/xdgmimealias.h, src/sugar/xdgmimeparent.h
 LGPL-2+ [2004 Matthias Clasen <mclasen@redhat.com> / 2004 Red Hat, Inc]: src/sugar/xdgmimealias.c, src/sugar/xdgmimeparent.c
 LGPL-2+ [2005 Matthias Clasen <mclasen@redhat.com>]: src/sugar/xdgmimecache.c, src/sugar/xdgmimecache.h
-LGPL-2+ [2007, One Laptop Per Child / 2006-2007, Red Hat, Inc]: src/sugar/__init__.py, src/sugar/mime.py
 GENERATED FILE [1992-1996, 1998-2001]: configure
 GPL GENERATED FILE [1996-1997, 1999-2000, 2002-2006]: missing
 GPL GENERATED FILE [1999-2000, 2003-2006 Free Software]: depcomp
 GPL GENERATED FILE [2000-2001, 2003-2005 Free Software Foundation, Inc]: py-compile
 GPL-2+ GENERATED FILE [1996-2001, 2003-2006]: ltmain.sh
 LGPL-2+ [2003-2004 Red Hat, Inc / 2003-2004 Jonathan Blandford <jrb@alum.mit.edu>]: src/sugar/xdgmime.c
+LGPL-2+ [2006-2007, Red Hat, Inc / 2007-2008, One Laptop Per Child]: src/sugar/__init__.py
 LGPL-2+ [2006-2007, Red Hat, Inc]: src/sugar/_sugarbaseextmodule.c
 LGPL-2+ [2007 Red Hat, Inc]: src/sugar/logger.py
+LGPL-2+ [2007, One Laptop Per Child / 2006-2007, Red Hat, Inc]: src/sugar/mime.py
 MIT/X11 (BSD like) [and license / notice and this permission notice shall be included in / 1994 X Consortium]: install-sh
 UNKNOWN [1996-2004]: aclocal.m4
 UNKNOWN [the / 1991, 1999 Free Software Foundation, Inc]: COPYING

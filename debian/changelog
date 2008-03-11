@@ -10,7 +10,9 @@ sugar-base (0.79.0-2) unstable; urgency=low
   * Add upstream source (in addition to Git source) to debian/copyright.
   * Fix typo and mention XO in long description.
   * Fix Git commands in README.packaging: Cannot push all+tags in 1 go.
-  * Bump copyright years for debian/* files.
+  * Update debian/copyright:
+    + Bump copyright years for src/sugar/__init__.py
+    + Bump copyright years for debian/* files
   * Add watch file.
   * Recommend sugar.
   * Suggest ipython (for better debugging in logger).
