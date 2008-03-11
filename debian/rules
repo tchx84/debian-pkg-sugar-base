@@ -11,11 +11,13 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include debian/cdbs/1/rules/copyright-check.mk
 include debian/cdbs/1/rules/buildinfo.mk
 
-DEB_UPSTREAM_URL = http://dev.laptop.org/pub/sugar/sources/sugar-base
+pkg = sugar-base
+
+DEB_UPSTREAM_URL = http://dev.laptop.org/pub/sugar/sources/$(pkg)
 DEB_UPSTREAM_TARBALL_EXTENSION = tar.bz2
 DEB_UPSTREAM_TARBALL_MD5 = d5cad965ab884373ab19649175c7fd3d
 
-binary-install/sugar-base::
+binary-install/$(pkg)::
 	dh_pycentral
 
 # Needed by upstream build process
