@@ -38,17 +38,13 @@ include debian/cdbs/1/class/autotools.mk
 DEB_CONFIGURE_SCRIPT_ENV += PYTHON=/usr/bin/python$(cdbs_make_curflavor)
 DEB_CONFIGURE_EXTRA_FLAGS += --disable-maintainer-mode
 
-# This class can optionally use debhelper's commands.  Just
-# be sure you include debhelper.mk before including this file.
-ifdef _cdbs_rules_debhelper
-
+# This class can optionally use debhelper's commands.
+# (if not, this build target should simply be ignored)
 $(patsubst %,binary-install/%,$(DEB_PACKAGES)) :: binary-install/%:
 ifeq (pysupport, $(DEB_PYTHON_SYSTEM))
 	dh_pysupport -p$(cdbs_curpkg) $(DEB_PYTHON_PRIVATE_MODULES_DIRS) $(DEB_PYTHON_PRIVATE_MODULES_DIRS_$(cdbs_curpkg))
 else
 	dh_pycentral -p$(cdbs_curpkg)
-endif
-	dh_python -p$(cdbs_curpkg) $(DEB_DH_PYTHON_ARGS)
 endif
 
 clean::

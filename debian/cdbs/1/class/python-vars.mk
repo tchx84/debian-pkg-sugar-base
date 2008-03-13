@@ -95,12 +95,6 @@ endif # build versions empty
 
 
 # Declare Build-Deps for packages using this file
-# This class can optionally utilize debhelper's "dh_python" command.  Just
-# be sure you include debhelper.mk before including this file.
-CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), cdbs (>= 0.4.43)
-ifdef _cdbs_rules_debhelper
-CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), debhelper (>= 5.0.37.2)
-endif
 ifeq (,$(DEB_PYTHON_ARCH_PACKAGES))
   ifneq (, $(cdbs_python_compile_version))
     CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python$(cdbs_python_compile_version)-dev, python (>= 2.3.5-11)
@@ -111,7 +105,7 @@ else
 CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-all-dev (>= 2.3.5-11)
 endif
 ifeq (pysupport, $(DEB_PYTHON_SYSTEM))
-CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-support (>= 0.3.2)
+CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-support (>= 0.6)
 else
 CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-central (>= 0.6)
 endif
