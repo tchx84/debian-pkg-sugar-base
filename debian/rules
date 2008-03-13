@@ -11,7 +11,7 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include debian/cdbs/1/rules/copyright-check.mk
 include debian/cdbs/1/rules/buildinfo.mk
 
-pkg = sugar-base
+pkg = python-sugar
 
 DEB_UPSTREAM_URL = http://dev.laptop.org/pub/sugar/sources/$(DEB_UPSTREAM_PACKAGE)
 DEB_UPSTREAM_TARBALL_EXTENSION = tar.bz2
