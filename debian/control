@@ -3,14 +3,14 @@ Section: x11
 Priority: optional
 Maintainer: Debian OLPC <pkg-olpc-devel@lists.alioth.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>
-Build-Depends: cdbs (>= 0.4.39), autotools-dev, libtool, automake, debhelper (>= 5), devscripts (>= 2.10.7), dh-buildinfo, python-gtk2-dev, python-gobject-dev (>= 2), python-central
+Build-Depends: autotools-dev, cdbs (>= 0.4.43), debhelper (>= 5.0.37.2), python-all-dev (>= 2.3.5-11), python-central (>= 0.6), libtool, automake, devscripts (>= 2.10.7), dh-buildinfo, python-gtk2-dev, python-gobject-dev (>= 2)
 Standards-Version: 3.7.3
 Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
 Homepage: http://wiki.laptop.org/go/Sugar
 XS-Python-Version: all
 
-Package: sugar-base
+Package: python-sugar
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}
 Recommends: sugar
