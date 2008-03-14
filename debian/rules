@@ -28,10 +28,10 @@ DEB_UPSTREAM_TARBALL_MD5 = d5cad965ab884373ab19649175c7fd3d
 
 # Cleanup a few empty subdirs missed by py-compile.mk cleanup routines
 clean::
-	-for flavor in $(cdbs_python_curpkg_build_versions); do \
+	-[ ! -d $(DEB_BUILDDIR) ] || for flavor in $(cdbs_python_curpkg_build_versions); do \
 		(cd $(DEB_BUILDDIR) && rmdir -p $$flavor/src/sugar); \
 	done
-	-rmdir $(DEB_BUILDDIR)
+	-[ ! -d $(DEB_BUILDDIR) ] || rmdir $(DEB_BUILDDIR)
 
 # Regenerate automade files when explicitly requested with
 #   DEB_BUILD_OPTIONS=init,git fakeroot debian/rules autogen
