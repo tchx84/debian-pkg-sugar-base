@@ -35,8 +35,7 @@ DEB_MAKE_FLAVORS = $(cdbs_python_curpkg_build_versions)
 #include $(_cdbs_class_path)/autotools.mk$(_cdbs_makefile_suffix)
 include debian/cdbs/1/class/autotools.mk
 
-DEB_CONFIGURE_SCRIPT_ENV += PYTHON=/usr/bin/python$(cdbs_make_curflavor)
-DEB_CONFIGURE_EXTRA_FLAGS += --disable-maintainer-mode
+DEB_CONFIGURE_SCRIPT_ENV += PYTHON="python$(cdbs_make_curflavor)"
 
 # This class can optionally use debhelper's commands.
 # (if not, this build target should simply be ignored)

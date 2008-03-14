@@ -114,6 +114,4 @@ endif
 # FIXME: Understand the above sentence and rephrase it
 cdbs_python_curpkg_build_versions = $(cdbs_python_build_versions)
 
-DEB_DH_PYTHON_ARGS = $(DEB_DH_PYTHON_ARGS_ALL) $(DEB_DH_PYTHON_ARGS_$(cdbs_curpkg))
-
 endif
