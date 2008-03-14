@@ -13,6 +13,9 @@ sugar-base (0.79.0-3) unstable; urgency=low
       makefile-vars.mk providing multi-flavor build support needed by
       py-compile.mk.
     + README.cdbs-tweaks updated to mention the above.
+  * Use quilt to handle patches.
+  * Regenerate patched automade files only explicitly (not at every
+    build), and apply as patch 2991.
   * Semi-auto-update debian/control to update build-dependencies:
       DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
