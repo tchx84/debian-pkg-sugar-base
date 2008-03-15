@@ -3,6 +3,13 @@ sugar-base (0.79.0-4) UNRELEASED; urgency=low
   * Drop no longer needed automake1.10 -> automake build-dependency fix
     in debian/rules.
   * Only clean builddir if it exists (just cosmetic, to avoid noise).
+  * Update CDBS tweaks:
+    + Add local python-autotools.mk (and drop py-compile.mk).
+    + Update python-vars.mk and makefile.mk for improved DEB_*PACKAGES
+      and build-dependency resolving.
+    + Cosmetic updates to README.cdbs-tweaks.
+  * Semi-auto-update debian/control to update build-dependencies:
+      DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
  -- Jonas Smedegaard <dr@jones.dk>  Fri, 14 Mar 2008 11:17:57 +0100
 

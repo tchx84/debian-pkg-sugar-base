@@ -12,12 +12,13 @@ DEB_AUTO_UPDATE_AUTOCONF = 1.10
 DEB_AUTO_UPDATE_LIBTOOL = pre
 endif
 
+DEB_BUILDDIR = build
 DEB_PYTHON_SYSTEM = pycentral
 include debian/cdbs/1/rules/upstream-tarball.mk
 include debian/cdbs/1/rules/copyright-check.mk
 include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
-include debian/cdbs/1/class/py-compile.mk
+include debian/cdbs/1/class/python-autotools.mk
 include debian/cdbs/1/rules/buildinfo.mk
 
 pkg = python-sugar
