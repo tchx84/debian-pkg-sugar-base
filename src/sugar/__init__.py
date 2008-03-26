@@ -1,5 +1,5 @@
 # Copyright (C) 2006-2007, Red Hat, Inc.
-# Copyright (C) 2007-2008, One Laptop Per Child
+# Copyright (C) 2007, One Laptop Per Child
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -15,16 +15,4 @@
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
-
-import os
-import gettext
-
-if os.environ.has_key('SUGAR_PREFIX'):
-    prefix = os.environ['SUGAR_PREFIX']
-else:
-    prefix = '/usr'
-
-locale_path = os.path.join(prefix, 'share', 'locale')
-
-gettext.bindtextdomain('sugar', locale_path)
 

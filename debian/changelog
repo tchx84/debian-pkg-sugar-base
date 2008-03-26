@@ -1,3 +1,12 @@
+sugar-base (0.79.0-5) unstable; urgency=low
+
+  * Sync with upstream Git as of today.
+    Main changes:
+    + Use the right gettext domain
+  * Revert earlier non-isolated patch applying the gettext fix.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 26 Mar 2008 10:03:04 +0100
+
 sugar-base (0.79.0-4) unstable; urgency=low
 
   * Drop no longer needed automake1.10 -> automake build-dependency fix
