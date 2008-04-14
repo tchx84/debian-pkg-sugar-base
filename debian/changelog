@@ -1,3 +1,10 @@
+sugar-base (0.79.0-6) unstable; urgency=low
+
+  * Have python-gobject-dev build-dependency fallback to python-gtk2-dev
+    older than 2.9 (it provided gobject back then).
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 15 Apr 2008 00:09:06 +0200
+
 sugar-base (0.79.0-5) unstable; urgency=low
 
   * Sync with upstream Git as of today.
