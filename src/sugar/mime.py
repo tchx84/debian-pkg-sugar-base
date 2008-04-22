@@ -170,7 +170,8 @@ def choose_most_significant(mime_types):
     for mime_category in ['image/', 'application/']:
         for mime_type in mime_types:
 
-            if mime_type.startswith(mime_category) and mime_type not in _black_list:
+            if mime_type.startswith(mime_category) and \
+               mime_type not in _black_list:
                 # skip mozilla private types (second component starts with '_'
                 # or ends with '-priv') 
                 if mime_type.split('/')[1].startswith('_') or \
@@ -212,10 +213,10 @@ def _file_looks_like_text(file_name):
 
     for encoding in ('ascii', 'latin_1', 'utf_8', 'utf_16'):
         try:
-            string = unicode(sample, encoding)
+            unicode(sample, encoding)
             return True
-        except Exception, e:
-            pass
+        except Exception:
+            return False
 
     return False
 
