@@ -1,7 +1,5 @@
-sugar-base (0.79.0-6) unstable; urgency=low
+sugar-base (0.79.0-7) unstable; urgency=low
 
-  * Have python-gobject-dev build-dependency fallback to python-gtk2-dev
-    older than 2.9 (it provided gobject back then).
   * Bump debhelper compatibility level to 6.
   * Update local cdbs snippets:
     + Update copyright-check cdbs snippet to store newline-delimited
@@ -12,6 +10,13 @@ sugar-base (0.79.0-6) unstable; urgency=low
       python-autotools.mk.
   * Semi-auto-update debian/control to update build-dependencies:
       DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 22 Apr 2008 21:35:45 +0200
+
+sugar-base (0.79.0-6) unstable; urgency=low
+
+  * Have python-gobject-dev build-dependency fallback to python-gtk2-dev
+    older than 2.9 (it provided gobject back then).
 
  -- Jonas Smedegaard <dr@jones.dk>  Tue, 15 Apr 2008 00:09:06 +0200
 
