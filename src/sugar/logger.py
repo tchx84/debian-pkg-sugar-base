@@ -18,7 +18,6 @@
 import sys
 import os
 import logging
-import time
 
 # Let's keep this self contained so that it can be easily
 # pasted in external sugar service like the datastore.
@@ -37,7 +36,7 @@ def set_level(level):
     if levels.has_key(level):
         logging.getLogger('').setLevel(levels[level])
 
-def _except_hook(type, value, traceback):
+def _except_hook(exctype, value, traceback):
     # Attempt to provide verbose IPython tracebacks.
     # Importing IPython is slow, so we import it lazily.
     try:
@@ -46,7 +45,7 @@ def _except_hook(type, value, traceback):
     except ImportError:
         sys.excepthook = sys.__excepthook__
 
-    sys.excepthook(type, value, traceback)
+    sys.excepthook(exctype, value, traceback)
         
 def start(log_filename=None):
     logging.basicConfig(level=logging.WARNING,
