@@ -1,5 +1,13 @@
-sugar-base (0.79.0-7) unstable; urgency=low
+sugar-base (0.79.1-1) unstable; urgency=low
 
+  * New upstream release.
+    Highlights:
+    + Use the right gettext domain
+    + Coding style improvements thanks to pylint
+  * Use chrpath to fix hardcoded rpath.
+  * Drop all patches:
+    + patch 0001 included in new upstream release.
+    + patch 2991 unneeded when using chrpath.
   * Bump debhelper compatibility level to 6.
   * Update local cdbs snippets:
     + Update copyright-check cdbs snippet to store newline-delimited
@@ -8,6 +16,8 @@ sugar-base (0.79.0-7) unstable; urgency=low
       update-tarball.mk.
     + Relax python-central and python-support build-dependencies in
       python-autotools.mk.
+  * Stop using patchsystem-quilt.mk (no patches applied)
+  * Stop Regenerate automade files (irrelevant when using chrpath)
   * Semi-auto-update debian/control to update build-dependencies:
       DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
