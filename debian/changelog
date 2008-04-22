@@ -18,6 +18,7 @@ sugar-base (0.79.1-1) unstable; urgency=low
       python-autotools.mk.
   * Stop using patchsystem-quilt.mk (no patches applied)
   * Stop Regenerate automade files (irrelevant when using chrpath)
+  * Mention exact upstream Git source in debian/copyright.
   * Semi-auto-update debian/control to update build-dependencies:
       DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
 
