@@ -1,3 +1,10 @@
+sugar-base (0.79.1-2) UNRELEASED; urgency=low
+
+  * Update cdbs tweaks:
+    + Strip any non-printable characters in copyright-check.mk.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 23 Apr 2008 11:16:37 +0200
+
 sugar-base (0.79.1-1) unstable; urgency=low
 
   * New upstream release.
