@@ -48,6 +48,11 @@ def _except_hook(exctype, value, traceback):
     sys.excepthook(exctype, value, traceback)
         
 def start(log_filename=None):
+    # remove existing handlers, or logging.basicConfig() won't have no effect.
+    root_logger = logging.getLogger('')
+    for handler in root_logger.handlers:
+        root_logger.removeHandler(handler)
+    
     logging.basicConfig(level=logging.WARNING,
             format="%(created)f %(levelname)s %(name)s: %(message)s")
 
