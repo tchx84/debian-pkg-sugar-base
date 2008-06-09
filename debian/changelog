@@ -1,9 +1,10 @@
-sugar-base (0.79.1-2) UNRELEASED; urgency=low
+sugar-base (0.81.1-1) unstable; urgency=low
 
+  * New upstream release.
   * Update cdbs tweaks:
     + Strip any non-printable characters in copyright-check.mk.
 
- -- Jonas Smedegaard <dr@jones.dk>  Wed, 23 Apr 2008 11:16:37 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 09 Jun 2008 11:42:42 +0200
 
 sugar-base (0.79.1-1) unstable; urgency=low
 
