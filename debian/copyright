@@ -9,101 +9,66 @@ Upstream author: Red Hat, Inc.
 Files: debian/*
 Copyright: © 2007-2008 Jonas Smedegaard <dr@jones.dk>
 License: GPL-2+
- The Debian packaging information is under the GPL, version 2 or later.
 
 Files: *
 Copyright: © 2006-2007, Red Hat, Inc.
 License: LGPL-2+
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
 
 Files: maint-helper.py
 Copyright: © 2007, Red Hat, Inc.
 License: GPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
 
 Files: src/sugar/logger.py
 Copyright: © 2007, Red Hat, Inc.
 License: LGPL-2+
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/__init__.py
 Copyright: © 2006-2007, Red Hat, Inc.
            © 2007-2008, One Laptop Per Child
 License: LGPL-2+
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/mime.py
 Copyright: © 2006-2007, Red Hat, Inc.
            © 2007, One Laptop Per Child
 License: LGPL-2+
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/xdgmime.h, src/sugar/xdgmimeglob.[ch],
        src/sugar/xdgmimeint.[ch], src/sugar/xdgmimemagic.[ch]
 Copyright: © 2003  Red Hat, Inc.
            © 2003  Jonathan Blandford <jrb@alum.mit.edu>
 License: LGPL-2+ | other
-  Licensed under the Academic Free License version 2.0
-  Or under the following terms:
- .
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/xdgmime.c
 Copyright: © 2003,2004  Red Hat, Inc.
            © 2003,2004  Jonathan Blandford <jrb@alum.mit.edu>
 License: LGPL-2+ | other
-  Licensed under the Academic Free License version 2.0
-  Or under the following terms:
- .
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/xdgmimecache.[ch]
 Copyright: © 2005  Matthias Clasen <mclasen@redhat.com>
 License: LGPL-2+ | other
-  Licensed under the Academic Free License version 2.0
-  Or under the following terms:
- .
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/xdgmimealias.c, src/sugar/xdgmimeparent.c
 Copyright: © 2004  Red Hat, Inc.
            © 2004  Matthias Clasen <mclasen@redhat.com>
 License: LGPL-2+ | other
-  Licensed under the Academic Free License version 2.0
-  Or under the following terms:
- .
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
 
 Files: src/sugar/xdgmimealias.h, src/sugar/xdgmimeparent.h
 Copyright: © 2004  Red Hat, Inc.
            © 200  Matthias Clasen <mclasen@redhat.com>
+License: LGPL-2+ | other
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+
 License: LGPL-2+ | other
   Licensed under the Academic Free License version 2.0
   Or under the following terms:

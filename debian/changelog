@@ -3,6 +3,8 @@ sugar-base (0.81.1-1) unstable; urgency=low
   * New upstream release.
   * Update cdbs tweaks:
     + Strip any non-printable characters in copyright-check.mk.
+  * Reorganize debian/copyright: only mention each license once.
+  * Update copyright-hints (new copyright years for automade files).
 
  -- Jonas Smedegaard <dr@jones.dk>  Mon, 09 Jun 2008 11:42:42 +0200
 
