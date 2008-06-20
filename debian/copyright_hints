@@ -32,6 +32,6 @@ LGPL-2+ [2006-2007, Red Hat, Inc / 2007-2008, One Laptop Per Child]: src/sugar/_
 LGPL-2+ [2006-2007, Red Hat, Inc]: src/sugar/_sugarbaseextmodule.c
 LGPL-2+ [2007 Red Hat, Inc]: src/sugar/logger.py
 LGPL-2+ [2007, One Laptop Per Child / 2006-2007, Red Hat, Inc]: src/sugar/mime.py
-MIT/X11 (BSD like) [and license / notice and this permission notice shall be included in / 1994 X Consortium]: install-sh
+MIT/X11 (BSD like) [1994 X Consortium]: install-sh
 UNKNOWN [1996-2004]: aclocal.m4
 UNKNOWN [the / 1991, 1999 Free Software Foundation, Inc]: COPYING
