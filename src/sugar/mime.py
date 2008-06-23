@@ -18,9 +18,12 @@
 
 import os
 import logging
-from gettext import gettext as _
+import gettext
 
 from sugar import _sugarbaseext
+
+
+_ = lambda msg: gettext.dgettext('sugar-base', msg)
 
 _extensions = {}
 _globs_timestamps = []
