@@ -26,5 +26,5 @@ else:
 
 locale_path = os.path.join(prefix, 'share', 'locale')
 
-gettext.bindtextdomain('sugar', locale_path)
+gettext.bindtextdomain('sugar-base', locale_path)
 
