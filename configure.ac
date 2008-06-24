@@ -30,4 +30,5 @@ AC_OUTPUT([
 Makefile
 src/Makefile
 src/sugar/Makefile
+po/Makefile.in
 ])
