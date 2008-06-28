@@ -1,11 +1,11 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Markus Schlager <m.slg@gmx.de>, 2008.
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: sugar-base\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-06-24 00:21+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -18,20 +18,21 @@ msgstr ""
 
 #: ../src/sugar/mime.py:29
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: ../src/sugar/mime.py:37
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: ../src/sugar/mime.py:42
 msgid "Audio"
-msgstr ""
+msgstr "Audio"
 
 #: ../src/sugar/mime.py:47
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: ../src/sugar/mime.py:52
+#, fuzzy
 msgid "Link"
-msgstr ""
+msgstr "Link"
