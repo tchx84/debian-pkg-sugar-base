@@ -2,19 +2,18 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Markus Schlager <m.slg@gmx.de>, 2008.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: sugar-base\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-06-24 00:21+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-06-28 10:18-0400\n"
+"Last-Translator: Markus Schlager <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: ../src/sugar/mime.py:29
 msgid "Text"
@@ -33,6 +32,5 @@ msgid "Video"
 msgstr "Video"
 
 #: ../src/sugar/mime.py:52
-#, fuzzy
 msgid "Link"
 msgstr "Link"
