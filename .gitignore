@@ -1,3 +1,19 @@
+# Generic
+
+*~
+*.pyc
+*.lo
+*.la
+stamp-*
+
+# Absolute
+
+intltool-extract
+intltool-extract.in
+intltool-merge
+intltool-merge.in
+intltool-update
+intltool-update.in
 aclocal.m4
 autom4te.cache
 config.guess
@@ -11,11 +27,12 @@ libtool
 ltmain.sh
 missing
 py-compile
-*~
-*.pyc
-*.lo
-*.la
 Makefile
 Makefile.in
 .deps
 .libs
+compile
+m4/intltool.m4
+po/POTFILES
+po/Makefile.in.in
+
