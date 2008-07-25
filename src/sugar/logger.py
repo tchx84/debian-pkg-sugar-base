@@ -15,6 +15,7 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
+import errno
 import sys
 import os
 import logging
@@ -24,8 +25,9 @@ import logging
 
 def get_logs_dir():
     profile = os.environ.get('SUGAR_PROFILE', 'default')
-    logs_dir = os.path.join(os.path.expanduser('~'),
-                            '.sugar', profile, 'logs')
+    logs_dir = os.environ.get('SUGAR_LOGS_DIR',
+                              os.path.join(os.path.expanduser('~'),
+                                           '.sugar', profile, 'logs'))
     return logs_dir
 
 def set_level(level):
@@ -53,18 +55,51 @@ def start(log_filename=None):
     for handler in root_logger.handlers:
         root_logger.removeHandler(handler)
     
+    class SafeLogWrapper(object):
+        """Small file-like wrapper to gracefully handle ENOSPC errors when
+        logging."""
+
+        def __init__(self, stream):
+            self._stream = stream
+
+        def write(self, s):
+            try:
+                self._stream.write(s)
+            except IOError, e:
+                # gracefully deal w/ disk full
+                if e.errno != errno.ENOSPC:
+                    raise e
+
+        def flush(self):
+            try:
+                self._stream.flush()
+            except IOError, e:
+                # gracefully deal w/ disk full
+                if e.errno != errno.ENOSPC:
+                    raise e
+
     logging.basicConfig(level=logging.WARNING,
-            format="%(created)f %(levelname)s %(name)s: %(message)s")
+            format="%(created)f %(levelname)s %(name)s: %(message)s",
+                        stream=SafeLogWrapper(sys.stderr))
 
     if os.environ.has_key('SUGAR_LOGGER_LEVEL'):
         set_level(os.environ['SUGAR_LOGGER_LEVEL'])
 
     if log_filename and not sys.stdin.isatty():
-        log_path = os.path.join(get_logs_dir(), log_filename + '.log')
-        log_file = open(log_path, 'w')
+        try:
+            log_path = os.path.join(get_logs_dir(), log_filename + '.log')
 
-        os.dup2(log_file.fileno(), sys.stdout.fileno())
-        os.dup2(log_file.fileno(), sys.stderr.fileno())
+            log_fd = os.open(log_path, os.O_WRONLY | os.O_CREAT)
+            os.dup2(log_fd, sys.stdout.fileno())
+            os.dup2(log_fd, sys.stderr.fileno())
+            os.close(log_fd)
+
+            sys.stdout = SafeLogWrapper(sys.stdout)
+            sys.stderr = SafeLogWrapper(sys.stderr)
+        except OSError, e:
+            # if we're out of space, just continue
+            if e.errno != errno.ENOSPC:
+                raise e
 
     sys.excepthook = _except_hook
 
