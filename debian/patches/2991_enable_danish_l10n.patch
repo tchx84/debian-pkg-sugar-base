@@ -1,0 +1,13 @@
+diff --git a/configure b/configure
+index 4c66748..798f974 100755
+--- a/configure
++++ b/configure
+@@ -19852,7 +19852,7 @@ fi
+ 
+ # Setup GETTEXT
+ #
+-ALL_LINGUAS="af am ar ay bg bn bn_IN ca de dz el en es fa fa_AF ff fr gu ha hi ht ig is it ja km ko mk ml mn mr mvo nb ne nl pa pap pis pl ps pt pt_BR qu ro ru rw sd si sl te th tpi tr ur vi yo zh_CN zh_TW"
++ALL_LINGUAS="af am ar ay bg bn bn_IN ca da de dz el en es fa fa_AF ff fr gu ha hi ht ig is it ja km ko mk ml mn mr mvo nb ne nl pa pap pis pl ps pt pt_BR qu ro ru rw sd si sl te th tpi tr ur vi yo zh_CN zh_TW"
+ 
+ GETTEXT_PACKAGE=sugar-base
+ 

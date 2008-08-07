@@ -1,0 +1,44 @@
+diff --git a/po/da.po b/po/da.po
+new file mode 100644
+index 0000000..8c815ea
+--- /dev/null
++++ b/po/da.po
+@@ -0,0 +1,38 @@
++# Danish translations for sugar-base package
++# Danske oversættelser for pakke sugar-base.
++# Copyright (C) 2008 Jonas Smedegaard <dr@jones.dk>
++# This file is distributed under the same license as the sugar-base package.
++# Jonas Smedegaard <dr@jones.dk>, 2008.
++#
++msgid ""
++msgstr ""
++"Project-Id-Version: sugar-base 0.82.1\n"
++"Report-Msgid-Bugs-To: None\n"
++"POT-Creation-Date: 2008-08-07 20:41+0200\n"
++"PO-Revision-Date: 2008-08-07 20:42+0200\n"
++"Last-Translator: Jonas Smedegaard <dr@jones.dk>\n"
++"Language-Team: None\n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=UTF-8\n"
++"Content-Transfer-Encoding: 8bit\n"
++"Plural-Forms: nplurals=2; plural=(n != 1);\n"
++
++#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:32
++msgid "Text"
++msgstr "Tekst"
++
++#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:40
++msgid "Image"
++msgstr "Billede"
++
++#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:45
++msgid "Audio"
++msgstr "Lyd"
++
++#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:50
++msgid "Video"
++msgstr "Video"
++
++#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:55
++msgid "Link"
++msgstr "Henvisning"

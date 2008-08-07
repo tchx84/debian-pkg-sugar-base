@@ -1,6 +1,8 @@
 sugar-base (0.82.1-1) unstable; urgency=low
 
   * New upstream release.
+  * Add patch 1001 adding danish l10n.
+  * Add patch 2991 to enable danish l10n in configure.
   * Update local cdbs snippets:
     + Restructure output of copyright-check.mk to match new proposed
       copyright-format at
@@ -9,6 +11,7 @@ sugar-base (0.82.1-1) unstable; urgency=low
     + Add new local package-relations.mk to merge duplicate
       build-dependencies and more.  Drop cleanup in debian/rules.
     + Update README.cdbs-tweaks.
+  * Add DEB_MAINTAINER_MODE in debian/rules (thanks to Romain Beauxis).
 
  -- Jonas Smedegaard <dr@jones.dk>  Thu, 07 Aug 2008 20:08:04 +0200
 
