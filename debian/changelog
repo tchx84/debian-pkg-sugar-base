@@ -3,6 +3,7 @@ sugar-base (0.82.1-1) unstable; urgency=low
   * New upstream release.
   * Add patch 1001 adding danish l10n.
   * Add patch 2991 to enable danish l10n in configure.
+  * Build-depend on intltool.
   * Update local cdbs snippets:
     + Restructure output of copyright-check.mk to match new proposed
       copyright-format at
