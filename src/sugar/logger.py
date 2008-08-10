@@ -38,6 +38,7 @@ def set_level(level):
     if levels.has_key(level):
         logging.getLogger('').setLevel(levels[level])
 
+# pylint: disable-msg=E1101,F0401
 def _except_hook(exctype, value, traceback):
     # Attempt to provide verbose IPython tracebacks.
     # Importing IPython is slow, so we import it lazily.
