@@ -11,6 +11,7 @@ pkgpyexecdir = $(pythondir)/sugar
 pkgpyexec_LTLIBRARIES = _sugarbaseext.la
 
 _sugarbaseext_la_CFLAGS = 		\
+	$(WARN_CFLAGS)			\
 	$(EXTENSION_CFLAGS)		\
 	$(PYTHON_INCLUDES)
 

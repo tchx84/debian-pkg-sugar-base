@@ -10,6 +10,8 @@ AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 AC_DISABLE_STATIC
 AC_PROG_LIBTOOL
 
+GNOME_COMPILE_WARNINGS(maximum)
+
 AM_PATH_PYTHON
 AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers)])
 
