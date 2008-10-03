@@ -1,3 +1,5 @@
+SUBDIRS = dispatch
+
 INCLUDES = -DXDG_PREFIX=sugar_mime
 
 sugardir = $(pythondir)/sugar
