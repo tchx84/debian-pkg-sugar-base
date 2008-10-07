@@ -12,7 +12,7 @@ XS-Python-Version: all
 
 Package: python-sugar
 Architecture: any
-Depends: ${shlibs:Depends}, ${python:Depends}
+Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
 Recommends: sugar
 Suggests: ipython
 Provides: ${python:Provides}
