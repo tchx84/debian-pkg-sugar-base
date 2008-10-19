@@ -1,9 +1,9 @@
-sugar-base (0.82.2-1) UNRELEASED; urgency=low
+sugar-base (0.82.2-1) unstable; urgency=low
 
   * New upstream release.
   * Depend on ${misc:Depends}.
 
- -- Jonas Smedegaard <dr@jones.dk>  Sun, 19 Oct 2008 13:43:59 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 19 Oct 2008 13:59:30 +0200
 
 sugar-base (0.82.1-1) unstable; urgency=low
 
