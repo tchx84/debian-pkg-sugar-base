@@ -16,6 +16,11 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
+"""MIME helpers based on freedesktop specification.
+
+STABLE.
+"""
+
 import os
 import logging
 import gettext
