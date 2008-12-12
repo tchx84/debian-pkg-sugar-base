@@ -107,8 +107,8 @@ def get_mime_description(mime_type):
     if generic_type:
         return generic_type['name']
 
-    import gnomevfs
-    return gnomevfs.mime_get_description(mime_type)
+    import gio
+    return gio.content_type_get_description(mime_type)
 
 def get_mime_parents(mime_type):
     return _sugarbaseext.list_mime_parents(mime_type)
