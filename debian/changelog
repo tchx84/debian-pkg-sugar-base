@@ -1,3 +1,24 @@
+sugar-base (0.82.2-4) unstable; urgency=low
+
+  * Add patch 0000 to sync with upstream stable head:
+    + Update aymara (ay) and turkish (tr) translations
+  * Limit watch file to track stable 0.82 branch.
+  * Update CDBS snippets:
+    + Fix use underscore (not dash) in internal variable
+    + Ignore only debian changelog and copyright-related files by
+      default in copyright-check.mk
+    + Correct and update copyright hints of the snippets themselves
+  * Update debian/copyright and copyright hints:
+    + Add info on CDBS snippets (new owners, no new licenses)
+    + Bump to version 420 of new format (no structural changes)
+    + Add sugar-devel mailinglist as upstream maintainer.
+    + Update upstream source URLs.
+    + Refer to LGPL as "GNU Library..." (not Lesser).
+    + Refer to "Debian GNU systems" (not only GNU/Linux).
+  * Update Homebase URL.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 21 Dec 2008 00:06:38 +0100
+
 sugar-base (0.82.2-3) unstable; urgency=low
 
   * Update CDBS snippet copyright-check.mk: Compact simple licenses
