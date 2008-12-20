@@ -1,84 +1,212 @@
-This is sugar-base packaged for Debian GNU systems.
-
-Upstream source: http://dev.laptop.org/pub/sugar/sources/sugar-base/
-
-Upstream Git source: git://dev.laptop.org/git/sugar-base
-
-Upstream author: Red Hat, Inc.
-
-Files: debian/*
-Copyright: © 2007-2008 Jonas Smedegaard <dr@jones.dk>
-License: GPL-2+
+Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=420
+Upstream-Name: sugar-base
+Upstream-Maintainer: sugar-devel@lists.sugarlabs.org
+	irc://irc.freenode.net/sugar
+Upstream-Source: http://download.sugarlabs.org/sources/sucrose/glucose/sugar-base/
+	git://git.sugarlabs.org/sugar-base/mainline
 
 Files: *
 Copyright: © 2006-2007, Red Hat, Inc.
 License: LGPL-2+
 
-Files: maint-helper.py
-Copyright: © 2007, Red Hat, Inc.
-License: GPL-2+
+Files: src/sugar/xdgmime*
+Copyright: 2003, Jonathan Blandford <jrb@alum.mit.edu>
+	2003, Red Hat, Inc
+License: other-Academic | LGPL-2+
 
-Files: src/sugar/logger.py
-Copyright: © 2007, Red Hat, Inc.
-License: LGPL-2+
+Files: src/sugar/xdgmimealias.[ch]
+	src/sugar/xdgmimeparent.[ch]
+Copyright: 2004, Matthias Clasen <mclasen@redhat.com>
+	2004, Red Hat, Inc
+License: other-Academic | LGPL-2+
+
+Files: Makefile.in
+Copyright: 1994-2002
+License: UNKNOWN (GENERATED FILE)
+
+Files: src/sugar/xdgmimecache.c
+	src/sugar/xdgmimecache.h
+Copyright: 2005, Matthias Clasen <mclasen@redhat.com>
+License: other-Academic | LGPL-2+
+
+Files: ./missing
+Copyright: 1996-1997, 1999-2000, 2002-2006, Free Software Foundation, Inc.
+	1996, Fran,cois Pinard <pinard@iro.umontreal.ca>
+License: GPL-2+ | other-Autoconf
+
+Files: ./depcomp
+Copyright: 1999-2000, 2003-2007, Free Software Foundation, Inc.
+License: GPL-2+ | other-Autoconf
+
+Files: ./py-compile
+Copyright: 2000-2001, 2003-2005, Free Software Foundation, Inc
+License: GPL-2+ | other-Autoconf
+
+Files: ./intltool-merge.in
+Copyright: 2000-2001, Eazel, Inc
+	2000, 2003, Free Software Foundation
+License: GPL-2+ | other-Autoconf
+
+Files: ./intltool-update.in
+Copyright: 2000-2003, Free Software Foundation
+License: GPL-2+ | other-Autoconf
+
+Files: config.guess
+	config.sub
+Copyright: 1992-2006, Free Software Foundation
+License: GPL-2+ | other-Autoconf
+
+Files: ./ltmain.sh
+Copyright: 1996-2001, 2003-2007, Free Software Foundation, Inc.
+License: GPL-2+ | other-Autoconf
+
+Files: ./intltool-extract.in
+Copyright: 2000-2001, 2003, Free Software Foundation
+License: GPL-2+ | other-Autoconf
+
+Files: m4/intltool.m4
+Copyright: 2001, Eazel, Inc
+License: GPL-2+ | other-Autoconf
+
+Files: src/sugar/xdgmime.c
+Copyright: 2003-2004, Red Hat, Inc
+	2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
+License: other-Academic | LGPL-2+
 
 Files: src/sugar/__init__.py
-Copyright: © 2006-2007, Red Hat, Inc.
-           © 2007-2008, One Laptop Per Child
+Copyright: 2006-2007, Red Hat, Inc
+	2007-2008, One Laptop Per Child
+License: LGPL-2+
+
+Files: src/sugar/_sugarbaseextmodule.c
+Copyright: 2006-2007, Red Hat, Inc
 License: LGPL-2+
 
 Files: src/sugar/mime.py
-Copyright: © 2006-2007, Red Hat, Inc.
-           © 2007, One Laptop Per Child
+Copyright: 2007, One Laptop Per Child
+	2006-2007, Red Hat, Inc
 License: LGPL-2+
 
-Files: src/sugar/xdgmime.h, src/sugar/xdgmimeglob.[ch],
-       src/sugar/xdgmimeint.[ch], src/sugar/xdgmimemagic.[ch]
-Copyright: © 2003  Red Hat, Inc.
-           © 2003  Jonathan Blandford <jrb@alum.mit.edu>
-License: LGPL-2+ | other
+Files: src/sugar/logger.py
+Copyright: 2007, Red Hat, Inc
+License: LGPL-2+
 
-Files: src/sugar/xdgmime.c
-Copyright: © 2003,2004  Red Hat, Inc.
-           © 2003,2004  Jonathan Blandford <jrb@alum.mit.edu>
-License: LGPL-2+ | other
+Files: ./install-sh
+Copyright: 1994, X Consortium
+License: other
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNEC-
+ TION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name of the X Consortium shall not
+ be used in advertising or otherwise to promote the sale, use or other deal-
+ ings in this Software without prior written authorization from the X Consor-
+ tium.
+ .
+ FSF changes to this file are in the public domain.
 
-Files: src/sugar/xdgmimecache.[ch]
-Copyright: © 2005  Matthias Clasen <mclasen@redhat.com>
-License: LGPL-2+ | other
+Files: ./configure
+Copyright: 1992-1996, 1998-2006, Free Software Foundation, Inc.
+License: GAP
 
-Files: src/sugar/xdgmimealias.c, src/sugar/xdgmimeparent.c
-Copyright: © 2004  Red Hat, Inc.
-           © 2004  Matthias Clasen <mclasen@redhat.com>
-License: LGPL-2+ | other
+Files: aclocal.m4
+Copyright: 1994-2008, Free Software Foundation, Inc.
+	1995-2002, Free Software Foundation, Inc
+	2001-2004, Red Hat, Inc
+	1996-2004, Free Software Foundation, Inc
+License: GPL-2+ | other-Autoconf
+ Some parts of the file is not copyright protected, some parts are
+ licensed as Public Domain (PD), but one part has the more restrictive
+ licensing terms of GPLv2+ or the license of a surrounding
+ autoconf-using project.
 
-Files: src/sugar/xdgmimealias.h, src/sugar/xdgmimeparent.h
-Copyright: © 2004  Red Hat, Inc.
-           © 200  Matthias Clasen <mclasen@redhat.com>
-License: LGPL-2+ | other
+Files: po/Makefile.in.in
+Copyright: 1995-1997, Ulrich Drepper <drepper@gnu.ai.mit.edu>
+	2004-2008, Rodney Dawes <dobey.pwns@gmail.com>
+License: PD
+ This file may be copied and used freely without restrictions.  It may
+ be used in projects which are not available under a GNU Public License,
+ but which still want to provide support for the GNU gettext functionality.
+
+Files: debian/*
+Copyright: © 2007-2008 Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/cdbs/1/class/autotools-vars.mk
+	debian/cdbs/1/class/makefile.mk
+Copyright: 2002-2003, Colin Walters <walters@debian.org>
+	2003,2008, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/cdbs/1/class/autotools.mk
+	debian/cdbs/1/class/makefile-vars.mk
+Copyright: 2002-2003, Colin Walters <walters@debian.org>
+	2008, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/cdbs/1/class/python-autotools.mk
+	debian/cdbs/1/rules/package-relations.mk
+Copyright: 2008, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/cdbs/1/class/python-vars.mk
+Copyright: 2003,2008, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/cdbs/1/rules/buildinfo.mk
+Copyright: 2004-2007, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/cdbs/1/rules/copyright-check.mk
+Copyright: 2005-2008, Jonas Smedegaard <dr@jones.dk>
+License: GPL-2+
+
+Files: debian/patches/1001_enable_danish_l10n.patch
+Copyright: 2008, Jonas Smedegaard <dr@jones.dk>
+License: LGPL-2+
 
 License: GPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ On Debian GNU systems, the complete text of GNU General Public License
+ (GPL) version 2 can be found at "/usr/share/common-licenses/GPL-2".
 
 License: LGPL-2+
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
+ On Debian GNU systems, the complete text of GNU Library General Public
+ License (LGPL) version 2 can be found at
+ "/usr/share/common-licenses/LGPL-2".
 
-License: LGPL-2+ | other
-  Licensed under the Academic Free License version 2.0
-  Or under the following terms:
+License: LGPL-2.1+
+ On Debian GNU systems, the complete text of GNU Library General Public
+ License (LGPL) version 2.1 can be found at
+ "/usr/share/common-licenses/LGPL".
+
+License: GAP
+ This file is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
+
+License: other-Autoconf
+ As a special exception to the GNU General Public License, if you
+ distribute this file as part of a program that contains a
+ configuration script generated by Autoconf, you may include it under
+ the same distribution terms that you use for the rest of that program.
+
+License: other-Academic
+ Licensed under the Academic Free License version 2.0
  .
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2 of the License, or (at your option) any later version.
-
-On Debian systems, the complete text of the GNU General Public License
-can be found in file "/usr/share/common-licenses/GPL", and the complete
-text of the GNU Lesser General Public License can be found in file
-"/usr/share/common-licenses/LGPL"..
+ No actual license is included with upstream source, and even if it is
+ quite likely http://opensource-definition.org/licenses/afl-2.0.html no
+ attempt has been done to resolve this as it has in all cases been dual-
+ licensed with GPL-2+ which in reality is used with with Debian.
