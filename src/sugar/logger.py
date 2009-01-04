@@ -91,7 +91,7 @@ def start(log_filename=None):
     if os.environ.has_key('SUGAR_LOGGER_LEVEL'):
         set_level(os.environ['SUGAR_LOGGER_LEVEL'])
 
-    if log_filename and not sys.stdin.isatty():
+    if log_filename:
         try:
             log_path = os.path.join(get_logs_dir(), log_filename + '.log')
 
