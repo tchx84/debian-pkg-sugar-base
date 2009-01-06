@@ -27,13 +27,18 @@ import gettext
 
 from sugar import _sugarbaseext
 
-
 _ = lambda msg: gettext.dgettext('sugar-base', msg)
+
+GENERIC_TYPE_TEXT = 'Text'
+GENERIC_TYPE_IMAGE = 'Image'
+GENERIC_TYPE_AUDIO = 'Audio'
+GENERIC_TYPE_VIDEO = 'Video'
+GENERIC_TYPE_LINK = 'Link'
 
 _extensions = {}
 _globs_timestamps = []
 _generic_types = [
-{ 'id'    : 'Text',
+{ 'id'    : GENERIC_TYPE_TEXT,
   'name'  : _('Text'),
   'icon'  : 'text-x-generic',
   'types' : ['text/plain', 'text/rtf', 'application/pdf',
@@ -41,22 +46,22 @@ _generic_types = [
              'application/vnd.oasis.opendocument.text',
              'application/rtf', 'text/rtf']
 },
-{ 'id'    : 'Image',
+{ 'id'    : GENERIC_TYPE_IMAGE,
   'name'  : _('Image'),
   'icon'  : 'image-x-generic',
   'types' : ['image/png', 'image/gif', 'image/jpeg']
 },
-{ 'id'    : 'Audio',
+{ 'id'    : GENERIC_TYPE_AUDIO,
   'name'  : _('Audio'),
   'icon'  : 'audio-x-generic',
   'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg']
 },
-{ 'id'    : 'Video',
+{ 'id'    : GENERIC_TYPE_VIDEO,
   'name'  : _('Video'),
   'icon'  : 'video-x-generic',
   'types' : ['video/ogg', 'application/ogg', 'video/x-theora+ogg']
 },
-{ 'id'    : 'Link',
+{ 'id'    : GENERIC_TYPE_LINK,
   'name'  : _('Link'),
   'icon'  : 'text-uri-list',
   'types' : ['text/x-moz-url', 'text/uri-list']
