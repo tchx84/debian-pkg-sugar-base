@@ -229,7 +229,7 @@ def _file_looks_like_text(file_name):
             unicode(sample, encoding)
             return True
         except Exception:
-            return False
+            pass
 
     return False
 
