@@ -1,3 +1,10 @@
+sugar-base (0.82.2-5) unstable; urgency=low
+
+  * Add (not yet used) sugarlabs URL to watch file.
+  * Add git-buildpackage configfile.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 20 Jan 2009 04:28:10 +0100
+
 sugar-base (0.82.2-4) unstable; urgency=low
 
   * Add patch 0000 to sync with upstream stable head:
