@@ -1,9 +1,18 @@
-sugar-base (0.82.2-5) unstable; urgency=low
+sugar-base (0.82.2-5) unstable; urgency=medium
 
   * Add (not yet used) sugarlabs URL to watch file.
   * Add git-buildpackage configfile.
+  * Update debian/copyright and copyright hints:
+    + Bump to version 428 of new format (no structural changes)
+    + Set Sugarlabs (not Redhat) as upstream maintainer, and add both
+      old laptop.org and new sugarlabs.org source URLs.
+    + Merge entries with same authors and licensing (varying only in
+      copyright years).
+    + Update copyright years
+    + Include GAP licenses verbatim.
+  * Set urgency=medium due to copyright and licensing corrections.
 
- -- Jonas Smedegaard <dr@jones.dk>  Tue, 20 Jan 2009 04:28:10 +0100
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 20 Jan 2009 07:18:10 +0100
 
 sugar-base (0.82.2-4) unstable; urgency=low
 
