@@ -71,6 +71,7 @@ Files: Makefile.am
 	debian/compat
 	debian/control
 	debian/control.in
+	debian/gbp.conf
 	debian/patches/2991_enable_danish_l10n.patch
 	debian/patches/README
 	debian/patches/series

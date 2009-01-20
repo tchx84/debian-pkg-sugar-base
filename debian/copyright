@@ -1,95 +1,43 @@
-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=420
+Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=428
 Upstream-Name: sugar-base
 Upstream-Maintainer: sugar-devel@lists.sugarlabs.org
 	irc://irc.freenode.net/sugar
-Upstream-Source: http://download.sugarlabs.org/sources/sucrose/glucose/sugar-base/
-	git://git.sugarlabs.org/sugar-base/mainline
+Upstream-Maintainer: Sugarlabs <sugar-devel@lists.sugarlabs.org>
+	http://lists.sugarlabs.org/listinfo/sugar-devel
+	irc://irc.freenode.net/sugar
+Upstream-Source: http://dev.laptop.org/pub/sugar/sources/sugar-base/
+	git://dev.laptop.org/sugar-base
+	http://download.sugarlabs.org/sources/sucrose/glucose/sugar-base
+	git://git.sugarlabs.org/sugar-base/mainline.git
 
 Files: *
-Copyright: © 2006-2007, Red Hat, Inc.
-License: LGPL-2+
-
-Files: src/sugar/xdgmime*
-Copyright: 2003, Jonathan Blandford <jrb@alum.mit.edu>
-	2003, Red Hat, Inc
-License: other-Academic | LGPL-2+
-
-Files: src/sugar/xdgmimealias.[ch]
-	src/sugar/xdgmimeparent.[ch]
-Copyright: 2004, Matthias Clasen <mclasen@redhat.com>
-	2004, Red Hat, Inc
-License: other-Academic | LGPL-2+
-
-Files: Makefile.in
-Copyright: 1994-2002
-License: UNKNOWN (GENERATED FILE)
-
-Files: src/sugar/xdgmimecache.c
-	src/sugar/xdgmimecache.h
-Copyright: 2005, Matthias Clasen <mclasen@redhat.com>
-License: other-Academic | LGPL-2+
-
-Files: ./missing
-Copyright: 1996-1997, 1999-2000, 2002-2006, Free Software Foundation, Inc.
-	1996, Fran,cois Pinard <pinard@iro.umontreal.ca>
-License: GPL-2+ | other-Autoconf
-
-Files: ./depcomp
-Copyright: 1999-2000, 2003-2007, Free Software Foundation, Inc.
-License: GPL-2+ | other-Autoconf
-
-Files: ./py-compile
-Copyright: 2000-2001, 2003-2005, Free Software Foundation, Inc
-License: GPL-2+ | other-Autoconf
-
-Files: ./intltool-merge.in
-Copyright: 2000-2001, Eazel, Inc
-	2000, 2003, Free Software Foundation
-License: GPL-2+ | other-Autoconf
-
-Files: ./intltool-update.in
-Copyright: 2000-2003, Free Software Foundation
-License: GPL-2+ | other-Autoconf
-
-Files: config.guess
-	config.sub
-Copyright: 1992-2006, Free Software Foundation
-License: GPL-2+ | other-Autoconf
-
-Files: ./ltmain.sh
-Copyright: 1996-2001, 2003-2007, Free Software Foundation, Inc.
-License: GPL-2+ | other-Autoconf
-
-Files: ./intltool-extract.in
-Copyright: 2000-2001, 2003, Free Software Foundation
-License: GPL-2+ | other-Autoconf
-
-Files: m4/intltool.m4
-Copyright: 2001, Eazel, Inc
-License: GPL-2+ | other-Autoconf
-
-Files: src/sugar/xdgmime.c
-Copyright: 2003-2004, Red Hat, Inc
-	2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
-License: other-Academic | LGPL-2+
-
-Files: src/sugar/__init__.py
 Copyright: 2006-2007, Red Hat, Inc
 	2007-2008, One Laptop Per Child
 License: LGPL-2+
 
-Files: src/sugar/_sugarbaseextmodule.c
-Copyright: 2006-2007, Red Hat, Inc
-License: LGPL-2+
+Files: src/sugar/xdgmime*
+Copyright: 2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
+	2003-2004, Red Hat, Inc
+	2004-2005, Matthias Clasen <mclasen@redhat.com>
+License: other-Academic | LGPL-2+
 
-Files: src/sugar/mime.py
-Copyright: 2007, One Laptop Per Child
-	2006-2007, Red Hat, Inc
-License: LGPL-2+
+Files: Makefile.in
+Copyright: 1994-2008, Free Software Foundation, Inc.
+License: GAP
+ This Makefile.in is free software; the Free Software Foundation
+ gives unlimited permission to copy and/or distribute it,
+ with or without modifications, as long as this notice is preserved.
 
-Files: src/sugar/logger.py
-Copyright: 2007, Red Hat, Inc
-License: LGPL-2+
+Files: ./config.*
+	./depcomp
+	./intltool-*
+	./ltmain.sh
+	./missing
+	./py-compile
+	m4/intltool.m4
+Copyright: 1992-2007, Free Software Foundation
+	2000-2001, Eazel, Inc
+License: GPL-2+ | other-Autoconf
 
 Files: ./install-sh
 Copyright: 1994, X Consortium
@@ -121,8 +69,10 @@ License: other
 Files: ./configure
 Copyright: 1992-1996, 1998-2006, Free Software Foundation, Inc.
 License: GAP
+ This configure script is free software; the Free Software Foundation
+ gives unlimited permission to copy, distribute and modify it.
 
-Files: aclocal.m4
+Files: ./aclocal.m4
 Copyright: 1994-2008, Free Software Foundation, Inc.
 	1995-2002, Free Software Foundation, Inc
 	2001-2004, Red Hat, Inc
@@ -142,41 +92,14 @@ License: PD
  but which still want to provide support for the GNU gettext functionality.
 
 Files: debian/*
-Copyright: © 2007-2008 Jonas Smedegaard <dr@jones.dk>
+Copyright: © 2003-2008 Jonas Smedegaard <dr@jones.dk>
 License: GPL-2+
 
-Files: debian/cdbs/1/class/autotools-vars.mk
-	debian/cdbs/1/class/makefile.mk
+Files: debian/cdbs/1/class/autotools*
+	debian/cdbs/1/class/makefile*
 Copyright: 2002-2003, Colin Walters <walters@debian.org>
 	2003,2008, Jonas Smedegaard <dr@jones.dk>
 License: GPL-2+
-
-Files: debian/cdbs/1/class/autotools.mk
-	debian/cdbs/1/class/makefile-vars.mk
-Copyright: 2002-2003, Colin Walters <walters@debian.org>
-	2008, Jonas Smedegaard <dr@jones.dk>
-License: GPL-2+
-
-Files: debian/cdbs/1/class/python-autotools.mk
-	debian/cdbs/1/rules/package-relations.mk
-Copyright: 2008, Jonas Smedegaard <dr@jones.dk>
-License: GPL-2+
-
-Files: debian/cdbs/1/class/python-vars.mk
-Copyright: 2003,2008, Jonas Smedegaard <dr@jones.dk>
-License: GPL-2+
-
-Files: debian/cdbs/1/rules/buildinfo.mk
-Copyright: 2004-2007, Jonas Smedegaard <dr@jones.dk>
-License: GPL-2+
-
-Files: debian/cdbs/1/rules/copyright-check.mk
-Copyright: 2005-2008, Jonas Smedegaard <dr@jones.dk>
-License: GPL-2+
-
-Files: debian/patches/1001_enable_danish_l10n.patch
-Copyright: 2008, Jonas Smedegaard <dr@jones.dk>
-License: LGPL-2+
 
 License: GPL-2+
  On Debian GNU systems, the complete text of GNU General Public License
