@@ -74,9 +74,8 @@ License: GAP
 
 Files: ./aclocal.m4
 Copyright: 1994-2008, Free Software Foundation, Inc.
-	1995-2002, Free Software Foundation, Inc
 	2001-2004, Red Hat, Inc
-	1996-2004, Free Software Foundation, Inc
+	2004, Scott James Remnant <scott@netsplit.com>
 License: GPL-2+ | other-Autoconf
  Some parts of the file is not copyright protected, some parts are
  licensed as Public Domain (PD), but one part has the more restrictive
