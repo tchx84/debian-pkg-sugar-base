@@ -5,9 +5,7 @@ Upstream-Maintainer: sugar-devel@lists.sugarlabs.org
 Upstream-Maintainer: Sugarlabs <sugar-devel@lists.sugarlabs.org>
 	http://lists.sugarlabs.org/listinfo/sugar-devel
 	irc://irc.freenode.net/sugar
-Upstream-Source: http://dev.laptop.org/pub/sugar/sources/sugar-base/
-	git://dev.laptop.org/sugar-base
-	http://download.sugarlabs.org/sources/sucrose/glucose/sugar-base
+Upstream-Source: http://download.sugarlabs.org/sources/sucrose/glucose/sugar-base
 	git://git.sugarlabs.org/sugar-base/mainline.git
 
 Files: *
