@@ -1,4 +1,4 @@
-Source: sugar-base-0.82
+Source: sugar-base-0.84
 Section: python
 Priority: optional
 Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
@@ -10,7 +10,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 XS-Python-Version: all
 
-Package: python-sugar-0.82
+Package: python-sugar-0.84
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
 Recommends: ${cdbs:Recommends}
