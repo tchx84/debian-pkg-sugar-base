@@ -66,8 +66,7 @@ License: UNKNOWN
 Files: Makefile.am
 	NEWS
 	configure.ac
-	debian/README.cdbs-tweaks
-	debian/README.packaging
+	debian/README.source
 	debian/compat
 	debian/control
 	debian/control.in
@@ -77,6 +76,10 @@ Files: Makefile.am
 	debian/patches/series
 	debian/pycompat
 	debian/watch
+	intltool-extract.in
+	intltool-merge.in
+	intltool-update.in
+	m4/gnome-compiler-flags.m4
 	m4/python.m4
 	po/ChangeLog
 	po/POTFILES.in
@@ -84,6 +87,10 @@ Files: Makefile.am
 	src/sugar/Makefile.am
 	src/sugar/_sugarbaseext.defs
 	src/sugar/_sugarbaseext.override
+	src/sugar/dispatch/Makefile.am
+	src/sugar/dispatch/__init__.py
+	src/sugar/dispatch/dispatcher.py
+	src/sugar/dispatch/saferef.py
 Copyright: *No copyright*
 License: UNKNOWN
 
@@ -101,6 +108,7 @@ License: LGPL-2+
 Files: Makefile.in
 	src/Makefile.in
 	src/sugar/Makefile.in
+	src/sugar/dispatch/Makefile.in
 Copyright: 1994-2002
 License: UNKNOWN (GENERATED FILE)
 
@@ -150,15 +158,6 @@ Files: py-compile
 Copyright: 2000-2001, 2003-2005, Free Software Foundation, Inc
 License: GPL (GENERATED FILE)
 
-Files: intltool-merge.in
-Copyright: 2000-2001, Eazel, Inc
-	2000, 2003, Free Software Foundation
-License: GPL (GENERATED FILE)
-
-Files: intltool-update.in
-Copyright: 2000-2003, Free Software Foundation
-License: GPL (GENERATED FILE)
-
 Files: debian/cdbs/1/class/python-vars.mk
 Copyright: 2003,2008, Jonas Smedegaard <dr@jones.dk>
 License: GPL
@@ -171,13 +170,17 @@ Files: debian/cdbs/1/rules/upstream-tarball.mk
 Copyright: 2007-2008, Jonas Smedegaard <dr@jones.dk>
 License: GPL
 
+Files: debian/rules
+Copyright: 2007-2009, Jonas Smedegaard <dr@jones.dk>
+License: GPL
+
 Files: debian/cdbs/1/rules/copyright-check.mk
 Copyright: \s*(\S.*?)\s*\
 License: GPL
 
 Files: config.guess
 Copyright: 1992-1999,
-	1992-2005
+	1992-2001
 License: GPL-2+ (GENERATED FILE)
 
 Files: config.sub
@@ -186,10 +189,6 @@ License: GPL-2+ (GENERATED FILE)
 
 Files: ltmain.sh
 Copyright: 1996-2001, 2003-2006
-License: GPL-2+ (GENERATED FILE)
-
-Files: intltool-extract.in
-Copyright: 2000-2001, 2003, Free Software Foundation
 License: GPL-2+ (GENERATED FILE)
 
 Files: m4/intltool.m4
@@ -236,10 +235,6 @@ License: UNKNOWN (GENERATED FILE)
 Files: po/Makefile.in.in
 Copyright: 1995-1997, by Ulrich Drepper <drepper@gnu.ai.mit.edu>
 	2004-2008, Rodney Dawes <dobey.pwns@gmail.com>
-License: UNKNOWN
-
-Files: debian/rules
-Copyright: 2007-2008, Jonas Smedegaard <dr@jones.dk>
 License: UNKNOWN
 
 Files: debian/patches/1001_enable_danish_l10n.patch

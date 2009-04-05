@@ -28,12 +28,11 @@ License: GAP
 
 Files: ./config.*
 	./depcomp
-	./intltool-*
 	./ltmain.sh
 	./missing
 	./py-compile
 	m4/intltool.m4
-Copyright: 1992-2007, Free Software Foundation
+Copyright: 1992-2008, Free Software Foundation
 	2000-2001, Eazel, Inc
 License: GPL-2+ | other-Autoconf
 
@@ -89,7 +88,7 @@ License: PD
  but which still want to provide support for the GNU gettext functionality.
 
 Files: debian/*
-Copyright: © 2003-2008 Jonas Smedegaard <dr@jones.dk>
+Copyright: © 2003-2009 Jonas Smedegaard <dr@jones.dk>
 License: GPL-2+
 
 Files: debian/cdbs/1/class/autotools*
