@@ -1,4 +1,4 @@
-AC_INIT([sugar-base],[0.82.2],[],[sugar-base])
+AC_INIT([sugar-base],[0.84.0],[],[sugar-base])
 
 AC_PREREQ([2.59])
 
@@ -9,6 +9,8 @@ AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 
 AC_DISABLE_STATIC
 AC_PROG_LIBTOOL
+
+GNOME_COMPILE_WARNINGS(maximum)
 
 AM_PATH_PYTHON
 AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers)])
@@ -31,5 +33,6 @@ AC_OUTPUT([
 Makefile
 src/Makefile
 src/sugar/Makefile
+src/sugar/dispatch/Makefile
 po/Makefile.in
 ])

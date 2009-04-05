@@ -15,6 +15,11 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
+"""Logging service setup.
+
+STABLE.
+"""
+
 import errno
 import sys
 import os
@@ -38,6 +43,7 @@ def set_level(level):
     if levels.has_key(level):
         logging.getLogger('').setLevel(levels[level])
 
+# pylint: disable-msg=E1101,F0401
 def _except_hook(exctype, value, traceback):
     # Attempt to provide verbose IPython tracebacks.
     # Importing IPython is slow, so we import it lazily.
@@ -85,7 +91,7 @@ def start(log_filename=None):
     if os.environ.has_key('SUGAR_LOGGER_LEVEL'):
         set_level(os.environ['SUGAR_LOGGER_LEVEL'])
 
-    if log_filename and not sys.stdin.isatty():
+    if log_filename:
         try:
             log_path = os.path.join(get_logs_dir(), log_filename + '.log')
 
