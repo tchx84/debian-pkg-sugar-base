@@ -1,10 +1,19 @@
 sugar-base (0.82.2-6) UNRELEASED; urgency=low
 
+  * Append branch to binary package names and Sugar-specific
+    package relations, to support multiple branches in same distribution
+    concurrently.
   * Fix debian/copyright (more owners, same licenses).
-  * Add README.source.
+  * Add README.source (and drop CDBS hints and README.packaging).
   * Enable tag signing in git-buildpackage configfile.
   * Enhance package-relations.mk to support all binary package relations
     (except -indep ones).
+  * Add proper copyright header to debian/rules.
+  * Drop laptop.org URLs in debian/copyright and watch file.
+  * Use sugarlabs.org download URL (not laptop.org one) for
+    upstream-tarball routine.
+  * Use wiki page (not bare domain URL) as Homepage.
+  * Maintain all package dependencies in debian/rules, with comments.
 
  -- Jonas Smedegaard <dr@jones.dk>  Sun, 05 Apr 2009 17:40:43 +0200
 

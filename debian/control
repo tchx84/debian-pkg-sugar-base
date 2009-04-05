@@ -7,15 +7,17 @@ Build-Depends: cdbs (>= 0.4.39), autotools-dev, devscripts (>= 2.10.7), quilt, p
 Standards-Version: 3.7.3
 Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
-Homepage: http://sugarlabs.org/
+Homepage: http://wiki.sugarlabs.org/go/Sugar
 XS-Python-Version: all
 
-Package: python-sugar
+Package: python-sugar-0.82
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
-Recommends: sugar
-Suggests: ipython
-Provides: ${python:Provides}
+Recommends: ${cdbs:Recommends}
+Suggests: ${cdbs:Suggests}
+Provides: ${python:Provides}, ${cdbs:Provides}
+Conflicts: ${cdbs:Conflicts}
+Replaces: ${cdbs:Replaces}
 XB-Python-Version: ${python:Versions}
 Description: Sugar graphical shell - core functionality
  Sugar is a graphical user interface aimed at children.
