@@ -1,8 +1,7 @@
 diff --git a/configure b/configure
-index 4c66748..798f974 100755
 --- a/configure
 +++ b/configure
-@@ -19852,7 +19852,7 @@ fi
+@@ -20555,7 +20555,7 @@ fi
  
  # Setup GETTEXT
  #
