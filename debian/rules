@@ -32,7 +32,9 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include debian/cdbs/1/class/python-autotools.mk
 include debian/cdbs/1/rules/buildinfo.mk
 
-pkg = python-sugar
+pkgbase = python-sugar
+pkgbranch = 0.82
+pkg = $(pkgbase)-$(pkgbranch)
 
 DEB_UPSTREAM_URL = http://download.sugarlabs.org/sources/sucrose/glucose/$(DEB_UPSTREAM_PACKAGE)
 DEB_UPSTREAM_TARBALL_EXTENSION = tar.bz2
@@ -55,8 +57,13 @@ CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-gtk2-dev, python-gobject-dev
 
 # Needed (often/seldom) at runtime
 #  * ipython beautifies tracebacks in logs
-CDBS_RECOMMENDS := sugar
+CDBS_RECOMMENDS := sugar-$(pkgbranch)
 CDBS_SUGGESTS := ipython
+
+# Ensure only one variant is installed at a time (Debian Policy 7.6.2)
+CDBS_PROVIDES := $(pkgbase)
+CDBS_CONFLICTS := $(pkgbase)
+CDBS_REPLACES := $(pkgbase)
 
 # Needed for our packaging
 CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), chrpath
