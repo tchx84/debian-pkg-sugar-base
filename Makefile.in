@@ -37,8 +37,9 @@ DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	config.guess config.sub depcomp install-sh ltmain.sh missing \
 	py-compile
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/intltool.m4 \
-	$(top_srcdir)/m4/python.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/gnome-compiler-flags.m4 \
+	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/m4/python.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -93,6 +94,7 @@ CYGPATH_W = @CYGPATH_W@
 DATADIRNAME = @DATADIRNAME@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
+DSYMUTIL = @DSYMUTIL@
 ECHO = @ECHO@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
@@ -149,6 +151,7 @@ MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
 MSGFMT_OPTS = @MSGFMT_OPTS@
 MSGMERGE = @MSGMERGE@
+NMEDIT = @NMEDIT@
 OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
 PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
@@ -176,6 +179,7 @@ SHELL = @SHELL@
 STRIP = @STRIP@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
+WARN_CFLAGS = @WARN_CFLAGS@
 XGETTEXT = @XGETTEXT@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
@@ -230,6 +234,7 @@ sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
+top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I m4
