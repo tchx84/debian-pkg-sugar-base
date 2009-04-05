@@ -1,8 +1,7 @@
 Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=XXX
 Upstream-Name: Untrusted draft - double-check copyrights yourself!
 
-Files: debian/patches/0000_upstream_stable_head.patch
-	po/af.po
+Files: po/af.po
 	po/am.po
 	po/ar.po
 	po/ay.po
@@ -67,6 +66,7 @@ Files: Makefile.am
 	NEWS
 	configure.ac
 	debian/README.source
+	debian/TODO
 	debian/compat
 	debian/control
 	debian/control.in
