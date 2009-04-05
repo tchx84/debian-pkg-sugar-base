@@ -13,8 +13,8 @@ XS-Python-Version: all
 Package: python-sugar
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
-Recommends: sugar
-Suggests: ipython
+Recommends: ${cdbs:Recommends}
+Suggests: ${cdbs:Suggests}
 Provides: ${python:Provides}
 XB-Python-Version: ${python:Versions}
 Description: Sugar graphical shell - core functionality
