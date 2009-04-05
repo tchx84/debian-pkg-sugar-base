@@ -1,4 +1,4 @@
-sugar-base (0.82.2-6) UNRELEASED; urgency=low
+sugar-base-0.82 (0.82.2-6) UNRELEASED; urgency=low
 
   * Append branch to binary package names and Sugar-specific
     package relations, to support multiple branches in same distribution

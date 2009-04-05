@@ -1,4 +1,4 @@
-Source: sugar-base
+Source: sugar-base-0.82
 Section: python
 Priority: optional
 Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
