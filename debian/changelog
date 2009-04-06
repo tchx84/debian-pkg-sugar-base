@@ -24,6 +24,7 @@ sugar-base-0.84 (0.84.0-1) unstable; urgency=low
   * Limit to supporting only Python 2.5 and newer (upstream never used
     older than that, and Debian no longer use older either so unlikely
     to get proper testing if it works).
+  * Bump standards-version to 3.8.1.
 
  -- Jonas Smedegaard <dr@jones.dk>  Mon, 06 Apr 2009 02:07:52 +0200
 
