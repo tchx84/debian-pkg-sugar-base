@@ -238,7 +238,7 @@ Copyright: 1995-1997, by Ulrich Drepper <drepper@gnu.ai.mit.edu>
 License: UNKNOWN
 
 Files: debian/patches/1001_enable_danish_l10n.patch
-Copyright: 2008, Jonas Smedegaard <dr@jones.dk>
+Copyright: 2008-2009, Jonas Smedegaard <dr@jones.dk>
 License: UNKNOWN
 
 Files: COPYING
