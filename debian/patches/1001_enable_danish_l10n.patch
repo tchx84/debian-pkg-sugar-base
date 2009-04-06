@@ -6,16 +6,16 @@ index 0000000..8c815ea
 @@ -0,0 +1,38 @@
 +# Danish translations for sugar-base package
 +# Danske oversættelser for pakke sugar-base.
-+# Copyright (C) 2008 Jonas Smedegaard <dr@jones.dk>
++# Copyright (C) 2008-2009 Jonas Smedegaard <dr@jones.dk>
 +# This file is distributed under the same license as the sugar-base package.
-+# Jonas Smedegaard <dr@jones.dk>, 2008.
++# Jonas Smedegaard <dr@jones.dk>, 2009.
 +#
 +msgid ""
 +msgstr ""
-+"Project-Id-Version: sugar-base 0.82.1\n"
++"Project-Id-Version: sugar-base 0.84.0\n"
 +"Report-Msgid-Bugs-To: None\n"
-+"POT-Creation-Date: 2008-08-07 20:41+0200\n"
-+"PO-Revision-Date: 2008-08-07 20:42+0200\n"
++"POT-Creation-Date: 2008-06-24 00:21+0530\n"
++"PO-Revision-Date: 2008-04-06 02:01+0200\n"
 +"Last-Translator: Jonas Smedegaard <dr@jones.dk>\n"
 +"Language-Team: None\n"
 +"MIME-Version: 1.0\n"
@@ -23,22 +23,22 @@ index 0000000..8c815ea
 +"Content-Transfer-Encoding: 8bit\n"
 +"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 +
-+#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:32
++#: ../src/sugar/mime.py:29
 +msgid "Text"
 +msgstr "Tekst"
 +
-+#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:40
++#: ../src/sugar/mime.py:37
 +msgid "Image"
 +msgstr "Billede"
 +
-+#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:45
++#: ../src/sugar/mime.py:42
 +msgid "Audio"
 +msgstr "Lyd"
 +
-+#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:50
++#: ../src/sugar/mime.py:47
 +msgid "Video"
 +msgstr "Video"
 +
-+#: /home/jonas/src/GITauth/collab-maint/sugar-base/./po/../src/sugar/mime.py:55
++#: ../src/sugar/mime.py:52
 +msgid "Link"
 +msgstr "Henvisning"
