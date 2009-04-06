@@ -8,7 +8,7 @@ Standards-Version: 3.7.3
 Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
 Homepage: http://wiki.sugarlabs.org/go/Sugar
-XS-Python-Version: all
+XS-Python-Version: >= 2.5
 
 Package: python-sugar-0.84
 Architecture: any
