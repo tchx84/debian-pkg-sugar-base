@@ -1,8 +1,9 @@
-sugar-base-0.84 (0.84.1-1) UNRELEASED; urgency=low
+sugar-base-0.84 (0.84.1-1) unstable; urgency=low
 
   * New upstream release.
+  * Add PyDispatcher license to copyright file.
 
- -- Jonas Smedegaard <dr@jones.dk>  Tue, 05 May 2009 15:11:49 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 29 May 2009 01:48:36 +0200
 
 sugar-base-0.84 (0.84.0-1) unstable; urgency=low
 
