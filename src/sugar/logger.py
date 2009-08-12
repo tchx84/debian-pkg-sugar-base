@@ -35,13 +35,21 @@ def get_logs_dir():
                                            '.sugar', profile, 'logs'))
     return logs_dir
 
+_LEVELS = { 'error'   : logging.ERROR,
+            'warning' : logging.WARNING,
+            'debug'   : logging.DEBUG,
+            'info'    : logging.INFO }
 def set_level(level):
-    levels = { 'error'   : logging.ERROR,
-               'warning' : logging.WARNING,
-               'debug'   : logging.DEBUG,
-               'info'    : logging.INFO }
-    if levels.has_key(level):
-        logging.getLogger('').setLevel(levels[level])
+    if level in _LEVELS:
+        logging.getLogger('').setLevel(_LEVELS[level])
+        return
+
+    try:
+        logging.getLogger('').setLevel(int(level))
+    except ValueError:
+        logging.warning('Invalid log level: %r' % level)
+        pass
+
 
 # pylint: disable-msg=E1101,F0401
 def _except_hook(exctype, value, traceback):
