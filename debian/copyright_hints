@@ -1,5 +1,5 @@
-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=XXX
-Upstream-Name: Untrusted draft - double-check copyrights yourself!
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=REVISION
+Name: Untrusted draft - double-check copyrights yourself!
 
 Files: po/af.po
 	po/am.po
@@ -81,7 +81,6 @@ Files: Makefile.am
 	intltool-update.in
 	m4/gnome-compiler-flags.m4
 	m4/python.m4
-	po/ChangeLog
 	po/POTFILES.in
 	src/Makefile.am
 	src/sugar/Makefile.am

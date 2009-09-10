@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends: cdbs (>= 0.4.39), autotools-dev, devscripts (>= 2.10.7), quilt, patchutils (>= 0.2.25), debhelper (>= 6), python-all-dev (>= 2.3.5-11), python-central (>= 0.5.6), dh-buildinfo, python-gtk2-dev, python-gobject-dev (>= 2) | python-gtk2-dev (<< 2.9), intltool, chrpath
-Standards-Version: 3.8.1
+Standards-Version: 3.8.3
 Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
 Homepage: http://wiki.sugarlabs.org/go/Sugar
@@ -22,7 +22,8 @@ XB-Python-Version: ${python:Versions}
 Description: Sugar graphical shell - core functionality
  Sugar is a graphical user interface aimed at children.
  .
- Sugar is mainly used as the interface for One Laptop Per Child (OLPC)
- XO machines.
+ Originating as intregral part of the OLPC "XO" a.k.a. the $100 laptop,
+ Sugar has since grown into a more widely usable low-ressource desktop
+ environment for kids.
  .
  This package contains the base modules for Sugar.
