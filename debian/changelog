@@ -1,3 +1,9 @@
+sugar-base-0.86 (0.85.4-0) UNRELEASED; urgency=low
+
+  * New upstream development release.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 10 Sep 2009 17:55:24 +0200
+
 sugar-base-0.84 (0.84.1-2) unstable; urgency=low
 
   * Rewrite copyright to use DEP5 r54 proposed machine-readable format.
