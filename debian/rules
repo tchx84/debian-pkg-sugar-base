@@ -58,13 +58,13 @@ CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-gtk2-dev, python-gobject-dev
 
 # Needed (often/seldom) at runtime
 #  * ipython beautifies tracebacks in logs
-CDBS_RECOMMENDS := sugar-$(pkgbranch)
-CDBS_SUGGESTS := ipython
+CDBS_RECOMMENDS = sugar-$(pkgbranch)
+CDBS_SUGGESTS = ipython
 
 # Ensure only one variant is installed at a time (Debian Policy 7.6.2)
-CDBS_PROVIDES := $(pkgbase)
-CDBS_CONFLICTS := $(pkgbase)
-CDBS_REPLACES := $(pkgbase)
+CDBS_PROVIDES = $(pkgbase)
+CDBS_CONFLICTS = $(pkgbase)
+CDBS_REPLACES = $(pkgbase)
 
 # Needed for our packaging
 CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), chrpath
