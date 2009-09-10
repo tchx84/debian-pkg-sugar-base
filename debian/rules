@@ -56,8 +56,9 @@ clean::
 #  pygtk << 2.9 contained gobject
 CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-gtk2-dev, python-gobject-dev (>= 2) | python-gtk2-dev (<< 2.9), intltool
 
-# Needed (often/seldom) at runtime
+# Needed (always/often/seldom) at runtime
 #  * ipython beautifies tracebacks in logs
+CDBS_DEPENDS = python-decorator
 CDBS_RECOMMENDS = sugar-$(pkgbranch)
 CDBS_SUGGESTS = ipython
 
