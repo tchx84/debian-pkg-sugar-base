@@ -15,13 +15,26 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
+"""Logging service setup.
+
+STABLE.
+"""
+
+import array
+import collections
 import errno
+import logging
 import sys
 import os
-import logging
+import repr as repr_
+import decorator
 
-# Let's keep this self contained so that it can be easily
+# Let's keep this module self contained so that it can be easily
 # pasted in external sugar service like the datastore.
+
+# traces function calls, use SUGAR_LOGGER_LEVEL=trace to enable
+TRACE = 5
+logging.addLevelName(TRACE, 'TRACE')
 
 def get_logs_dir():
     profile = os.environ.get('SUGAR_PROFILE', 'default')
@@ -30,14 +43,25 @@ def get_logs_dir():
                                            '.sugar', profile, 'logs'))
     return logs_dir
 
+_LEVELS = { 'error'   : logging.ERROR,
+            'warning' : logging.WARNING,
+            'debug'   : logging.DEBUG,
+            'info'    : logging.INFO,
+            'trace'   : TRACE,
+            'all'     : 0,
+}
 def set_level(level):
-    levels = { 'error'   : logging.ERROR,
-               'warning' : logging.WARNING,
-               'debug'   : logging.DEBUG,
-               'info'    : logging.INFO }
-    if levels.has_key(level):
-        logging.getLogger('').setLevel(levels[level])
+    if level in _LEVELS:
+        logging.getLogger('').setLevel(_LEVELS[level])
+        return
 
+    try:
+        logging.getLogger('').setLevel(int(level))
+    except ValueError:
+        logging.warning('Invalid log level: %r' % level)
+
+
+# pylint: disable-msg=E1101,F0401
 def _except_hook(exctype, value, traceback):
     # Attempt to provide verbose IPython tracebacks.
     # Importing IPython is slow, so we import it lazily.
@@ -48,13 +72,13 @@ def _except_hook(exctype, value, traceback):
         sys.excepthook = sys.__excepthook__
 
     sys.excepthook(exctype, value, traceback)
-        
+
 def start(log_filename=None):
     # remove existing handlers, or logging.basicConfig() won't have no effect.
     root_logger = logging.getLogger('')
     for handler in root_logger.handlers:
         root_logger.removeHandler(handler)
-    
+
     class SafeLogWrapper(object):
         """Small file-like wrapper to gracefully handle ENOSPC errors when
         logging."""
@@ -85,7 +109,7 @@ def start(log_filename=None):
     if os.environ.has_key('SUGAR_LOGGER_LEVEL'):
         set_level(os.environ['SUGAR_LOGGER_LEVEL'])
 
-    if log_filename and not sys.stdin.isatty():
+    if log_filename:
         try:
             log_path = os.path.join(get_logs_dir(), log_filename + '.log')
 
@@ -102,4 +126,70 @@ def start(log_filename=None):
                 raise e
 
     sys.excepthook = _except_hook
+
+
+class TraceRepr(repr_.Repr):
+
+    # better handling of subclasses of basic types, e.g. for DBus
+    _TYPES = [int, long, bool, tuple, list, array.array, set, frozenset,
+        collections.deque, dict, str]
+    def repr1(self, x, level):
+        for t in self._TYPES:
+            if isinstance(x, t):
+                return getattr(self, 'repr_'+t.__name__)(x, level)
+
+        return repr_.Repr.repr1(self, x, level)
+
+    def repr_int(self, x, level):
+        return repr(x)
+
+    def repr_bool(self, x, level):
+        return repr(x)
+
+
+def trace(logger=None, logger_name=None, skip_args=None, skip_kwargs=None,
+    maxsize_list=30, maxsize_dict=30, maxsize_string=300):
+
+    if skip_args is None:
+        skip_args = []
+
+    if skip_kwargs is None:
+        skip_kwargs = []
+
+    # size-limit repr()
+    trace_repr = TraceRepr()
+    trace_repr.maxlist = maxsize_list
+    trace_repr.maxdict = maxsize_dict
+    trace_repr.maxstring = maxsize_string
+    trace_repr.maxother = maxsize_string
+    trace_logger = logger or logging.getLogger(logger_name)
+
+    def _trace(f, *args, **kwargs):
+        # don't do expensive formatting if loglevel TRACE is not enabled
+        enabled = trace_logger.isEnabledFor(TRACE)
+        logging.debug('logger.trace: mec %r' % enabled)
+        if enabled:
+            params_formatted = ", ".join(
+                [trace_repr.repr(a)
+                    for (idx, a) in enumerate(args) if idx not in skip_args] + \
+                ['%s=%s' % (k,trace_repr.repr(v))
+                    for (k,v) in kwargs.items() if k not in skip_kwargs])
+
+            trace_logger.log(TRACE, "%s(%s) invoked", f.__name__,
+                params_formatted)
+
+        try:
+            res = f(*args, **kwargs)
+        except:
+            trace_logger.exception("Exception occured in %s", f.__name__)
+            raise
+
+        if enabled:
+            trace_logger.log(TRACE, "%s(%s) returned %s", f.__name__,
+                params_formatted, trace_repr.repr(res))
+
+        return res
+
+    return decorator.decorator(_trace)
+
 

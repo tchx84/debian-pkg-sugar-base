@@ -16,19 +16,29 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
+"""MIME helpers based on freedesktop specification.
+
+STABLE.
+"""
+
 import os
 import logging
 import gettext
 
 from sugar import _sugarbaseext
 
-
 _ = lambda msg: gettext.dgettext('sugar-base', msg)
+
+GENERIC_TYPE_TEXT = 'Text'
+GENERIC_TYPE_IMAGE = 'Image'
+GENERIC_TYPE_AUDIO = 'Audio'
+GENERIC_TYPE_VIDEO = 'Video'
+GENERIC_TYPE_LINK = 'Link'
 
 _extensions = {}
 _globs_timestamps = []
 _generic_types = [
-{ 'id'    : 'Text',
+{ 'id'    : GENERIC_TYPE_TEXT,
   'name'  : _('Text'),
   'icon'  : 'text-x-generic',
   'types' : ['text/plain', 'text/rtf', 'application/pdf',
@@ -36,22 +46,23 @@ _generic_types = [
              'application/vnd.oasis.opendocument.text',
              'application/rtf', 'text/rtf']
 },
-{ 'id'    : 'Image',
+{ 'id'    : GENERIC_TYPE_IMAGE,
   'name'  : _('Image'),
   'icon'  : 'image-x-generic',
   'types' : ['image/png', 'image/gif', 'image/jpeg']
 },
-{ 'id'    : 'Audio',
+{ 'id'    : GENERIC_TYPE_AUDIO,
   'name'  : _('Audio'),
   'icon'  : 'audio-x-generic',
-  'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg']
+  'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg',
+             'audio/x-mpegurl', 'audio/mpegurl', 'audio/x-scpls']
 },
-{ 'id'    : 'Video',
+{ 'id'    : GENERIC_TYPE_VIDEO,
   'name'  : _('Video'),
   'icon'  : 'video-x-generic',
   'types' : ['video/ogg', 'application/ogg', 'video/x-theora+ogg']
 },
-{ 'id'    : 'Link',
+{ 'id'    : GENERIC_TYPE_LINK,
   'name'  : _('Link'),
   'icon'  : 'text-uri-list',
   'types' : ['text/x-moz-url', 'text/uri-list']
@@ -102,8 +113,8 @@ def get_mime_description(mime_type):
     if generic_type:
         return generic_type['name']
 
-    import gnomevfs
-    return gnomevfs.mime_get_description(mime_type)
+    import gio
+    return gio.content_type_get_description(mime_type)
 
 def get_mime_parents(mime_type):
     return _sugarbaseext.list_mime_parents(mime_type)
@@ -219,7 +230,7 @@ def _file_looks_like_text(file_name):
             unicode(sample, encoding)
             return True
         except Exception:
-            return False
+            pass
 
     return False
 
