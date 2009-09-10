@@ -93,12 +93,7 @@ def get_for_file(file_name):
     if file_name.startswith('file://'):
         file_name = file_name[7:]
 
-    if os.path.islink(file_name):
-        readlink = os.readlink(file_name)
-        if readlink.startswith('/'):
-            file_name = readlink
-        else:
-            file_name = os.path.join(os.path.dirname(file_name), readlink)
+    file_name = os.path.realpath(file_name)
 
     mime_type = _sugarbaseext.get_mime_type_for_file(file_name)
     if mime_type == 'application/octet-stream':
