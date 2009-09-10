@@ -90,14 +90,25 @@ def get_all_generic_types():
     return types
 
 def get_for_file(file_name):
+    if file_name.startswith('file://'):
+        file_name = file_name[7:]
+
+    if os.path.islink(file_name):
+        readlink = os.readlink(file_name)
+        if readlink.startswith('/'):
+            file_name = readlink
+        else:
+            file_name = os.path.join(os.path.dirname(file_name), readlink)
+
     mime_type = _sugarbaseext.get_mime_type_for_file(file_name)
     if mime_type == 'application/octet-stream':
         if _file_looks_like_text(file_name):
             return 'text/plain'
         else:
             return 'application/octet-stream'
+
     return mime_type
-        
+
 def get_from_file_name(file_name):
     return _sugarbaseext.get_mime_type_from_file_name(file_name)
 
