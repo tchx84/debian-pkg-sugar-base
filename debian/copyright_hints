@@ -150,9 +150,9 @@ Files: src/sugar/xdgmimecache.c
 Copyright: 2005, Matthias Clasen <mclasen@redhat.com>
 License: LGPL-2+
 
-Files: m4/ltsugar.m4
-	m4/lt~obsolete.m4
-Copyright: 2004-2005, 2007, Free Software Foundation, Inc
+Files: m4/ltoptions.m4
+	m4/ltsugar.m4
+Copyright: 2004-2005, 2007-2008, Free Software Foundation, Inc
 License: UNKNOWN
 
 Files: src/sugar/dispatch/license.txt
@@ -259,8 +259,8 @@ Files: m4/ltversion.m4
 Copyright: 2004, Free Software Foundation, Inc
 License: UNKNOWN
 
-Files: m4/ltoptions.m4
-Copyright: 2004-2005, 2007-2008, Free Software Foundation, Inc
+Files: m4/lt~obsolete.m4
+Copyright: 2004-2005, 2007, Free Software Foundation, Inc
 License: UNKNOWN
 
 Files: debian/patches/1001_enable_danish_l10n.patch

@@ -1,8 +1,13 @@
-sugar-base-0.86 (0.85.4-0) UNRELEASED; urgency=low
+sugar-base-0.86 (0.85.4-1) unstable; urgency=low
 
   * New upstream development release.
+  * Fix licensing of libtool files in debian/copyright (Eazel author
+    only of m4/intltool.m4, no new licenses).
+  * Set non-build dependencies using recursively-expanded variables
+    ("=", not ":=") in debian/rules.
+  * Depend on python-decorator.
 
- -- Jonas Smedegaard <dr@jones.dk>  Thu, 10 Sep 2009 17:55:24 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 10 Sep 2009 20:13:32 +0200
 
 sugar-base-0.84 (0.84.1-2) unstable; urgency=low
 
