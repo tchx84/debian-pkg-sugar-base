@@ -44,7 +44,7 @@ _generic_types = [
   'types' : ['text/plain', 'text/rtf', 'application/pdf',
              'application/x-pdf', 'text/html',
              'application/vnd.oasis.opendocument.text',
-             'application/rtf', 'text/rtf']
+             'application/rtf', 'text/rtf', 'application/epub+zip']
 },
 { 'id'    : GENERIC_TYPE_IMAGE,
   'name'  : _('Image'),
