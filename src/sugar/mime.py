@@ -55,7 +55,7 @@ _generic_types = [
   'name'  : _('Audio'),
   'icon'  : 'audio-x-generic',
   'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg',
-             'audio/x-mpegurl', 'audio/mpegurl', 'audio/x-scpls']
+             'audio/x-mpegurl', 'audio/mpegurl', 'audio/mpeg', 'audio/x-scpls']
 },
 { 'id'    : GENERIC_TYPE_VIDEO,
   'name'  : _('Video'),
