@@ -44,7 +44,7 @@ _generic_types = [
   'types' : ['text/plain', 'text/rtf', 'application/pdf',
              'application/x-pdf', 'text/html',
              'application/vnd.oasis.opendocument.text',
-             'application/rtf', 'text/rtf']
+             'application/rtf', 'text/rtf', 'application/epub+zip']
 },
 { 'id'    : GENERIC_TYPE_IMAGE,
   'name'  : _('Image'),
@@ -55,7 +55,7 @@ _generic_types = [
   'name'  : _('Audio'),
   'icon'  : 'audio-x-generic',
   'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg',
-             'audio/x-mpegurl', 'audio/mpegurl', 'audio/x-scpls']
+             'audio/x-mpegurl', 'audio/mpegurl', 'audio/mpeg', 'audio/x-scpls']
 },
 { 'id'    : GENERIC_TYPE_VIDEO,
   'name'  : _('Video'),
@@ -93,12 +93,7 @@ def get_for_file(file_name):
     if file_name.startswith('file://'):
         file_name = file_name[7:]
 
-    if os.path.islink(file_name):
-        readlink = os.readlink(file_name)
-        if readlink.startswith('/'):
-            file_name = readlink
-        else:
-            file_name = os.path.join(os.path.dirname(file_name), readlink)
+    file_name = os.path.realpath(file_name)
 
     mime_type = _sugarbaseext.get_mime_type_for_file(file_name)
     if mime_type == 'application/octet-stream':
