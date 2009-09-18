@@ -1,3 +1,12 @@
+sugar-base-0.86 (0.85.6-1) unstable; urgency=low
+
+  * New upstream development release.
+  * Simplify watch file (we want to watch too new files too).
+  * Fix include cdbs-declared dependencies (i.e. fix depend on
+    python-decorator).
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 18 Sep 2009 21:02:46 +0200
+
 sugar-base-0.86 (0.85.5-1) unstable; urgency=low
 
   * New upstream development release.
