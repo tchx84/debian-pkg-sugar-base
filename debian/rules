@@ -39,7 +39,7 @@ pkg = $(pkgbase)-$(pkgbranch)
 DEB_UPSTREAM_PACKAGE = $(DEB_SOURCE_PACKAGE:%-$(pkgbranch)=%)
 DEB_UPSTREAM_URL = http://download.sugarlabs.org/sources/sucrose/glucose/$(DEB_UPSTREAM_PACKAGE)
 DEB_UPSTREAM_TARBALL_EXTENSION = tar.bz2
-DEB_UPSTREAM_TARBALL_MD5 = 51202d8c201c9060163d14f6e2c63a34
+DEB_UPSTREAM_TARBALL_MD5 = 320f418a4f38d4c15402ff80b7845ab1
 
 # Strip hardcoded rpath
 binary-strip/$(pkg)::
