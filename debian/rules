@@ -53,12 +53,14 @@ clean::
 	-[ ! -d $(DEB_BUILDDIR) ] || rmdir $(DEB_BUILDDIR)
 
 # Needed by upstream build process
-#  pygtk << 2.9 contained gobject
+#  * pygtk << 2.9 contained gobject
+#    (pygtk needed by autotools but seems bogus: no linkage in binaries)
 CDBS_BUILD_DEPENDS := $(CDBS_BUILD_DEPENDS), python-gtk2-dev, python-gobject-dev (>= 2) | python-gtk2-dev (<< 2.9), intltool
 
 # Needed (always/often/seldom) at runtime
+#  * python-gobject versioning needed for GIO bindings
 #  * ipython beautifies tracebacks in logs
-CDBS_DEPENDS = python-decorator
+CDBS_DEPENDS = python-gobject (>= 2.15.0), python-decorator
 CDBS_RECOMMENDS = sugar-$(pkgbranch)
 CDBS_SUGGESTS = ipython
 
