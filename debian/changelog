@@ -1,8 +1,10 @@
-sugar-base-0.88 (0.86.0-1) UNRELEASED; urgency=low
+sugar-base-0.88 (0.86.0-1) experimental; urgency=low
 
   * Switch packaging to branch 0.88.
+  * Release for experimental, as not all parts of 0.88 branch are
+    packaged yet.
 
- -- Jonas Smedegaard <dr@jones.dk>  Fri, 20 Nov 2009 21:00:39 +0100
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 20 Nov 2009 21:02:00 +0100
 
 sugar-base-0.86 (0.86.0-1) unstable; urgency=low
 
