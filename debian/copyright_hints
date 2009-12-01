@@ -111,11 +111,6 @@ Files: Makefile.in
 Copyright: 1994-2002
 License: UNKNOWN (GENERATED FILE)
 
-Files: compile
-	depcomp
-Copyright: 1999-2000, 2003-2005, Free Software Foundation, Inc
-License: GPL (GENERATED FILE)
-
 Files: debian/cdbs/1/class/autotools-vars.mk
 	debian/cdbs/1/class/makefile.mk
 Copyright: 2002-2003, Colin Walters <walters@debian.org>
@@ -165,7 +160,11 @@ Copyright: HOLDERS AND CONTRIBUTORS "AS IS" AND
 License: BSD (3 clause)
 
 Files: missing
-Copyright: 1996-1997, 1999-2000, 2002-2005
+Copyright: 1996-1997, 1999-2000, 2002-2006
+License: GPL (GENERATED FILE)
+
+Files: depcomp
+Copyright: 1999-2000, 2003-2007, Free Software
 License: GPL (GENERATED FILE)
 
 Files: py-compile
