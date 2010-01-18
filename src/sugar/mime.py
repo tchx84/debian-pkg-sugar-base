@@ -180,7 +180,7 @@ _black_list = [
               ]
 
 def choose_most_significant(mime_types):
-    logging.debug('Choosing between %r.' % mime_types)
+    logging.debug('Choosing between %r.', mime_types)
     if not mime_types:
         return ''
 
@@ -200,7 +200,7 @@ def choose_most_significant(mime_types):
 
                 # take out the specifier after ';' that mozilla likes to add
                 mime_type = mime_type.split(';')[0]
-                logging.debug('Choosed %r!' % mime_type)
+                logging.debug('Choosed %r!', mime_type)
                 return mime_type
 
     if 'text/x-moz-url' in mime_types:
@@ -215,7 +215,7 @@ def choose_most_significant(mime_types):
         logging.debug('Choosed text/plain!')
         return 'text/plain'
 
-    logging.debug('Returning first: %r.' % mime_types[0])
+    logging.debug('Returning first: %r.', mime_types[0])
     return mime_types[0]
 
 def split_uri_list(uri_list):

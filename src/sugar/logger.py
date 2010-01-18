@@ -58,7 +58,7 @@ def set_level(level):
     try:
         logging.getLogger('').setLevel(int(level))
     except ValueError:
-        logging.warning('Invalid log level: %r' % level)
+        logging.warning('Invalid log level: %r', level)
 
 
 # pylint: disable-msg=E1101,F0401
