@@ -167,7 +167,6 @@ def trace(logger=None, logger_name=None, skip_args=None, skip_kwargs=None,
     def _trace(f, *args, **kwargs):
         # don't do expensive formatting if loglevel TRACE is not enabled
         enabled = trace_logger.isEnabledFor(TRACE)
-        logging.debug('logger.trace: mec %r' % enabled)
         if enabled:
             params_formatted = ", ".join(
                 [trace_repr.repr(a)
