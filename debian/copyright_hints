@@ -6,9 +6,13 @@ Files: ./po/af.po,
 	./po/ar.po,
 	./po/ay.po,
 	./po/bg.po,
+	./po/bi.po,
 	./po/bn.po,
 	./po/bn_IN.po,
 	./po/ca.po,
+	./po/cpp.po,
+	./po/cs.po,
+	./po/da.po,
 	./po/de.po,
 	./po/dz.po,
 	./po/el.po,
@@ -17,21 +21,29 @@ Files: ./po/af.po,
 	./po/fa.po,
 	./po/fa_AF.po,
 	./po/ff.po,
+	./po/fil.po,
 	./po/fr.po,
 	./po/gu.po,
 	./po/ha.po,
+	./po/he.po,
 	./po/hi.po,
 	./po/ht.po,
+	./po/hu.po,
+	./po/id.po,
 	./po/ig.po,
 	./po/is.po,
 	./po/it.po,
 	./po/ja.po,
 	./po/km.po,
 	./po/ko.po,
+	./po/kos.po,
+	./po/mg.po,
+	./po/mi.po,
 	./po/mk.po,
 	./po/ml.po,
 	./po/mn.po,
 	./po/mr.po,
+	./po/ms.po,
 	./po/mvo.po,
 	./po/nb.po,
 	./po/ne.po,
@@ -41,6 +53,7 @@ Files: ./po/af.po,
 	./po/pis.po,
 	./po/pl.po,
 	./po/ps.po,
+	./po/pseudo.po,
 	./po/pt.po,
 	./po/pt_BR.po,
 	./po/qu.po,
@@ -49,13 +62,22 @@ Files: ./po/af.po,
 	./po/rw.po,
 	./po/sd.po,
 	./po/si.po,
+	./po/sk.po,
 	./po/sl.po,
+	./po/sq.po,
+	./po/sv.po,
+	./po/sw.po,
+	./po/ta.po,
 	./po/te.po,
 	./po/th.po,
 	./po/tpi.po,
 	./po/tr.po,
+	./po/tvl.po,
+	./po/tzo.po,
+	./po/ug.po,
 	./po/ur.po,
 	./po/vi.po,
+	./po/wa.po,
 	./po/yo.po,
 	./po/zh_CN.po,
 	./po/zh_TW.po
@@ -72,9 +94,6 @@ Files: ./Makefile.am,
 	./debian/control,
 	./debian/control.in,
 	./debian/gbp.conf,
-	./debian/patches/2991_enable_danish_l10n.patch,
-	./debian/patches/README,
-	./debian/patches/series,
 	./debian/pycompat,
 	./debian/source/format,
 	./debian/watch,
@@ -167,12 +186,6 @@ Copyright: 2006-2007, Red Hat, Inc
 License: LGPL-2+
  FIXME
 
-Files: ./debian/patches/1001_enable_danish_l10n.patch,
-	./po/da.po
-Copyright: 2008-2009, Jonas Smedegaard <dr@jones.dk>
-License: UNKNOWN
- FIXME
-
 Files: ./src/sugar/dispatch/license.txt
 Copyright: 2001-2003, Patrick K. O'Brien and Contributors
 	Django Software Foundation and individual contributors
@@ -189,12 +202,12 @@ License: GPL
  FIXME
 
 Files: ./depcomp
-Copyright: 1999-2000, 2003-2007, Free Software
+Copyright: 1999-2000, 2003-2007, 2009 Free
 License: GPL
  FIXME
 
 Files: ./py-compile
-Copyright: 2000-2001, 2003-2005, Free Software Foundation, Inc
+Copyright: 2000-2001, 2003-2005, 2008-2009, Free Software
 License: GPL
  FIXME
 
@@ -221,6 +234,7 @@ License: GPL-2+
 Files: ./aclocal.m4
 Copyright: 1995-2002, Free Software Foundation, Inc
 	1995-2003, 2005-2006, Free Software Foundation, Inc
+	1996, 1998, 2000-2005, 2008
 	1996-1997, 2000-2001, 2003, 2005, 2008
 	1996-2004,
 	1997, 1999-2001, 2003-2005, 2008
