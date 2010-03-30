@@ -19,7 +19,8 @@
 import os
 import gettext
 
-if os.environ.has_key('SUGAR_PREFIX'):
+
+if 'SUGAR_PREFIX' in os.environ:
     prefix = os.environ['SUGAR_PREFIX']
 else:
     prefix = '/usr'
@@ -27,4 +28,3 @@ else:
 locale_path = os.path.join(prefix, 'share', 'locale')
 
 gettext.bindtextdomain('sugar-base', locale_path)
-

@@ -38,48 +38,58 @@ GENERIC_TYPE_LINK = 'Link'
 _extensions = {}
 _globs_timestamps = []
 _generic_types = [
-{ 'id'    : GENERIC_TYPE_TEXT,
-  'name'  : _('Text'),
-  'icon'  : 'text-x-generic',
-  'types' : ['text/plain', 'text/rtf', 'application/pdf',
-             'application/x-pdf', 'text/html',
-             'application/vnd.oasis.opendocument.text',
-             'application/rtf', 'text/rtf', 'application/epub+zip']
+{
+    'id': GENERIC_TYPE_TEXT,
+    'name': _('Text'),
+    'icon': 'text-x-generic',
+    'types': [
+        'text/plain', 'text/rtf', 'application/pdf', 'application/x-pdf',
+        'text/html', 'application/vnd.oasis.opendocument.text',
+        'application/rtf', 'text/rtf', 'application/epub+zip'],
 },
-{ 'id'    : GENERIC_TYPE_IMAGE,
-  'name'  : _('Image'),
-  'icon'  : 'image-x-generic',
-  'types' : ['image/png', 'image/gif', 'image/jpeg']
+{
+    'id': GENERIC_TYPE_IMAGE,
+    'name': _('Image'),
+    'icon': 'image-x-generic',
+    'types': ['image/png', 'image/gif', 'image/jpeg'],
 },
-{ 'id'    : GENERIC_TYPE_AUDIO,
-  'name'  : _('Audio'),
-  'icon'  : 'audio-x-generic',
-  'types' : ['audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg',
-             'audio/x-mpegurl', 'audio/mpegurl', 'audio/mpeg', 'audio/x-scpls']
+{
+    'id': GENERIC_TYPE_AUDIO,
+    'name': _('Audio'),
+    'icon': 'audio-x-generic',
+    'types': [
+        'audio/ogg', 'audio/x-wav', 'audio/wav', 'audio/x-vorbis+ogg',
+        'audio/x-mpegurl', 'audio/mpegurl', 'audio/mpeg', 'audio/x-scpls'],
 },
-{ 'id'    : GENERIC_TYPE_VIDEO,
-  'name'  : _('Video'),
-  'icon'  : 'video-x-generic',
-  'types' : ['video/ogg', 'application/ogg', 'video/x-theora+ogg']
+{
+    'id': GENERIC_TYPE_VIDEO,
+    'name': _('Video'),
+    'icon': 'video-x-generic',
+    'types': ['video/ogg', 'application/ogg', 'video/x-theora+ogg'],
 },
-{ 'id'    : GENERIC_TYPE_LINK,
-  'name'  : _('Link'),
-  'icon'  : 'text-uri-list',
-  'types' : ['text/x-moz-url', 'text/uri-list']
+{
+    'id': GENERIC_TYPE_LINK,
+    'name': _('Link'),
+    'icon': 'text-uri-list',
+    'types': ['text/x-moz-url', 'text/uri-list'],
 }]
 
+
 class ObjectType(object):
+
     def __init__(self, type_id, name, icon, mime_types):
         self.type_id = type_id
         self.name = name
         self.icon = icon
         self.mime_types = mime_types
 
+
 def get_generic_type(type_id):
     types = get_all_generic_types()
     for generic_type in types:
         if type_id == generic_type.type_id:
             return generic_type
+
 
 def get_all_generic_types():
     types = []
@@ -88,6 +98,7 @@ def get_all_generic_types():
                                  generic_type['icon'], generic_type['types'])
         types.append(object_type)
     return types
+
 
 def get_for_file(file_name):
     if file_name.startswith('file://'):
@@ -104,8 +115,10 @@ def get_for_file(file_name):
 
     return mime_type
 
+
 def get_from_file_name(file_name):
     return _sugarbaseext.get_mime_type_from_file_name(file_name)
+
 
 def get_mime_icon(mime_type):
     generic_type = _get_generic_type_for_mime(mime_type)
@@ -113,6 +126,7 @@ def get_mime_icon(mime_type):
         return generic_type['icon']
 
     return mime_type.replace('/', '-')
+
 
 def get_mime_description(mime_type):
     generic_type = _get_generic_type_for_mime(mime_type)
@@ -122,8 +136,10 @@ def get_mime_description(mime_type):
     import gio
     return gio.content_type_get_description(mime_type)
 
+
 def get_mime_parents(mime_type):
     return _sugarbaseext.list_mime_parents(mime_type)
+
 
 def get_primary_extension(mime_type):
     global _extensions
@@ -174,13 +190,15 @@ def get_primary_extension(mime_type):
     else:
         return None
 
-_black_list = [
-               # Target used only between gtk.TextBuffer instances
-               'application/x-gtk-text-buffer-rich-text',
-              ]
+
+_MIME_TYPE_BLACK_LIST = [
+    # Target used only between gtk.TextBuffer instances
+    'application/x-gtk-text-buffer-rich-text',
+]
+
 
 def choose_most_significant(mime_types):
-    logging.debug('Choosing between %r.' % mime_types)
+    logging.debug('Choosing between %r.', mime_types)
     if not mime_types:
         return ''
 
@@ -191,16 +209,16 @@ def choose_most_significant(mime_types):
         for mime_type in mime_types:
 
             if mime_type.startswith(mime_category) and \
-               mime_type not in _black_list:
+               mime_type not in _MIME_TYPE_BLACK_LIST:
                 # skip mozilla private types (second component starts with '_'
-                # or ends with '-priv') 
+                # or ends with '-priv')
                 if mime_type.split('/')[1].startswith('_') or \
                    mime_type.split('/')[1].endswith('-priv'):
                     continue
 
                 # take out the specifier after ';' that mozilla likes to add
                 mime_type = mime_type.split(';')[0]
-                logging.debug('Choosed %r!' % mime_type)
+                logging.debug('Choosed %r!', mime_type)
                 return mime_type
 
     if 'text/x-moz-url' in mime_types:
@@ -215,11 +233,13 @@ def choose_most_significant(mime_types):
         logging.debug('Choosed text/plain!')
         return 'text/plain'
 
-    logging.debug('Returning first: %r.' % mime_types[0])
+    logging.debug('Returning first: %r.', mime_types[0])
     return mime_types[0]
+
 
 def split_uri_list(uri_list):
     return _sugarbaseext.uri_list_extract_uris(uri_list)
+
 
 def _file_looks_like_text(file_name):
     f = open(file_name, 'r')
@@ -239,6 +259,7 @@ def _file_looks_like_text(file_name):
             pass
 
     return False
+
 
 def _get_generic_type_for_mime(mime_type):
     for generic_type in _generic_types:
