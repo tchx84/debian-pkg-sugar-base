@@ -34,7 +34,16 @@ import decorator
 
 # traces function calls, use SUGAR_LOGGER_LEVEL=trace to enable
 TRACE = 5
+_LEVELS = {
+    'error': logging.ERROR,
+    'warning': logging.WARNING,
+    'debug': logging.DEBUG,
+    'info': logging.INFO,
+    'trace': TRACE,
+    'all': 0,
+}
 logging.addLevelName(TRACE, 'TRACE')
+
 
 def get_logs_dir():
     profile = os.environ.get('SUGAR_PROFILE', 'default')
@@ -43,13 +52,7 @@ def get_logs_dir():
                                            '.sugar', profile, 'logs'))
     return logs_dir
 
-_LEVELS = { 'error'   : logging.ERROR,
-            'warning' : logging.WARNING,
-            'debug'   : logging.DEBUG,
-            'info'    : logging.INFO,
-            'trace'   : TRACE,
-            'all'     : 0,
-}
+
 def set_level(level):
     if level in _LEVELS:
         logging.getLogger('').setLevel(_LEVELS[level])
@@ -58,7 +61,7 @@ def set_level(level):
     try:
         logging.getLogger('').setLevel(int(level))
     except ValueError:
-        logging.warning('Invalid log level: %r' % level)
+        logging.warning('Invalid log level: %r', level)
 
 
 # pylint: disable-msg=E1101,F0401
@@ -67,11 +70,13 @@ def _except_hook(exctype, value, traceback):
     # Importing IPython is slow, so we import it lazily.
     try:
         from IPython.ultraTB import AutoFormattedTB
-        sys.excepthook = AutoFormattedTB(mode='Verbose', color_scheme='NoColor')
+        sys.excepthook = AutoFormattedTB(mode='Verbose',
+            color_scheme='NoColor')
     except ImportError:
         sys.excepthook = sys.__excepthook__
 
     sys.excepthook(exctype, value, traceback)
+
 
 def start(log_filename=None):
     # remove existing handlers, or logging.basicConfig() won't have no effect.
@@ -106,7 +111,7 @@ def start(log_filename=None):
             format="%(created)f %(levelname)s %(name)s: %(message)s",
                         stream=SafeLogWrapper(sys.stderr))
 
-    if os.environ.has_key('SUGAR_LOGGER_LEVEL'):
+    if 'SUGAR_LOGGER_LEVEL' in os.environ:
         set_level(os.environ['SUGAR_LOGGER_LEVEL'])
 
     if log_filename:
@@ -133,6 +138,7 @@ class TraceRepr(repr_.Repr):
     # better handling of subclasses of basic types, e.g. for DBus
     _TYPES = [int, long, bool, tuple, list, array.array, set, frozenset,
         collections.deque, dict, str]
+
     def repr1(self, x, level):
         for t in self._TYPES:
             if isinstance(x, t):
@@ -167,15 +173,17 @@ def trace(logger=None, logger_name=None, skip_args=None, skip_kwargs=None,
     def _trace(f, *args, **kwargs):
         # don't do expensive formatting if loglevel TRACE is not enabled
         enabled = trace_logger.isEnabledFor(TRACE)
-        if enabled:
-            params_formatted = ", ".join(
-                [trace_repr.repr(a)
-                    for (idx, a) in enumerate(args) if idx not in skip_args] + \
-                ['%s=%s' % (k,trace_repr.repr(v))
-                    for (k,v) in kwargs.items() if k not in skip_kwargs])
+        if not enabled:
+            return f(*args, **kwargs)
 
-            trace_logger.log(TRACE, "%s(%s) invoked", f.__name__,
-                params_formatted)
+        params_formatted = ", ".join(
+            [trace_repr.repr(a)
+                for (idx, a) in enumerate(args) if idx not in skip_args] + \
+            ['%s=%s' % (k, trace_repr.repr(v))
+                for (k, v) in kwargs.items() if k not in skip_kwargs])
+
+        trace_logger.log(TRACE, "%s(%s) invoked", f.__name__,
+            params_formatted)
 
         try:
             res = f(*args, **kwargs)
@@ -183,12 +191,9 @@ def trace(logger=None, logger_name=None, skip_args=None, skip_kwargs=None,
             trace_logger.exception("Exception occured in %s", f.__name__)
             raise
 
-        if enabled:
-            trace_logger.log(TRACE, "%s(%s) returned %s", f.__name__,
-                params_formatted, trace_repr.repr(res))
+        trace_logger.log(TRACE, "%s(%s) returned %s", f.__name__,
+            params_formatted, trace_repr.repr(res))
 
         return res
 
     return decorator.decorator(_trace)
-
-
