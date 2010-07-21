@@ -26,7 +26,7 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/python-autotools.mk
 
 pkgbase = python-sugar
-pkgbranch = 0.88
+pkgbranch = 0.90
 pkg = $(pkgbase)-$(pkgbranch)
 
 DEB_UPSTREAM_PACKAGE = $(DEB_SOURCE_PACKAGE:%-$(pkgbranch)=%)
