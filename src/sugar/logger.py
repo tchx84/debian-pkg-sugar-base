@@ -25,6 +25,7 @@ import collections
 import errno
 import logging
 import sys
+import traceback
 import os
 import repr as repr_
 import decorator
@@ -107,9 +108,14 @@ def start(log_filename=None):
                 if e.errno != errno.ENOSPC:
                     raise e
 
+    def handleError(record):
+        traceback.print_exc()
+        traceback.print_stack()
+
     logging.basicConfig(level=logging.WARNING,
             format="%(created)f %(levelname)s %(name)s: %(message)s",
                         stream=SafeLogWrapper(sys.stderr))
+    root_logger.handlers[0].handleError = handleError
 
     if 'SUGAR_LOGGER_LEVEL' in os.environ:
         set_level(os.environ['SUGAR_LOGGER_LEVEL'])
