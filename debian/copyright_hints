@@ -96,6 +96,7 @@ Files: ./Makefile.am,
 	./debian/gbp.conf,
 	./debian/pycompat,
 	./debian/source/format,
+	./debian/source/local-options,
 	./debian/watch,
 	./intltool-extract.in,
 	./intltool-merge.in,
@@ -221,19 +222,13 @@ Copyright: (ISLOWER ? 'A' + ( - 'a') : )
 	(ISLOWER ? ( | 0x40) : )
 	1992-1996, 1998-2001,
 	1996-2001, 2003-2005
-	2008, Free Software Foundation, Inc
-License: GPL-2+
- FIXME
-
-Files: ./m4/libtool.m4
-Copyright: 1996-2001, 2003-2005
-	2008, Free Software Foundation, Inc
+	2009, Free Software Foundation, Inc
 License: GPL-2+
  FIXME
 
 Files: ./aclocal.m4
 Copyright: 1995-2002, Free Software Foundation, Inc
-	1995-2003, 2005-2006, Free Software Foundation, Inc
+	1995-2003, 2005-2006, 2008-2010, Free Software Foundation
 	1996, 1998, 2000-2005, 2008
 	1996-1997, 2000-2001, 2003, 2005, 2008
 	1996-2004,
@@ -253,6 +248,12 @@ Copyright: 1995-2002, Free Software Foundation, Inc
 	2004, Scott James Remnant <scott@netsplit.com>
 	2004-2005, Free Software Foundation, Inc
 	2006, 2008 Free Software Foundation, Inc
+License: GPL-2+
+ FIXME
+
+Files: ./m4/libtool.m4
+Copyright: 1996-2001, 2003-2005
+	2008, Free Software Foundation, Inc
 License: GPL-2+
  FIXME
 

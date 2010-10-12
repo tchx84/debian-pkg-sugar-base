@@ -5,8 +5,8 @@ Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends: autotools-dev,
  devscripts (>= 2.10.7~),
- dh-buildinfo,
  debhelper (>= 6),
+ dh-buildinfo,
  python-central,
  cdbs (>= 0.4.75~),
  python-all-dev,
@@ -14,9 +14,9 @@ Build-Depends: autotools-dev,
  python-gobject-dev (>= 2) | python-gtk2-dev (<< 2.9),
  intltool,
  chrpath
-Standards-Version: 3.8.4
-Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git;a=summary
+Standards-Version: 3.9.1
+Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base
+Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 XS-Python-Version: >= 2.5
 
