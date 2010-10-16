@@ -8,10 +8,12 @@ from sugar.dispatch import saferef
 
 WEAKREF_TYPES = (weakref.ReferenceType, saferef.BoundMethodWeakref)
 
+
 def _make_id(target):
     if hasattr(target, 'im_func'):
         return (id(target.im_self), id(target.im_func))
     return id(target)
+
 
 class Signal(object):
     """Base class for all signals

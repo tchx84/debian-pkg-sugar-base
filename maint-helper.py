@@ -23,11 +23,14 @@ import datetime
 import subprocess
 
 source_exts = [ '.py', '.c', '.h', '.cpp' ]
+COPYRIGHT = 'Copyright (C) '
+
 
 def is_source(path):
     for ext in source_exts:
         if path.endswith(ext):
             return True
+
 
 def get_name_and_version():
     f = open('configure.ac', 'r')
@@ -42,11 +45,13 @@ def get_name_and_version():
 
     return [ match.group(2), match.group(1) ]
 
+
 def cmd_help():
     print 'Usage: \n\
 maint-helper.py build-snapshot       - build a source snapshot \n\
 maint-helper.py fix-copyright [path] - fix the copyright year \n\
 maint-helper.py check-licenses       - check licenses in the source'
+
 
 def cmd_build_snapshot():
     [ name, version ] = get_name_and_version()
@@ -123,6 +128,7 @@ def cmd_build_snapshot():
 
     print 'Done.'
 
+
 def check_licenses(path, license, missing):
     matchers = { 'LGPL' : 'GNU Lesser General Public',
                  'GPL'  : 'GNU General Public License' }
@@ -164,6 +170,7 @@ def check_licenses(path, license, missing):
                         missing[license] = []
                     missing[license].append(full_path)
 
+
 def cmd_check_licenses():
     missing = {}
     check_licenses(os.getcwd(), 'LGPL', missing)
@@ -174,7 +181,6 @@ def cmd_check_licenses():
             print path
         print '\n'
 
-COPYRIGHT = 'Copyright (C) '
 
 def fix_copyright(path):
     for item in os.listdir(path):
@@ -212,8 +218,10 @@ def fix_copyright(path):
                     f.write(result)
                     f.close()
 
+
 def cmd_fix_copyright(path):
     fix_copyright(path)
+
 
 if len(sys.argv) < 2:
     cmd_help()
