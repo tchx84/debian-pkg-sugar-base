@@ -168,7 +168,7 @@ class Signal(object):
         """
         none_senderkey = _make_id(None)
 
-        for (receiverkey, r_senderkey), receiver in self.receivers:
+        for (receiverkey_, r_senderkey), receiver in self.receivers:
             if r_senderkey == none_senderkey or r_senderkey == senderkey:
                 if isinstance(receiver, WEAKREF_TYPES):
                     # Dereference the weak reference.
