@@ -115,6 +115,7 @@ class BoundMethodWeakref(object):
             methods = self.deletionMethods[:]
             del self.deletionMethods[:]
             try:
+                # pylint: disable=W0212
                 del self.__class__._allInstances[self.key]
             except KeyError:
                 pass
