@@ -23,11 +23,12 @@ def safeRef(target, onDelete = None):
         if target.im_self is not None:
             # Turn a bound method into a BoundMethodWeakref instance.
             # Keep track of these instances for lookup by disconnect().
-            assert hasattr(target, 'im_func'), """safeRef target %r has im_self, but no im_func, don't know how to create reference"""%( target,)
-            reference = get_bound_method_weakref(
-                target=target,
-                onDelete=onDelete
-            )
+            if not hasattr(target, 'im_func'):
+                raise TypeError("safeRef target %r has im_self, but no"
+                    " im_func, don't know how to create reference" %
+                    (target, ))
+            reference = get_bound_method_weakref(target=target,
+                onDelete=onDelete)
             return reference
     if callable(onDelete):
         return weakref.ref(target, onDelete)
