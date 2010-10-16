@@ -190,7 +190,7 @@ class BoundNonDescriptorMethodWeakref(BoundMethodWeakref):
     an attribute named differenty than the function's name such as in:
 
     class A: pass
-    def foo(self): return "foo"
+    def foo(self): return 'foo'
     A.bar = foo
 
     But this shouldn't be a common use case. So, on platforms where methods
