@@ -1,9 +1,4 @@
 import weakref
-try:
-    set
-except NameError:
-    from sets import Set as set # Python 2.3 fallback
-
 from sugar.dispatch import saferef
 
 WEAKREF_TYPES = (weakref.ReferenceType, saferef.BoundMethodWeakref)
