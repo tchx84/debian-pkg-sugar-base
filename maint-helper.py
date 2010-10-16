@@ -79,7 +79,7 @@ def cmd_build_snapshot():
 
     print 'Update NEWS.sugar...'
 
-    if os.environ.has_key('SUGAR_NEWS'):
+    if 'SUGAR_NEWS' in os.environ:
         sugar_news_path = os.environ['SUGAR_NEWS']
         if os.path.isfile(sugar_news_path):
             f = open(sugar_news_path, 'r')
@@ -166,7 +166,7 @@ def check_licenses(path, license, missing):
                     miss_license = False
 
                 if miss_license:
-                    if not missing.has_key(license):
+                    if license not in missing:
                         missing[license] = []
                     missing[license].append(full_path)
 
