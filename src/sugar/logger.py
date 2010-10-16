@@ -148,7 +148,7 @@ class TraceRepr(repr_.Repr):
     def repr1(self, x, level):
         for t in self._TYPES:
             if isinstance(x, t):
-                return getattr(self, 'repr_'+t.__name__)(x, level)
+                return getattr(self, 'repr_' + t.__name__)(x, level)
 
         return repr_.Repr.repr1(self, x, level)
 

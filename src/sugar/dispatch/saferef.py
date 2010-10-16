@@ -8,7 +8,7 @@ aren't handled by the core weakref module).
 import weakref, traceback
 
 
-def safeRef(target, onDelete = None):
+def safeRef(target, onDelete=None):
     """Return a *safe* weak reference to a callable target
 
     target -- the object to be weakly referenced, if it's a
@@ -33,7 +33,7 @@ def safeRef(target, onDelete = None):
     if callable(onDelete):
         return weakref.ref(target, onDelete)
     else:
-        return weakref.ref( target )
+        return weakref.ref(target)
 
 
 class BoundMethodWeakref(object):
@@ -72,7 +72,7 @@ class BoundMethodWeakref(object):
 
     _allInstances = weakref.WeakValueDictionary()
 
-    def __new__( cls, target, onDelete=None, *arguments,**named ):
+    def __new__(cls, target, onDelete=None, *arguments, **named):
         """Create new instance or return current instance
 
         Basically this method of construction allows us to
@@ -85,14 +85,14 @@ class BoundMethodWeakref(object):
         of already-referenced methods.
         """
         key = cls.calculateKey(target)
-        current =cls._allInstances.get(key)
+        current = cls._allInstances.get(key)
         if current is not None:
-            current.deletionMethods.append( onDelete)
+            current.deletionMethods.append(onDelete)
             return current
         else:
-            base = super( BoundMethodWeakref, cls).__new__( cls )
+            base = super(BoundMethodWeakref, cls).__new__(cls)
             cls._allInstances[key] = base
-            base.__init__( target, onDelete, *arguments,**named)
+            base.__init__(target, onDelete, *arguments, **named)
             return base
 
     def __init__(self, target, onDelete=None):
@@ -114,55 +114,51 @@ class BoundMethodWeakref(object):
             methods = self.deletionMethods[:]
             del self.deletionMethods[:]
             try:
-                del self.__class__._allInstances[ self.key ]
+                del self.__class__._allInstances[self.key]
             except KeyError:
                 pass
             for function in methods:
                 try:
-                    if callable( function ):
-                        function( self )
+                    if callable(function):
+                        function(self)
                 except Exception, e:
                     try:
                         traceback.print_exc()
                     except AttributeError, err:
-                        print '''Exception during saferef %s cleanup function %s: %s'''%(
-                            self, function, e
-                        )
+                        print ('Exception during saferef %s cleanup function'
+                            ' %s: %s' % (self, function, e))
         self.deletionMethods = [onDelete]
-        self.key = self.calculateKey( target )
+        self.key = self.calculateKey(target)
         self.weakSelf = weakref.ref(target.im_self, remove)
         self.weakFunc = weakref.ref(target.im_func, remove)
         self.selfName = str(target.im_self)
         self.funcName = str(target.im_func.__name__)
 
-    def calculateKey( cls, target ):
+    def calculateKey(cls, target):
         """Calculate the reference key for this reference
 
         Currently this is a two-tuple of the id()'s of the
         target object and the target function respectively.
         """
-        return (id(target.im_self),id(target.im_func))
-    calculateKey = classmethod( calculateKey )
+        return (id(target.im_self), id(target.im_func))
+    calculateKey = classmethod(calculateKey)
 
     def __str__(self):
         """Give a friendly representation of the object"""
-        return """%s( %s.%s )"""%(
-            self.__class__.__name__,
-            self.selfName,
-            self.funcName,
-        )
+        return '%s( %s.%s )' % (self.__class__.__name__, self.selfName,
+            self.funcName)
 
     __repr__ = __str__
 
-    def __nonzero__( self ):
+    def __nonzero__(self):
         """Whether we are still a valid reference"""
         return self() is not None
 
-    def __cmp__( self, other ):
+    def __cmp__(self, other):
         """Compare with another reference"""
-        if not isinstance (other,self.__class__):
-            return cmp( self.__class__, type(other) )
-        return cmp( self.key, other.key)
+        if not isinstance(other, self.__class__):
+            return cmp(self.__class__, type(other))
+        return cmp(self.key, other.key)
 
     def __call__(self):
         """Return a strong reference to the bound method

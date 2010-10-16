@@ -22,7 +22,7 @@ import re
 import datetime
 import subprocess
 
-source_exts = [ '.py', '.c', '.h', '.cpp' ]
+source_exts = ['.py', '.c', '.h', '.cpp']
 COPYRIGHT = 'Copyright (C) '
 
 
@@ -43,7 +43,7 @@ def get_name_and_version():
         print 'Cannot find the package name and version.'
         sys.exit(0)
 
-    return [ match.group(2), match.group(1) ]
+    return [match.group(2), match.group(1)]
 
 
 def cmd_help():
@@ -54,7 +54,7 @@ maint-helper.py check-licenses       - check licenses in the source'
 
 
 def cmd_build_snapshot():
-    [ name, version ] = get_name_and_version()
+    [name, version] = get_name_and_version()
 
     print 'Update git...'
 
@@ -88,7 +88,7 @@ def cmd_build_snapshot():
         else:
             sugar_news = ''
 
-        [ name, version ] = get_name_and_version()
+        name, version = get_name_and_version()
         sugar_news += '%s - %s - %s\n\n' % (name, version, alphatag)
 
         f = open('NEWS', 'r')
@@ -130,8 +130,8 @@ def cmd_build_snapshot():
 
 
 def check_licenses(path, license, missing):
-    matchers = { 'LGPL' : 'GNU Lesser General Public',
-                 'GPL'  : 'GNU General Public License' }
+    matchers = {'LGPL': 'GNU Lesser General Public License',
+        'GPL': 'GNU General Public License'}
 
     license_file = os.path.join(path, '.license')
     if os.path.isfile(license_file):
