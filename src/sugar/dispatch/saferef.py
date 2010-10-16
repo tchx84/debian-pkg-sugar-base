@@ -185,8 +185,8 @@ class BoundNonDescriptorMethodWeakref(BoundMethodWeakref):
 
     It assumes that the function name and the target attribute name are the
     same, instead of assuming that the function is a descriptor. This approach
-    is equally fast, but not 100% reliable because functions can be stored on an
-    attribute named differenty than the function's name such as in:
+    is equally fast, but not 100% reliable because functions can be stored on
+    an attribute named differenty than the function's name such as in:
 
     class A: pass
     def foo(self): return "foo"
@@ -241,11 +241,12 @@ class BoundNonDescriptorMethodWeakref(BoundMethodWeakref):
 
 
 def get_bound_method_weakref(target, onDelete):
-    """Instantiates the appropiate BoundMethodWeakRef, depending on the details of
-    the underlying class method implementation"""
+    """Instantiates the appropiate BoundMethodWeakRef, depending on the details
+    of the underlying class method implementation"""
     if hasattr(target, '__get__'):
         # target method is a descriptor, so the default implementation works:
         return BoundMethodWeakref(target=target, onDelete=onDelete)
     else:
         # no luck, use the alternative implementation:
-        return BoundNonDescriptorMethodWeakref(target=target, onDelete=onDelete)
+        return BoundNonDescriptorMethodWeakref(target=target,
+            onDelete=onDelete)

@@ -18,8 +18,8 @@ class Signal(object):
     """
 
     def __init__(self, providing_args=None):
-        """providing_args -- A list of the arguments this signal can pass along in
-                       a send() call.
+        """providing_args -- A list of the arguments this signal can pass along
+        in a send() call.
         """
         self.receivers = []
         if providing_args is None:
@@ -64,7 +64,8 @@ class Signal(object):
             lookup_key = (_make_id(receiver), _make_id(sender))
 
         if weak:
-            receiver = saferef.safeRef(receiver, onDelete=self._remove_receiver)
+            receiver = saferef.safeRef(receiver,
+                onDelete=self._remove_receiver)
 
         for r_key, _ in self.receivers:
             if r_key == lookup_key:
@@ -72,7 +73,8 @@ class Signal(object):
         else:
             self.receivers.append((lookup_key, receiver))
 
-    def disconnect(self, receiver=None, sender=None, weak=True, dispatch_uid=None):
+    def disconnect(self, receiver=None, sender=None, weak=True,
+            dispatch_uid=None):
         """Disconnect receiver from sender for signal
 
         receiver -- the registered receiver to disconnect. May be none if
@@ -137,8 +139,9 @@ class Signal(object):
         Return a list of tuple pairs [(receiver, response), ... ],
         may raise DispatcherKeyError
 
-        if any receiver raises an error (specifically any subclass of Exception),
-        the error instance is returned as the result for that receiver.
+        if any receiver raises an error (specifically any subclass of
+        Exception), the error instance is returned as the result for that
+        receiver.
         """
 
         responses = []
