@@ -65,7 +65,7 @@ def set_level(level):
         logging.warning('Invalid log level: %r', level)
 
 
-# pylint: disable-msg=E1101,F0401
+# pylint: disable=E1101,F0401
 def _except_hook(exctype, value, traceback):
     # Attempt to provide verbose IPython tracebacks.
     # Importing IPython is slow, so we import it lazily.
