@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-AC_INIT([sugar-base],[0.87.2],[],[sugar-base])
-=======
 AC_INIT([sugar-base],[0.92.0],[],[sugar-base])
->>>>>>> eb7ada51259747e39c064abb1eae9be7c01e71d3
 
 AC_PREREQ([2.59])
 
