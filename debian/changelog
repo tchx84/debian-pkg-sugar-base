@@ -1,3 +1,21 @@
+sugar-base-0.90 (0.90.1-2) unstable; urgency=low
+
+  * Update README.source to not mention quilt: Source format 3.0 use it
+    internally, but there it is standard and thus need no mention here.
+  * Update copyright file:
+    + Rewrite using draft 174 of DEP-5 syntax.
+    + Fix use exceptions (not bogus License sections).
+    + Tighten License section naming.
+  * Add patch 1001 to add compatibility with ipython 0.11.
+    Closes: bug#635289. Thanks to Julian Taylor.
+  * Bump policy compliance to standards-version 3.9.2.
+  * Remove la file.
+    Closes: bug#633235.
+  * Use Python helper python2 (not pycentral).
+    Closes: bug#617082.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 25 Jul 2011 00:41:13 +0200
+
 sugar-base-0.90 (0.90.1-1) unstable; urgency=low
 
   * New upstream stable release.
