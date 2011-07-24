@@ -65,7 +65,7 @@ def set_level(level):
         logging.warning('Invalid log level: %r', level)
 
 
-# pylint: disable-msg=E1101,F0401
+# pylint: disable=E1101,F0401,W0621
 def _except_hook(exctype, value, traceback):
     # Attempt to provide verbose IPython tracebacks.
     # Importing IPython is slow, so we import it lazily.
@@ -113,7 +113,7 @@ def start(log_filename=None):
         traceback.print_stack()
 
     logging.basicConfig(level=logging.WARNING,
-            format="%(created)f %(levelname)s %(name)s: %(message)s",
+            format='%(created)f %(levelname)s %(name)s: %(message)s',
                         stream=SafeLogWrapper(sys.stderr))
     root_logger.handlers[0].handleError = handleError
 
@@ -148,7 +148,7 @@ class TraceRepr(repr_.Repr):
     def repr1(self, x, level):
         for t in self._TYPES:
             if isinstance(x, t):
-                return getattr(self, 'repr_'+t.__name__)(x, level)
+                return getattr(self, 'repr_' + t.__name__)(x, level)
 
         return repr_.Repr.repr1(self, x, level)
 
@@ -182,22 +182,22 @@ def trace(logger=None, logger_name=None, skip_args=None, skip_kwargs=None,
         if not enabled:
             return f(*args, **kwargs)
 
-        params_formatted = ", ".join(
+        params_formatted = ', '.join(
             [trace_repr.repr(a)
                 for (idx, a) in enumerate(args) if idx not in skip_args] + \
             ['%s=%s' % (k, trace_repr.repr(v))
                 for (k, v) in kwargs.items() if k not in skip_kwargs])
 
-        trace_logger.log(TRACE, "%s(%s) invoked", f.__name__,
+        trace_logger.log(TRACE, '%s(%s) invoked', f.__name__,
             params_formatted)
 
         try:
             res = f(*args, **kwargs)
         except:
-            trace_logger.exception("Exception occured in %s", f.__name__)
+            trace_logger.exception('Exception occured in %s', f.__name__)
             raise
 
-        trace_logger.log(TRACE, "%s(%s) returned %s", f.__name__,
+        trace_logger.log(TRACE, '%s(%s) returned %s', f.__name__,
             params_formatted, trace_repr.repr(res))
 
         return res
