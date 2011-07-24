@@ -134,6 +134,7 @@ def get_mime_description(mime_type):
         return generic_type['name']
 
     import gio
+    # pylint: disable=E1101
     return gio.content_type_get_description(mime_type)
 
 
