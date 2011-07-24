@@ -1,8 +1,11 @@
-sugar-base-0.92 (0.90.1-3) UNRELEASED; urgency=low
+sugar-base-0.92 (0.92.0-1) unstable; urgency=low
+
+  * New upstream release.
 
   * Switch packaging to upstream branch 0.92.
+  * Update copyright file: Extend years.
 
- -- Jonas Smedegaard <dr@jones.dk>  Mon, 25 Jul 2011 01:09:56 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 25 Jul 2011 01:28:04 +0200
 
 sugar-base-0.90 (0.90.1-2) unstable; urgency=low
 
