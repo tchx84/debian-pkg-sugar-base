@@ -1,4 +1,4 @@
-AC_INIT([sugar-base],[0.92.0],[],[sugar-base])
+AC_INIT([sugar-base],[0.93.2],[],[sugar-base])
 
 AC_PREREQ([2.59])
 
@@ -7,7 +7,6 @@ AC_CONFIG_SRCDIR([configure.ac])
 
 AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 
-AM_MAINTAINER_MODE
 AC_DISABLE_STATIC
 AC_PROG_LIBTOOL
 
@@ -22,7 +21,7 @@ PKG_CHECK_MODULES(EXTENSION, pygobject-2.0)
 
 # Setup GETTEXT
 #
-ALL_LINGUAS="af am ar ay bg bi bn_IN bn ca cpp cs da de dz el en es fa_AF fa ff fil fr gu ha he hi ht hu id ig is it ja km ko kos mg mi mk ml mn mr ms mvo nb ne nl pa pap pis pl pseudo ps pt_BR pt qu ro ru rw sd si sk sl sq sv sw ta te th tpi tr tvl tzo ug ur vi wa yo zh_CN zh_TW"
+ALL_LINGUAS="af am ar ay bg bn bn_IN ca de dz el en es fa fa_AF ff fr gu ha hi ht ig is it ja km ko mk ml mn mr mvo nb ne nl pa pap pis pl ps pt pt_BR qu ro ru rw sd si sl te th tpi tr ur vi yo zh_CN zh_TW"
 
 GETTEXT_PACKAGE=sugar-base
 AC_PROG_INTLTOOL([0.33])

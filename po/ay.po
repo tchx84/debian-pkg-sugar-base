@@ -1,3 +1,7 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #  [es] ""
 #  [es] "Project-Id-Version: olpc-sugar\n"
 #  [es] "Report-Msgid-Bugs-To: \n"
@@ -20,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-24 00:21+0530\n"
+"POT-Creation-Date: 2010-09-28 11:45-0400\n"
 "PO-Revision-Date: 2008-09-13 15:10-0400\n"
 "Last-Translator: OLPC-Bolivia\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,26 +34,26 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.1.1rc4\n"
 
 #  [es] "Texto"
-#: ../src/sugar/mime.py:29
+#: ../src/sugar/mime.py:43
 msgid "Text"
 msgstr "Kipu"
 
 #  [es] "Imagen"
-#: ../src/sugar/mime.py:37
+#: ../src/sugar/mime.py:52
 msgid "Image"
 msgstr "Salta"
 
 #  [es] "Audio"
-#: ../src/sugar/mime.py:42
+#: ../src/sugar/mime.py:58
 msgid "Audio"
 msgstr "Arsu"
 
 #  [es] "Video"
-#: ../src/sugar/mime.py:47
+#: ../src/sugar/mime.py:66
 msgid "Video"
 msgstr "Lurawinak uñjawi"
 
 #  [es] "Enlace"
-#: ../src/sugar/mime.py:52
+#: ../src/sugar/mime.py:72
 msgid "Link"
 msgstr "Jach'a chinu"

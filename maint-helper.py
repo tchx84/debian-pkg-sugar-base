@@ -16,21 +16,20 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
+# Latest source available at git://dev.laptop.org/sugar 
+
 import os
 import sys
 import re
 import datetime
 import subprocess
 
-source_exts = ['.py', '.c', '.h', '.cpp']
-COPYRIGHT = 'Copyright (C) '
-
+source_exts = [ '.py', '.c', '.h', '.cpp' ]
 
 def is_source(path):
     for ext in source_exts:
         if path.endswith(ext):
             return True
-
 
 def get_name_and_version():
     f = open('configure.ac', 'r')
@@ -43,8 +42,7 @@ def get_name_and_version():
         print 'Cannot find the package name and version.'
         sys.exit(0)
 
-    return [match.group(2), match.group(1)]
-
+    return [ match.group(2), match.group(1) ]
 
 def cmd_help():
     print 'Usage: \n\
@@ -52,9 +50,8 @@ maint-helper.py build-snapshot       - build a source snapshot \n\
 maint-helper.py fix-copyright [path] - fix the copyright year \n\
 maint-helper.py check-licenses       - check licenses in the source'
 
-
 def cmd_build_snapshot():
-    [name, version] = get_name_and_version()
+    [ name, version ] = get_name_and_version()
 
     print 'Update git...'
 
@@ -79,7 +76,7 @@ def cmd_build_snapshot():
 
     print 'Update NEWS.sugar...'
 
-    if 'SUGAR_NEWS' in os.environ:
+    if os.environ.has_key('SUGAR_NEWS'):
         sugar_news_path = os.environ['SUGAR_NEWS']
         if os.path.isfile(sugar_news_path):
             f = open(sugar_news_path, 'r')
@@ -88,7 +85,7 @@ def cmd_build_snapshot():
         else:
             sugar_news = ''
 
-        name, version = get_name_and_version()
+        [ name, version ] = get_name_and_version()
         sugar_news += '%s - %s - %s\n\n' % (name, version, alphatag)
 
         f = open('NEWS', 'r')
@@ -128,22 +125,21 @@ def cmd_build_snapshot():
 
     print 'Done.'
 
-
-def check_licenses(path, license_name, missing):
-    matchers = {'LGPL': 'GNU Lesser General Public License',
-        'GPL': 'GNU General Public License'}
+def check_licenses(path, license, missing):
+    matchers = { 'LGPL' : 'GNU Lesser General Public',
+                 'GPL'  : 'GNU General Public License' }
 
     license_file = os.path.join(path, '.license')
     if os.path.isfile(license_file):
         f = open(license_file, 'r')
-        license_name = f.readline().strip()
+        license = f.readline().strip()
         f.close()
 
     for item in os.listdir(path):
         full_path = os.path.join(path, item)
 
         if os.path.isdir(full_path):
-            check_licenses(full_path, license_name, missing)
+            check_licenses(full_path, license, missing)
         else:
             check_source = is_source(item)
 
@@ -158,7 +154,7 @@ def check_licenses(path, license_name, missing):
                 f.close()
 
                 miss_license = True
-                if source.find(matchers[license_name]) > 0:
+                if source.find(matchers[license]) > 0:
                     miss_license = False
 
                 # Special cases.
@@ -166,10 +162,9 @@ def check_licenses(path, license_name, missing):
                     miss_license = False
 
                 if miss_license:
-                    if license_name not in missing:
-                        missing[license_name] = []
-                    missing[license_name].append(full_path)
-
+                    if not missing.has_key(license):
+                        missing[license] = []
+                    missing[license].append(full_path)
 
 def cmd_check_licenses():
     missing = {}
@@ -181,6 +176,7 @@ def cmd_check_licenses():
             print path
         print '\n'
 
+COPYRIGHT = 'Copyright (C) '
 
 def fix_copyright(path):
     for item in os.listdir(path):
@@ -218,10 +214,8 @@ def fix_copyright(path):
                     f.write(result)
                     f.close()
 
-
 def cmd_fix_copyright(path):
     fix_copyright(path)
-
 
 if len(sys.argv) < 2:
     cmd_help()
