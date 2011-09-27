@@ -2,7 +2,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -17,28 +16,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 1.7.0\n"
 
-#  "Texto"
 #: ../src/sugar/mime.py:43
 msgid "Text"
 msgstr ""
 
-#  "Imagen"
 #: ../src/sugar/mime.py:52
 msgid "Image"
 msgstr ""
 
-#  "Audio"
 #: ../src/sugar/mime.py:58
 msgid "Audio"
 msgstr ""
 
-#  "Video"
 #: ../src/sugar/mime.py:66
 msgid "Video"
 msgstr ""
 
-#  "Enlace"
 #: ../src/sugar/mime.py:72
 msgid "Link"
 msgstr ""
-
