@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-09-28 11:45-0400\n"
-"PO-Revision-Date: 2011-04-13 02:53+0200\n"
+"PO-Revision-Date: 2012-02-09 02:40+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: am\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/sugar/mime.py:43
 msgid "Text"
@@ -27,7 +27,7 @@ msgstr "ጽሑፍ"
 
 #: ../src/sugar/mime.py:52
 msgid "Image"
-msgstr ""
+msgstr "ምስል"
 
 #: ../src/sugar/mime.py:58
 msgid "Audio"
@@ -39,4 +39,4 @@ msgstr "ፈልግ"
 
 #: ../src/sugar/mime.py:72
 msgid "Link"
-msgstr ""
+msgstr "አያያዝ"
