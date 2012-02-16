@@ -39,4 +39,3 @@ msgstr "Video"
 #: ../src/sugar/mime.py:72
 msgid "Link"
 msgstr "Enlace"
-
