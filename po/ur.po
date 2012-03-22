@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../src/sugar/mime.py:43
 msgid "Text"
-msgstr ""
+msgstr "ٹيکسٹ"
 
 #: ../src/sugar/mime.py:52
 msgid "Image"
-msgstr ""
+msgstr "تصوير"
 
 #: ../src/sugar/mime.py:58
 msgid "Audio"
@@ -31,8 +31,8 @@ msgstr "ئاۋاز"
 
 #: ../src/sugar/mime.py:66
 msgid "Video"
-msgstr ""
+msgstr "ويڈيو"
 
 #: ../src/sugar/mime.py:72
 msgid "Link"
-msgstr ""
+msgstr "لنک"
