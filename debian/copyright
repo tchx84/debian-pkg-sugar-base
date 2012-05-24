@@ -8,13 +8,13 @@ Source: http://download.sugarlabs.org/sources/sucrose/glucose/sugar-base
 
 Files: *
 Copyright: 2006-2007, Red Hat, Inc
- 2007-2008, One Laptop Per Child
+  2007-2008, One Laptop Per Child
 License: LGPL-2+
 
 Files: src/sugar/xdgmime*
 Copyright: 2003-2004, Jonathan Blandford <jrb@alum.mit.edu>
- 2003-2004, Red Hat, Inc
- 2004-2005, Matthias Clasen <mclasen@redhat.com>
+  2003-2004, Red Hat, Inc
+  2004-2005, Matthias Clasen <mclasen@redhat.com>
 License: Academic or LGPL-2+
 
 Files: m4/lt*
@@ -23,7 +23,7 @@ License: GAP
 
 Files: src/sugar/dispatch/*
 Copyright: 2001-2003, Patrick K. O'Brien and Contributors
- ????, Django Software Foundation and individual contributors.
+  ????, Django Software Foundation and individual contributors.
 License: BSD-3-clause˜O'Brien
 
 Files: */Makefile.in
@@ -43,7 +43,7 @@ License: GPL-2+ with Autoconf exception
 
 Files: m4/intltool.m4
 Copyright: 1992-2008, Free Software Foundation
- 2000-2001, Eazel, Inc
+  2000-2001, Eazel, Inc
 License: GPL-2+ with Autoconf exception
  As a special exception to the GNU General Public License, if you
  distribute this file as part of a program that contains a
@@ -73,8 +73,8 @@ License: GAP~configure
 
 Files: aclocal.m4
 Copyright: 1994-2009, Free Software Foundation, Inc.
- 2001-2004, Red Hat, Inc
- 2004, Scott James Remnant <scott@netsplit.com>
+  2001-2004, Red Hat, Inc
+  2004, Scott James Remnant <scott@netsplit.com>
 License: GPL-2+ with Autoconf exception
  As a special exception to the GNU General Public License, if you
  distribute this file as part of a program that contains a
@@ -83,7 +83,7 @@ License: GPL-2+ with Autoconf exception
 
 Files: po/Makefile.in.in
 Copyright: 1995-1997, Ulrich Drepper <drepper@gnu.ai.mit.edu>
- 2004-2008, Rodney Dawes <dobey.pwns@gmail.com>
+  2004-2008, Rodney Dawes <dobey.pwns@gmail.com>
 License: GAP~gettext
 
 Files: debian/*
