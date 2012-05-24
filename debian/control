@@ -14,9 +14,9 @@ Build-Depends: autotools-dev,
  python-gobject-dev (>= 2) | python-gtk2-dev (<< 2.9),
  intltool,
  chrpath
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base
-Vcs-Browser: http://git.debian.org/?p=collab-maint/sugar-base.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/sugar-base.git
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 
 Package: python-sugar-0.96
@@ -30,7 +30,7 @@ Replaces: ${cdbs:Replaces}
 Description: Sugar graphical shell - core functionality
  Sugar is a graphical user interface aimed at children.
  .
- Originating as intregral part of the OLPC "XO" a.k.a. the $100 laptop,
+ Originating as integral part of the OLPC "XO" a.k.a. the $100 laptop,
  Sugar has since grown into a more widely usable low-ressource desktop
  environment for kids.
  .

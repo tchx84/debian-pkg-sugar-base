@@ -1,8 +1,17 @@
-sugar-base-0.96 (0.92.0-2) UNRELEASED; urgency=low
+sugar-base-0.96 (0.96.0-1) unstable; urgency=low
 
-  * Switch packaging to upstream branch 0.96.
+  * New upstream release.
 
- -- Jonas Smedegaard <dr@jones.dk>  Thu, 24 May 2012 18:05:42 +0200
+  * Use anonscm.debian.org for Vcs-Browser field.
+  * Refresh patch 1001.
+  * Update copyright file:
+    + Bump format to 1.0.
+    + Fix double-indent in Copyright fields as per Policy §5.6.13.
+    + Fix concistently use ~ (not ˜) in derivative License shortnames.
+  * Fix typo in long description.
+  * Bump standards-version to 3.9.3.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 24 May 2012 18:54:11 +0200
 
 sugar-base-0.92 (0.92.0-1) unstable; urgency=low
 
