@@ -2,11 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-24 00:21+0530\n"
+"POT-Creation-Date: 2010-09-28 11:45-0400\n"
 "PO-Revision-Date: 2008-07-05 04:53-0400\n"
 "Last-Translator: Γιάννης Κασκαμανίδης <ttnfy17@yahoo.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,22 +19,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Pootle 1.1.0rc2\n"
 
-#: ../src/sugar/mime.py:29
+#: ../src/sugar/mime.py:43
 msgid "Text"
 msgstr "Κείμενο"
 
-#: ../src/sugar/mime.py:37
+#: ../src/sugar/mime.py:52
 msgid "Image"
 msgstr "Εικόνα"
 
-#: ../src/sugar/mime.py:42
+#: ../src/sugar/mime.py:58
 msgid "Audio"
 msgstr "Ήχος"
 
-#: ../src/sugar/mime.py:47
+#: ../src/sugar/mime.py:66
 msgid "Video"
 msgstr "Βίντεο"
 
-#: ../src/sugar/mime.py:52
+#: ../src/sugar/mime.py:72
 msgid "Link"
 msgstr "Σύνδεσμος"
