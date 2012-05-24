@@ -24,7 +24,7 @@ License: GAP
 Files: src/sugar/dispatch/*
 Copyright: 2001-2003, Patrick K. O'Brien and Contributors
   ????, Django Software Foundation and individual contributors.
-License: BSD-3-clause˜O'Brien
+License: BSD-3-clause~O'Brien
 
 Files: */Makefile.in
 Copyright: 1994-2009, Free Software Foundation, Inc.
@@ -61,7 +61,7 @@ License: GPL-2+ with Libtool exception
 
 Files: install-sh
 Copyright: 1994, X Consortium
-License: Expat̃X with X exception
+License: Expat~X with X exception
  Except as contained in this notice, the name of the X Consortium shall
  not be used in advertising or otherwise to promote the sale, use or
  other dealings in this Software without prior written authorization
@@ -133,7 +133,7 @@ Comment:
  attempt has been done to resolve this as it has in all cases been dual-
  licensed with GPL-2+ which in reality is used with Debian.
 
-License: BSD-3-clausẽO'Brien
+License: BSD-3-clause~O'Brien
  Copyright (c) 2001-2003, Patrick K. O'Brien and Contributors
  All rights reserved.
  .
