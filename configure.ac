@@ -1,4 +1,4 @@
-AC_INIT([sugar-base],[0.96.0],[],[sugar-base])
+AC_INIT([sugar-base],[0.98.0],[],[sugar-base])
 
 AC_PREREQ([2.59])
 
