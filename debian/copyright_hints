@@ -110,6 +110,17 @@ Copyright: 2003, Jonathan Blandford <jrb@alum.mit.edu>
 License: LGPL-2+
  FIXME
 
+Files: config.guess
+ config.sub
+ depcomp
+ missing
+Copyright: 1992-1999,
+  1992-2000
+  1996-1997, 1999-2000, 2002-2006
+  1999-2000, 2003-2007, 2009-2010
+License: GPL-2+
+ FIXME
+
 Files: src/sugar/xdgmimealias.c
  src/sugar/xdgmimealias.h
  src/sugar/xdgmimeparent.c
@@ -126,15 +137,6 @@ Files: Makefile.in
  src/sugar/dispatch/Makefile.in
 Copyright: 1994-2002
 License: UNKNOWN
- FIXME
-
-Files: config.guess
- config.sub
- missing
-Copyright: 1992-1999,
-  1992-2001
-  1996-1997, 1999-2000, 2002-2006
-License: GPL-2+
  FIXME
 
 Files: m4/ltsugar.m4
@@ -174,7 +176,12 @@ Copyright: 2001-2003, Patrick K. O'Brien and Contributors
   HOLDERS AND CONTRIBUTORS "AS IS" AND
   HOLDERS AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT
   OWNER OR CONTRIBUTORS BE LIABLE FOR
-License: BSD (3 clause)
+License: BSD-3-clause
+ FIXME
+
+Files: install-sh
+Copyright: 1994, X Consortium
+License: Expat
  FIXME
 
 Files: configure
@@ -196,23 +203,23 @@ Copyright: 1995-2002, Free Software Foundation, Inc
   1999-2005, 2008
   1999-2005, 2008-2009,
   1999-2006, 2009
-  2001, 2003, 2005, 2008 Free Software Foundation, Inc
-  2001, 2003, 2005, Free Software Foundation, Inc
-  2001-2003, 2005, 2008, Free Software Foundation, Inc
+  2001, 2003, 2005, 2008, 2011, Free Software Foundation
+  2001, 2003, 2005, 2011 Free Software Foundation, Inc
+  2001-2003, 2005, 2008, 2010 Free Software
   2001-2003, 2005, 2009, Free Software Foundation, Inc
   2001-2004, Red Hat, Inc
-  2002-2003, 2005-2008, Free Software Foundation, Inc
+  2002-2003, 2005-2008, 2011 Free Software
   2003, 2005 Free Software Foundation, Inc
-  2003-2006, Free Software Foundation, Inc
+  2003-2006, 2011 Free Software Foundation
   2004, Scott James Remnant <scott@netsplit.com>
-  2004-2005, Free Software Foundation, Inc
-  2006, 2008 Free Software Foundation, Inc
+  2004-2005, 2012 Free Software Foundation, Inc
+  2006, 2008, 2010, Free Software Foundation, Inc
 License: GPL-2+
  FIXME
 
 Files: m4/libtool.m4
 Copyright: 1996-2001, 2003-2005
-  2010, Free Software Foundation, Inc
+  2011, Free Software Foundation, Inc
 License: GPL-2+
  FIXME
 
@@ -227,13 +234,8 @@ Copyright: 2001, Eazel, Inc
 License: GPL-2+
  FIXME
 
-Files: depcomp
-Copyright: 1999-2000, 2003-2007, 2009 Free
-License: GPL-2+
- FIXME
-
 Files: py-compile
-Copyright: 2000-2001, 2003-2005, 2008-2009, Free Software
+Copyright: 2000-2001, 2003-2005, 2008-2009, 2011 Free
 License: GPL-2+
  FIXME
 
@@ -254,12 +256,7 @@ Copyright: 1991, 1999 Free Software Foundation, Inc
   law: that is to say, a work containing the Library or a
   notices, you must include the
   the
-License: LGPL-2.1+
- FIXME
-
-Files: install-sh
-Copyright: 1994, X Consortium
-License: MIT/X11 (BSD like)
+License: LGPL-ever
  FIXME
 
 Files: po/es.po
