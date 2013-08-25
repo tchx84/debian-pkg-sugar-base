@@ -1,4 +1,4 @@
-Source: sugar-base-0.96
+Source: sugar-base-0.98
 Section: python
 Priority: optional
 Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
@@ -9,7 +9,7 @@ Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/sugar-base.git
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 
-Package: python-sugar-0.96
+Package: python-sugar-0.98
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}, ${cdbs:Depends}, ${misc:Depends}
 Recommends: ${cdbs:Recommends}
