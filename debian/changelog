@@ -1,12 +1,10 @@
-sugar-base-0.98 (0.98.0-1~1) UNRELEASED; urgency=low
+sugar-base-0.98 (0.98.0-1) unstable; urgency=low
 
-  [ upstream ]
   * New upstream release
-
-  [ Santiago ] 
   * Switch packaging to upstream branch 0.98
+  * Added myself to Uploaders
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Sun, 25 Aug 2013 23:30:07 +0200
+ -- Santiago Ruano Rincón <santiago@debian.org>  Fri, 06 Sep 2013 18:08:23 +0200
 
 sugar-base-0.96 (0.96.0-1) unstable; urgency=low
 
