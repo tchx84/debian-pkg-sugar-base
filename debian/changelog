@@ -3,8 +3,9 @@ sugar-base-0.98 (0.98.0-1) unstable; urgency=low
   * New upstream release
   * Switch packaging to upstream branch 0.98
   * Added myself to Uploaders
+  * Bump standards-version to 3.9.4
 
- -- Santiago Ruano Rincón <santiago@debian.org>  Fri, 06 Sep 2013 18:08:23 +0200
+ -- Santiago Ruano Rincón <santiago@debian.org>  Sat, 07 Sep 2013 00:55:13 +0200
 
 sugar-base-0.96 (0.96.0-1) unstable; urgency=low
 
