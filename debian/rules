@@ -57,7 +57,6 @@ CDBS_BUILD_DEPENDS += , python-gtk2-dev, python-gobject-dev (>= 2) | python-gtk2
 #  * python-gobject versioning needed for GIO bindings
 #  * ipython beautifies tracebacks in logs
 CDBS_DEPENDS_DEFAULT = python-gobject (>= 2.15.0), python-decorator
-CDBS_RECOMMENDS_DEFAULT = sugar-$(pkgbranch)
 CDBS_SUGGESTS_DEFAULT = ipython
 
 # Ensure only one variant is installed at a time (Debian Policy 7.6.2)
