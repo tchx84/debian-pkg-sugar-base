@@ -2,7 +2,8 @@ Source: sugar-base-0.98
 Section: oldlibs
 Priority: optional
 Maintainer: Debian Sugar Team <pkg-sugar-devel@lists.alioth.debian.org>
-Uploaders: Jonas Smedegaard <dr@jones.dk>, Santiago Ruano Rincón <santiago@debian.org>
+Uploaders: Jonas Smedegaard <dr@jones.dk>,
+ Santiago Ruano Rincón <santiago@debian.org>
 Build-Depends: @cdbs@
 Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-sugar/sugar-base
@@ -11,10 +12,14 @@ Homepage: http://wiki.sugarlabs.org/go/Sugar
 
 Package: python-sugar-0.98
 Architecture: any
-Depends: ${shlibs:Depends}, ${python:Depends}, ${cdbs:Depends}, ${misc:Depends}
+Depends: ${cdbs:Depends}
+ ${misc:Depends},
+ ${python:Depends},
+ ${shlibs:Depends}
 Recommends: ${cdbs:Recommends}
 Suggests: ${cdbs:Suggests}
-Provides: ${python:Provides}, ${cdbs:Provides}
+Provides: ${cdbs:Provides},
+ ${python:Provides}
 Conflicts: ${cdbs:Conflicts}
 Replaces: ${cdbs:Replaces}
 Description: Sugar graphical shell - core functionality
