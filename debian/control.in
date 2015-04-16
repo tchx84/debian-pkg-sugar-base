@@ -1,5 +1,5 @@
 Source: sugar-base-0.98
-Section: python
+Section: oldlibs
 Priority: optional
 Maintainer: Debian Sugar Team <pkg-sugar-devel@lists.alioth.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>, Santiago Ruano Rincón <santiago@debian.org>
