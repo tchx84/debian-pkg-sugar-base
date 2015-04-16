@@ -1,12 +1,12 @@
 Source: sugar-base-0.98
 Section: python
 Priority: optional
-Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
+Maintainer: Debian Sugar Team <pkg-sugar-devel@lists.alioth.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>, Santiago Ruano Rincón <santiago@debian.org>
 Build-Depends: @cdbs@
 Standards-Version: 3.9.6
-Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/sugar-base.git
+Vcs-Git: git://anonscm.debian.org/pkg-sugar/sugar-base
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-sugar/sugar-base.git
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 
 Package: python-sugar-0.98
