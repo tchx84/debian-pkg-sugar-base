@@ -1,9 +1,10 @@
 Source: sugar-base-0.98
-Section: python
+Section: oldlibs
 Priority: optional
-Maintainer: Debian OLPC <debian-olpc-devel@lists.alioth.debian.org>
-Uploaders: Jonas Smedegaard <dr@jones.dk>, Santiago Ruano Rincón <santiago@debian.org>
-Build-Depends: cdbs (>= 0.4.97~),
+Maintainer: Debian Sugar Team <pkg-sugar-devel@lists.alioth.debian.org>
+Uploaders: Jonas Smedegaard <dr@jones.dk>,
+ Santiago Ruano Rincón <santiago@debian.org>
+Build-Depends: cdbs (>= 0.4.90~),
  autotools-dev,
  devscripts,
  debhelper,
@@ -11,27 +12,34 @@ Build-Depends: cdbs (>= 0.4.97~),
  python,
  python-all-dev,
  python-gtk2-dev,
- python-gobject-dev (>= 2) | python-gtk2-dev (<< 2.9),
+ python-gobject-dev,
  intltool,
  chrpath
-Standards-Version: 3.9.4
-Vcs-Git: git://git.debian.org/git/collab-maint/sugar-base
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/sugar-base.git
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-sugar/sugar-base
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-sugar/sugar-base.git
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 
 Package: python-sugar-0.98
 Architecture: any
-Depends: ${shlibs:Depends}, ${python:Depends}, ${cdbs:Depends}, ${misc:Depends}
+Depends: ${cdbs:Depends}
+ ${misc:Depends},
+ ${python:Depends},
+ ${shlibs:Depends}
 Recommends: ${cdbs:Recommends}
 Suggests: ${cdbs:Suggests}
-Provides: ${python:Provides}, ${cdbs:Provides}
+Provides: ${cdbs:Provides},
+ ${python:Provides}
 Conflicts: ${cdbs:Conflicts}
 Replaces: ${cdbs:Replaces}
-Description: Sugar graphical shell - core functionality
- Sugar is a graphical user interface aimed at children.
+Description: Sugar graphical shell - legacy core functionality
+ Sugar is a desktop environment. It is conceived as a platform upon
+ which children learn with Sugar Activities. The platform provides
+ mechanisms for collaboration, reflection, and exploration. Sugar
+ Activities cover a broad range of applications: browsing, drawing,
+ composing, writing, programming, etc.
  .
- Originating as integral part of the OLPC "XO" a.k.a. the $100 laptop,
- Sugar has since grown into a more widely usable low-ressource desktop
- environment for kids.
+ This package contains some deprecated yet still widely used base
+ modules for Sugar.  Please use python-sugar3 instead where possible.
  .
- This package contains the base modules for Sugar.
+ To get prettier tracebacks if things break, install ipython.

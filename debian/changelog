@@ -1,3 +1,33 @@
+sugar-base-0.98 (0.98.0-2) UNRELEASED; urgency=medium
+
+  * Track xz compressed upstream tarballs (but favor bzip2).
+  * Update package relations:
+    + Fix stop recommend bogus sugar-*.
+      Closes: bug#782468.
+    + Relax to build-depend unversioned on python-gobject-dev without
+      fallback, and depend unversioned on python-gobject: Needed
+      versions satisfied even in oldstable.
+  * Bump debhelper compatibility level to 8.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Move packaging to Debian Sugar Team.
+  * Move to section oldlibs: Deprecated upstream.
+  * Wrap and sort Uploaders and package relations fields.
+  * Update copyright info:
+    + Extend coverage for myself.
+    + Relicense packaging as GPL-3+.
+    + Fix use SPDX shortname for X11 license.
+      Thanks to Paul Richards Tagliamonte.
+    + Merge same-licensed Files sections, and rewrap at 72 chars.
+  * Rewrite README.source to emphasize that control.in file is *not* a
+    show-stopper for contributions, and refer to wiki page for details.
+  * Modernize long description, and mention deprecation.
+  * Stop track upstream tarball checksum.
+  * Mention relevancy of suggested ipython in long description and
+    README.Debian.
+  * Support multiarch, with graceful fallback to ease backporting.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 17 Apr 2015 09:15:50 +0200
+
 sugar-base-0.98 (0.98.0-1) unstable; urgency=low
 
   * New upstream release
