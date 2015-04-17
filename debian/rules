@@ -44,6 +44,9 @@ CDBS_PROVIDES_DEFAULT = $(pkgbase)
 CDBS_CONFLICTS_DEFAULT = $(pkgbase)
 CDBS_REPLACES_DEFAULT = $(pkgbase)
 
+# Use multiarch paths, with graceful fallback to ease backporting
+DEB_CONFIGURE_EXTRA_FLAGS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+
 # Remove .la file
 binary-post-install/$(pkg)::
 	find $(DEB_DESTDIR)/usr -type f -name '*.la' -delete
