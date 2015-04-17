@@ -36,6 +36,7 @@ binary-post-install/$(pkg)::
 	find $(DEB_DESTDIR)/usr -type f -name '*.la' -delete
 
 # Strip hardcoded rpath
+CDBS_BUILD_DEPENDS += , chrpath
 binary-strip/$(pkg)::
 	find $(DEB_DESTDIR)/usr/lib -type f -name '*.so' -exec chrpath -d '{}' ';'
 
@@ -59,6 +60,3 @@ CDBS_SUGGESTS_DEFAULT = ipython
 CDBS_PROVIDES_DEFAULT = $(pkgbase)
 CDBS_CONFLICTS_DEFAULT = $(pkgbase)
 CDBS_REPLACES_DEFAULT = $(pkgbase)
-
-# Needed for our packaging
-CDBS_BUILD_DEPENDS += , chrpath
