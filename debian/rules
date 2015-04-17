@@ -30,6 +30,20 @@ DEB_UPSTREAM_PACKAGE = $(DEB_SOURCE_PACKAGE:%-$(pkgbranch)=%)
 DEB_UPSTREAM_URL = http://download.sugarlabs.org/sources/sucrose/glucose/$(DEB_UPSTREAM_PACKAGE)
 DEB_UPSTREAM_TARBALL_EXTENSION = tar.bz2
 
+# Needed by upstream build process
+#    (pygtk needed by autotools but seems bogus: no linkage in binaries)
+CDBS_BUILD_DEPENDS += , python-gtk2-dev, python-gobject-dev, intltool
+
+# Needed (always/often/seldom) at runtime
+#  * ipython beautifies tracebacks in logs
+CDBS_DEPENDS_DEFAULT = python-gobject, python-decorator
+CDBS_SUGGESTS_DEFAULT = ipython
+
+# Ensure only one variant is installed at a time (Debian Policy 7.6.2)
+CDBS_PROVIDES_DEFAULT = $(pkgbase)
+CDBS_CONFLICTS_DEFAULT = $(pkgbase)
+CDBS_REPLACES_DEFAULT = $(pkgbase)
+
 # Remove .la file
 binary-post-install/$(pkg)::
 	find $(DEB_DESTDIR)/usr -type f -name '*.la' -delete
@@ -45,17 +59,3 @@ clean::
 		(cd $(DEB_BUILDDIR) && rmdir -p $$flavor/src/sugar); \
 	done
 	-[ ! -d $(DEB_BUILDDIR) ] || rmdir $(DEB_BUILDDIR)
-
-# Needed by upstream build process
-#    (pygtk needed by autotools but seems bogus: no linkage in binaries)
-CDBS_BUILD_DEPENDS += , python-gtk2-dev, python-gobject-dev, intltool
-
-# Needed (always/often/seldom) at runtime
-#  * ipython beautifies tracebacks in logs
-CDBS_DEPENDS_DEFAULT = python-gobject, python-decorator
-CDBS_SUGGESTS_DEFAULT = ipython
-
-# Ensure only one variant is installed at a time (Debian Policy 7.6.2)
-CDBS_PROVIDES_DEFAULT = $(pkgbase)
-CDBS_CONFLICTS_DEFAULT = $(pkgbase)
-CDBS_REPLACES_DEFAULT = $(pkgbase)
