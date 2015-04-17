@@ -1,0 +1,7 @@
+sugar-base for Debian
+---------------------
+
+To get prettier tracebacks if things break, install ipython.
+
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 17 Apr 2015 09:05:42 +0200

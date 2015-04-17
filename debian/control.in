@@ -31,3 +31,5 @@ Description: Sugar graphical shell - legacy core functionality
  .
  This package contains some deprecated yet still widely used base
  modules for Sugar.  Please use python-sugar3 instead where possible.
+ .
+ To get prettier tracebacks if things break, install ipython.
