@@ -22,7 +22,7 @@ Homepage: http://wiki.sugarlabs.org/go/Sugar
 
 Package: python-sugar-0.98
 Architecture: any
-Depends: ${cdbs:Depends}
+Depends: ${cdbs:Depends},
  ${misc:Depends},
  ${python:Depends},
  ${shlibs:Depends}
