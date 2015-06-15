@@ -1,3 +1,21 @@
+sugar-base-0.98 (0.98.0-3) unstable; urgency=medium
+
+  * Modernize short and long description.
+  * Update copyright info:
+    + Use License-Grant and License-Reference fields.
+      Thanks to Ben Finney.
+    + Add comments on LGPL Lesser versus Library assumption.
+    + Drop duplicate copyright statement in BSD-3-clause~O'Brien License
+      section.
+  * Add lintian overrides regarding license in License-Reference field.
+    See bug#786450.
+  * Remove debian/source/local-options: abort-on-upstream-changes and
+    unapply-patches are default in dpkg-source since 1.16.1.
+  * Modernize git-buildpackage config: Avoid "git-" prefix.
+  * Drop obsolete TODO file.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 15 Jun 2015 16:53:58 -0500
+
 sugar-base-0.98 (0.98.0-2) unstable; urgency=medium
 
   * Track xz compressed upstream tarballs (but favor bzip2).
