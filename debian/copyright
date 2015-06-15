@@ -53,7 +53,7 @@ License: GAP
 Files: src/sugar/dispatch/*
 Copyright:
   © 2001-2003, Patrick K. O'Brien and Contributors
-  © ????, Django Software Foundation and individual contributors.
+  © Django Software Foundation and individual contributors.
 License: BSD-3-clause~O'Brien
 
 Files: */Makefile.in
@@ -134,9 +134,6 @@ License: GPL-3+
 License-Reference: /usr/share/common-licenses/GPL-3
 
 License: BSD-3-clause~O'Brien
- Copyright (c) 2001-2003, Patrick K. O'Brien and Contributors
- All rights reserved.
- .
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are
  met:
