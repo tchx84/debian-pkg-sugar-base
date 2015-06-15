@@ -16,6 +16,10 @@ License-Grant:
  by the Free Software Foundation; either version 2 of the License, or
  (at your option) any later version.
 License: LGPL-2+
+Comment:
+ No "GNU Lesser General Public License" version 2 was published by the
+ Free Software. It is assumed to really be "GNU Library General Public
+ License".
 
 Files: src/sugar/xdgmime*
 Copyright:
@@ -36,6 +40,10 @@ Comment:
  even if quite likely https://spdx.org/licenses/AFL-2.0.html no attempt
  has been done to clarify as the alternative LGPL-2+ license is suitable
  for use with Debian.
+ .
+ No "GNU Lesser General Public License" version 2 was published by the
+ Free Software. It is assumed to really be "GNU Library General Public
+ License".
 
 Files: m4/lt*
 Copyright:
