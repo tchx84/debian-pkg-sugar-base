@@ -1,4 +1,4 @@
-Source: sugar-base-0.98
+Source: sugar-base
 Section: oldlibs
 Priority: optional
 Maintainer: Debian Sugar Team <pkg-sugar-devel@lists.alioth.debian.org>
@@ -20,7 +20,7 @@ Vcs-Git: git://anonscm.debian.org/pkg-sugar/sugar-base
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-sugar/sugar-base.git
 Homepage: http://wiki.sugarlabs.org/go/Sugar
 
-Package: python-sugar-0.98
+Package: python-sugar
 Architecture: any
 Depends: ${cdbs:Depends},
  ${misc:Depends},
