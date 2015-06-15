@@ -22,11 +22,10 @@ include /usr/share/cdbs/1/rules/utils.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/python-autotools.mk
 
-pkgbase = python-sugar
+pkg = python-sugar
 pkgbranch = $(basename $(DEB_UPSTREAM_VERSION))
-pkg = $(pkgbase)-$(pkgbranch)
 
-DEB_UPSTREAM_PACKAGE = $(DEB_SOURCE_PACKAGE:%-$(pkgbranch)=%)
+DEB_UPSTREAM_PACKAGE = $(DEB_SOURCE_PACKAGE)
 DEB_UPSTREAM_URL = http://download.sugarlabs.org/sources/sucrose/glucose/$(DEB_UPSTREAM_PACKAGE)
 DEB_UPSTREAM_TARBALL_EXTENSION = tar.bz2
 
@@ -38,11 +37,6 @@ CDBS_BUILD_DEPENDS += , python-gtk2-dev, python-gobject-dev, intltool
 #  * ipython beautifies tracebacks in logs
 CDBS_DEPENDS_DEFAULT = python-gobject, python-decorator
 CDBS_SUGGESTS_DEFAULT = ipython
-
-# Ensure only one variant is installed at a time (Debian Policy 7.6.2)
-CDBS_PROVIDES_DEFAULT = $(pkgbase)
-CDBS_CONFLICTS_DEFAULT = $(pkgbase)
-CDBS_REPLACES_DEFAULT = $(pkgbase)
 
 # Remove .la file
 binary-post-install/$(pkg)::
