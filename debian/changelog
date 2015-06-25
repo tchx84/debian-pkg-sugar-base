@@ -1,3 +1,10 @@
+sugar-base (0.98.0-5) unstable; urgency=medium
+
+  * Bump debhelper compatibility level to 9.
+  * Tidy rules file: Suppress versioned debhelper build-dependency.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 25 Jun 2015 16:47:27 -0500
+
 sugar-base (0.98.0-4) experimental; urgency=medium
 
   * Drop branch from source and binary package.
