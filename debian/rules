@@ -42,6 +42,14 @@ CDBS_BUILD_DEPENDS += , python-gtk2-dev, python-gobject-dev, intltool
 CDBS_DEPENDS_DEFAULT = python-gobject, python-decorator
 CDBS_SUGGESTS_DEFAULT = ipython
 
+# Replace previous package names to avoid conflicts
+older-base = python-sugar-0.88
+older-base +=, python-sugar-0.96
+older-base +=, python-sugar-0.98
+CDBS_PROVIDES_$(pkg) +=, $(older-base)
+CDBS_REPLACES_$(pkg) +=, $(older-base)
+CDBS_CONFLICTS_$(pkg) +=, $(older-base)
+
 # Remove .la file
 binary-post-install/$(pkg)::
 	find $(DEB_DESTDIR)/usr -type f -name '*.la' -delete
